@@ -1,0 +1,211 @@
+[2021-11-24T22:26:20.671] [ERROR] cheese - TypeError: Assignment to constant variable.
+    at Object.<anonymous> (/home/yrj_work/koa-apis-cms/src/utils/log.js:12:5)
+    at Module._compile (internal/modules/cjs/loader.js:1137:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)
+    at Module.load (internal/modules/cjs/loader.js:985:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:878:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)
+    at internal/main/run_main_module.js:17:47
+[2021-11-24T22:26:25.552] [ERROR] cheese - TypeError: Assignment to constant variable.
+    at Object.<anonymous> (/home/yrj_work/koa-apis-cms/src/utils/log.js:12:5)
+    at Module._compile (internal/modules/cjs/loader.js:1137:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)
+    at Module.load (internal/modules/cjs/loader.js:985:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:878:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)
+    at internal/main/run_main_module.js:17:47
+[2021-11-24T23:03:19.732] [ERROR] cheese - dddddddddTypeError: Assignment to constant variable.
+[2021-11-24T23:03:31.990] [ERROR] cheese - ddddddddd TypeError: Assignment to constant variable.
+[2021-11-26T15:20:55.909] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token ')'
+[2021-11-26T15:39:36.960] [ERROR] cheese - 匹配路由错误: TypeError: router.routes is not a function
+[2021-11-26T15:39:50.515] [ERROR] cheese - 匹配路由错误: TypeError: router.routes is not a function
+[2021-11-26T15:40:18.614] [ERROR] cheese - 匹配路由错误: Error: post `/register`: `middleware` must be a function, not `undefined`
+[2021-11-26T15:57:14.075] [ERROR] cheese - 匹配路由错误: ReferenceError: Seller is not defined
+[2021-11-26T15:58:14.821] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T15:58:39.092] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T15:58:58.268] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T15:59:11.143] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T15:59:42.944] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T15:59:46.417] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:00:10.062] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:00:21.186] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:01:08.313] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:01:14.150] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:01:50.278] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:01:58.207] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:02:02.466] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:02:10.112] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:02:50.602] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:03:05.491] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:03:09.438] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:03:46.450] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:04:02.774] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:09:24.892] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:09:52.551] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:10:23.103] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:10:34.393] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:10:36.413] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:11:21.361] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:11:45.094] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:12:57.246] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:13:03.253] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:13:27.830] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:13:55.131] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:14:06.009] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:14:18.390] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:14:22.440] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:14:26.687] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:14:33.576] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:14:43.506] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:14:48.732] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:15:06.850] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:18:20.140] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:18:53.813] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:19:06.260] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:19:26.612] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:19:33.161] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:19:37.743] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:19:39.398] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:19:51.880] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:19:59.796] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:20:15.636] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:21:10.588] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:21:21.417] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:21:43.034] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:22:00.416] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:22:28.625] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:22:39.580] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:23:01.759] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:23:11.750] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:23:13.430] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:23:14.395] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:23:41.774] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:24:48.737] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:24:50.714] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:25:00.726] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:25:27.066] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:26:39.901] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:27:02.403] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:27:11.337] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:27:14.320] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:27:31.792] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:27:41.780] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:27:53.340] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:28:01.721] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:28:03.797] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:28:25.991] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:28:57.773] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:29:19.219] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:29:39.080] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:29:53.847] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:29:54.861] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:30:03.675] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:30:35.363] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:30:37.866] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:30:45.186] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:30:46.784] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:31:02.586] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:36:33.881] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:36:42.484] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:37:06.748] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:37:21.373] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:37:25.857] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:37:43.831] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:37:45.098] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:37:57.464] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:38:09.599] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:38:17.939] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:38:51.700] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:39:03.672] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:39:07.210] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:39:08.065] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:39:42.102] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:40:09.742] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:40:27.253] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:40:48.524] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:40:56.569] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:40:57.155] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:41:06.851] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:41:35.775] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:41:44.566] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:42:12.024] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:42:26.468] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-26T16:42:34.346] [ERROR] cheese - 匹配路由错误: SyntaxError: Missing initializer in destructuring declaration
+[2021-11-26T16:50:14.818] [ERROR] cheese - 匹配路由错误: SyntaxError: Missing initializer in destructuring declaration
+[2021-11-26T16:53:12.755] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'class'
+[2021-11-26T16:53:38.279] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'class'
+[2021-11-26T16:53:47.472] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'class'
+[2021-11-26T16:54:32.505] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2021-11-26T16:54:38.404] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2021-11-26T16:54:41.371] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'class'
+[2021-11-26T16:54:54.250] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'class'
+[2021-11-26T16:55:10.653] [ERROR] cheese - 匹配路由错误: SyntaxError: Missing initializer in destructuring declaration
+[2021-11-26T16:55:19.947] [ERROR] cheese - 匹配路由错误: SyntaxError: Missing initializer in destructuring declaration
+[2021-11-26T16:55:27.992] [ERROR] cheese - 匹配路由错误: SyntaxError: Missing initializer in destructuring declaration
+[2021-11-26T16:56:08.828] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2021-11-26T16:56:14.469] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2021-11-26T16:57:46.113] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected identifier
+[2021-11-26T17:02:27.702] [ERROR] cheese - 注册seller的验证中间件 TypeError: Cannot destructure property 'account' of 'ctx.request.body' as it is undefined.
+[2021-11-26T17:06:18.556] [ERROR] cheese - 注册seller的验证中间件 TypeError: Assignment to constant variable.
+[2021-11-26T17:06:57.222] [ERROR] cheese - 注册seller的验证中间件 TypeError: Assignment to constant variable.
+[2021-11-26T17:07:11.902] [ERROR] cheese - 注册seller的验证中间件 TypeError: Assignment to constant variable.
+[2021-11-26T17:07:30.387] [ERROR] cheese - 注册seller的验证中间件 TypeError: Assignment to constant variable.
+[2021-11-26T17:07:47.252] [ERROR] cheese - 注册seller的验证中间件 TypeError: Assignment to constant variable.
+[2021-11-26T17:07:53.117] [ERROR] cheese - 注册seller的验证中间件 TypeError: Assignment to constant variable.
+[2021-11-26T17:08:03.877] [ERROR] cheese - 注册seller的验证中间件 TypeError: Assignment to constant variable.
+[2021-11-26T17:08:09.787] [ERROR] cheese - 注册seller的验证中间件 TypeError: Assignment to constant variable.
+[2021-11-26T17:09:49.437] [ERROR] cheese - 注册seller的验证中间件 TypeError: Assignment to constant variable.
+[2021-11-26T17:10:06.252] [ERROR] cheese - 注册seller的验证中间件 TypeError: Assignment to constant variable.
+[2021-11-26T17:10:54.028] [ERROR] cheese - 注册seller的验证中间件 TypeError: Assignment to constant variable.
+[2021-11-26T17:11:38.266] [ERROR] cheese - 注册seller的验证中间件 TypeError: Assignment to constant variable.
+[2021-11-26T17:11:55.928] [ERROR] cheese - 注册seller的验证中间件 TypeError: Assignment to constant variable.
+[2021-11-26T17:12:06.358] [ERROR] cheese - 注册seller的验证中间件 TypeError: Assignment to constant variable.
+[2021-11-26T17:12:11.377] [ERROR] cheese - 注册seller的验证中间件 TypeError: Assignment to constant variable.
+[2021-11-26T17:12:40.741] [ERROR] cheese - 注册seller的验证中间件 TypeError: Assignment to constant variable.
+[2021-11-26T17:14:31.525] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected identifier
+[2021-11-26T17:14:49.326] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token ':'
+[2021-11-26T17:52:15.510] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '.'
+[2021-11-26T17:55:46.353] [ERROR] cheese - 匹配路由错误: Error: Cannot find module '../../constants/errorTypes'
+Require stack:
+- /home/yrj_work/koa-apis-cms/src/middleware/common.middleware.js
+- /home/yrj_work/koa-apis-cms/src/middleware/seller.middleware.js
+- /home/yrj_work/koa-apis-cms/src/router/seller.router.js
+- /home/yrj_work/koa-apis-cms/src/router/index.js
+- /home/yrj_work/koa-apis-cms/src/index.js
+[2021-11-26T17:56:07.142] [ERROR] cheese - 匹配路由错误: Error: Cannot find module '../../constants/errorTypes'
+Require stack:
+- /home/yrj_work/koa-apis-cms/src/middleware/common.middleware.js
+- /home/yrj_work/koa-apis-cms/src/middleware/seller.middleware.js
+- /home/yrj_work/koa-apis-cms/src/router/seller.router.js
+- /home/yrj_work/koa-apis-cms/src/router/index.js
+- /home/yrj_work/koa-apis-cms/src/index.js
+[2021-11-26T17:56:12.468] [ERROR] cheese - 匹配路由错误: Error: Cannot find module '../../constants/errorTypes'
+Require stack:
+- /home/yrj_work/koa-apis-cms/src/middleware/common.middleware.js
+- /home/yrj_work/koa-apis-cms/src/middleware/seller.middleware.js
+- /home/yrj_work/koa-apis-cms/src/router/seller.router.js
+- /home/yrj_work/koa-apis-cms/src/router/index.js
+- /home/yrj_work/koa-apis-cms/src/index.js
+[2021-11-26T17:56:20.392] [ERROR] cheese - 匹配路由错误: Error: Cannot find module '../../constants/errorTypes'
+Require stack:
+- /home/yrj_work/koa-apis-cms/src/middleware/common.middleware.js
+- /home/yrj_work/koa-apis-cms/src/middleware/seller.middleware.js
+- /home/yrj_work/koa-apis-cms/src/router/seller.router.js
+- /home/yrj_work/koa-apis-cms/src/router/index.js
+- /home/yrj_work/koa-apis-cms/src/index.js
+[2021-11-26T17:56:30.719] [ERROR] cheese - 匹配路由错误: Error: Cannot find module '../../constants/errorTypes'
+Require stack:
+- /home/yrj_work/koa-apis-cms/src/middleware/common.middleware.js
+- /home/yrj_work/koa-apis-cms/src/middleware/seller.middleware.js
+- /home/yrj_work/koa-apis-cms/src/router/seller.router.js
+- /home/yrj_work/koa-apis-cms/src/router/index.js
+- /home/yrj_work/koa-apis-cms/src/index.js
+[2021-11-26T18:01:11.686] [ERROR] cheese - 匹配路由错误: Error: ENOENT: no such file or directory, open '/home/yrj_work/koa-apis-cms/src/constants/app/keys/private.key'
+[2021-11-26T18:02:14.008] [ERROR] cheese - 匹配路由错误: Error: ENOENT: no such file or directory, open '/home/yrj_work/koa-apis-cms/src/constants/app/keys/private.key'
+[2021-11-26T18:02:37.347] [ERROR] cheese - 匹配路由错误: Error: ENOENT: no such file or directory, open '/home/yrj_work/koa-apis-cms/src/constants/app/keys/private.key'
+[2021-11-26T18:02:52.184] [ERROR] cheese - 匹配路由错误: Error: ENOENT: no such file or directory, open '/home/yrj_work/koa-apis-cms/src/constants/app/keys/private.key'
+[2021-11-26T18:03:54.893] [ERROR] cheese - 匹配路由错误: Error: ENOENT: no such file or directory, open '/home/yrj_work/koa-apis-cms/src/constants/app/keys/public.key'
+[2021-11-26T18:06:29.773] [ERROR] cheese - 登录seller时 ReferenceError: createToken is not defined
+[2021-11-28T11:24:33.821] [ERROR] cheese - 匹配路由错误: SyntaxError: Identifier 'verifyToken' has already been declared
+[2021-11-28T14:32:13.105] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-28T14:32:15.416] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'

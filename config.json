@@ -1,0 +1,22 @@
+{
+    "app_config": {
+        "host": "localhost",
+        "port": 2140
+    },
+    "db_config": {
+        "host": "localhost",
+        "port": 3306,
+        "user": "root",
+        "password": "qqqw",
+        "database": "design"
+    },
+    "redis_config": {
+        "host": "localhost",
+        "port": 6379,
+        "password": "qqqw"
+    },
+    "web_socket_config": {
+        "ip": "192.168.0.99",
+        "port": 1070
+    }
+}
