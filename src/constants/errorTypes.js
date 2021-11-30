@@ -13,6 +13,8 @@ const SHOP_DOES_NOT_EXIST = 'shop_does_not_exist'
 const YOU_ALREADY_HAVE_A_SHOP = 'you_already_have_a_shop'
 const SHOP_WAS_CLOSED = 'shop_closed'
 const FOOD_CLASSIFY_ALREADY_EXIST = 'food_classify_already_exist'
+const DEVICE_ID_DIFFERENT = 'device_id_different'
+const QR_CODE_EXPIRED = 'qr_code_expired'
 
 
 module.exports = {
@@ -30,5 +32,7 @@ module.exports = {
     SHOP_DOES_NOT_EXIST,
     YOU_ALREADY_HAVE_A_SHOP,
     SHOP_WAS_CLOSED,
-    FOOD_CLASSIFY_ALREADY_EXIST
+    FOOD_CLASSIFY_ALREADY_EXIST,
+    DEVICE_ID_DIFFERENT,
+    QR_CODE_EXPIRED
 }

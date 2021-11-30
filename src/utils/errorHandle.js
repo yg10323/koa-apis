@@ -79,6 +79,16 @@ const errorHandler = (error, ctx) => {
             message = '该食品分类已存在'
             break;
 
+        case errorTypes.DEVICE_ID_DIFFERENT:
+            code = 400
+            message = 'device_id不一致'
+            break;
+
+        case errorTypes.QR_CODE_EXPIRED:
+            code = 400
+            message = '二维码已过期, 请重新扫码'
+            break;
+
         default:
             code = 404
             message = 'NOT FOUND'

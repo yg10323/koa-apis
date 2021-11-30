@@ -209,3 +209,50 @@ Require stack:
 [2021-11-28T11:24:33.821] [ERROR] cheese - 匹配路由错误: SyntaxError: Identifier 'verifyToken' has already been declared
 [2021-11-28T14:32:13.105] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
 [2021-11-28T14:32:15.416] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-30T09:52:17.367] [ERROR] cheese - 添加seller时 Error: Table 'design.seller' doesn't exist
+[2021-11-30T09:52:17.368] [ERROR] cheese - 登陆seller的中间件 TypeError: Cannot read property '0' of undefined
+[2021-11-30T09:53:21.267] [ERROR] cheese - 添加seller时 Error: Table 'design.seller' doesn't exist
+[2021-11-30T09:53:21.267] [ERROR] cheese - 登陆seller的中间件 TypeError: Cannot read property '0' of undefined
+[2021-11-30T09:54:13.076] [ERROR] cheese - 添加seller时 Error: Table 'design.seller' doesn't exist
+[2021-11-30T09:54:13.077] [ERROR] cheese - 登陆seller的中间件 TypeError: Cannot read property '0' of undefined
+[2021-11-30T09:54:21.099] [ERROR] cheese - 判断seller是否存在 Error: Table 'design.seller' doesn't exist
+[2021-11-30T09:54:21.099] [ERROR] cheese - 注册seller的验证中间件 TypeError: Cannot read property 'length' of undefined
+[2021-11-30T09:55:15.568] [ERROR] cheese - 添加seller时 Error: Table 'design.seller' doesn't exist
+[2021-11-30T09:55:15.568] [ERROR] cheese - 登陆seller的中间件 TypeError: Cannot read property '0' of undefined
+[2021-11-30T09:56:42.827] [ERROR] cheese - 添加seller时 Error: Table 'design.seller' doesn't exist
+[2021-11-30T09:56:42.828] [ERROR] cheese - 登陆seller的中间件 TypeError: Cannot read property '0' of undefined
+[2021-11-30T09:57:17.863] [ERROR] cheese - 添加seller时 Error: Table 'design.seller' doesn't exist
+[2021-11-30T09:57:17.864] [ERROR] cheese - 登陆seller的中间件 TypeError: Cannot read property '0' of undefined
+[2021-11-30T09:58:34.296] [ERROR] cheese - 添加seller时 Error: Table 'design.seller' doesn't exist
+[2021-11-30T09:58:34.298] [ERROR] cheese - 登陆seller的中间件 TypeError: Cannot read property '0' of undefined
+[2021-11-30T09:59:43.704] [ERROR] cheese - 添加seller时 Error: Table 'design.seller' doesn't exist
+[2021-11-30T09:59:43.704] [ERROR] cheese - 登陆seller的中间件 TypeError: Cannot read property '0' of undefined
+[2021-11-30T10:00:05.297] [ERROR] cheese - 添加seller时 Error: Table 'design.seller' doesn't exist
+[2021-11-30T10:00:05.297] [ERROR] cheese - 登陆seller的中间件 TypeError: Cannot read property '0' of undefined
+[2021-11-30T10:00:17.197] [ERROR] cheese - 添加seller时 Error: Table 'design.seller' doesn't exist
+[2021-11-30T10:00:17.197] [ERROR] cheese - 登陆seller的中间件 TypeError: Cannot read property '0' of undefined
+[2021-11-30T19:33:38.343] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-11-30T19:44:33.819] [ERROR] cheese - 匹配路由错误: ReferenceError: saveDeviceId is not defined
+[2021-11-30T19:44:43.837] [ERROR] cheese - 匹配路由错误: Error: post `/send_deviceid`: `middleware` must be a function, not `undefined`
+[2021-11-30T19:44:55.339] [ERROR] cheese - 匹配路由错误: Error: post `/send_deviceid`: `middleware` must be a function, not `undefined`
+[2021-11-30T19:44:58.540] [ERROR] cheese - 匹配路由错误: Error: post `/send_deviceid`: `middleware` must be a function, not `undefined`
+[2021-11-30T19:45:15.070] [ERROR] cheese - 匹配路由错误: Error: post `/send_deviceid`: `middleware` must be a function, not `undefined`
+[2021-11-30T19:45:32.404] [ERROR] cheese - 匹配路由错误: SyntaxError: Missing initializer in destructuring declaration
+[2021-11-30T19:50:00.783] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2021-11-30T20:31:27.895] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2021-11-30T20:33:56.891] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2021-11-30T20:34:01.366] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2021-11-30T20:37:46.195] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2021-11-30T20:48:08.822] [ERROR] cheese - 匹配路由错误: SyntaxError: Missing initializer in destructuring declaration
+[2021-11-30T20:50:56.811] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'class'
+[2021-11-30T21:01:49.204] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2021-11-30T21:05:54.078] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2021-11-30T21:17:07.108] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2021-11-30T21:21:15.560] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'class'
+[2021-11-30T21:21:38.618] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2021-11-30T21:32:03.910] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2021-11-30T21:57:53.680] [ERROR] cheese - Seller==verifyScanLogin ReferenceError: account is not defined
+[2021-11-30T22:00:35.285] [ERROR] cheese - Seller==verifyScanLogin ReferenceError: account is not defined
+[2021-11-30T22:01:43.532] [ERROR] cheese - Seller==verifyScanLogin ReferenceError: account is not defined
+[2021-11-30T22:02:37.142] [ERROR] cheese - Seller==verifyScanLogin ReferenceError: account is not defined
+[2021-11-30T22:03:09.182] [ERROR] cheese - Seller==verifyScanLogin ReferenceError: account is not defined

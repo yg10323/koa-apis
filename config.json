@@ -11,9 +11,8 @@
         "database": "design"
     },
     "redis_config": {
-        "host": "localhost",
-        "port": 6379,
-        "password": "qqqw"
+        "host": "127.0.0.1",
+        "port": 6379
     },
     "web_socket_config": {
         "ip": "192.168.0.99",

@@ -21,7 +21,7 @@ const encryption = (pwd) => {
 const createToken = (payload, expires) => {
     try {
         const token = jwt.sign({ ...payload }, PRIVATE_KEY, {
-            // token有效期为一天
+            // token有效期
             expiresIn: expires,
             // 加密算法
             algorithm: 'RS256'

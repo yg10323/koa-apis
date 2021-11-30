@@ -25,6 +25,12 @@ io.on("connection", socket => {
     console.log(`客户端${socket.handshake.address}已连接`);
     console.log(`已连接的客户端数量: ${socket.server.eio.clientsCount}`);
 
+    // 连接一个客户端后建立两个广播频道
+    // 监听二维码过期的信息
+    const SubscribeExpire = new BroadcastChannel('SubscribeExpire')
+    // 监听给web端下发token的信息
+    const ScanCodeToWeb = new BroadcastChannel('ScanCodeToWeb')
+
     // 监听客户端二维码请求
     socket.on('getQrCode', async () => {
         //问题 socket通信建立以后, node进程会随着时间的推移打开的文件句柄增多
@@ -40,22 +46,29 @@ io.on("connection", socket => {
             // redis中的key是socke_id,确保二维码的唯一
             redis.set(socket.id, JSON.stringify({ sid: socket.id, qid }), 10);
             // qrInfo: 用于用户在手机端扫码时比对信息使用
-            io.to(socket.id).emit('sendQrCode', { qr: getQRcode(str), qrInfo: { sid: socket.id, qid } })
+            // TODO  2021-11-30 20:37:26 qrInfo在手机端好像没用到, 后面再看一下
+            io.to(socket.id).emit('sendQrCode', { qr: getQRcode({ sid: socket.id, qid }), qrInfo: { sid: socket.id, qid } })
         }
     });
 
     // 监听客户端断开
-    socket.on("disconnect", () => {
+    socket.on("disconnect", async () => {
         console.log(`客户端${socket.handshake.address}已断开`);
+        // 当前客户端断开时关闭该广播监听
+        await SubscribeExpire.close()
     });
 
     // 根据socket_id通知对应的socket客户端二维码过期了
-    new BroadcastChannel('SubscribeExpire').onmessage = sid => io.to(sid).emit('qrOverTime')
+    SubscribeExpire.onmessage = sid => io.to(sid).emit('qrOverTime')
+    ScanCodeToWeb.onmessage = async (msg) => {
+        io.to(msg.socketId).emit('scanCodeWebToken', msg.req)
+        await ScanCodeToWeb.close()
+    }
 
 })
 
 
 // 启动socket服务
 http.listen(port, function () {
-    console.log(`socket服务启动成功,端口: ${port}`);
+    console.log(`socket服务已启动, 端口: ${port}`);
 });

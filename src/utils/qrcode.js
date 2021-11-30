@@ -1,9 +1,9 @@
 const qr = require('qr-image')
 
 
-const getQRcode = (str) => {
-    // 根据 randomNumber 的随机字符串生成base64二维码
-    return `data:image/png;base64,${qr.imageSync(str, { type: 'png' }).toString("base64")}`
+const getQRcode = (obj) => {
+    // 二维码包含的信息为socke_id和随机字符串, 对应redis中的value
+    return `data:image/png;base64,${qr.imageSync(JSON.stringify(obj), { type: 'png' }).toString("base64")}`
 }
 
 

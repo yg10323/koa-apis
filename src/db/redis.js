@@ -1,5 +1,5 @@
 const redis = require("redis");
-// const BroadcastChannel = require('../broadcast/broadcastChannel')
+const { redis_config } = require('../../config.json')
 const { BroadcastChannel } = require('broadcast-channel')
 
 
@@ -7,12 +7,12 @@ class Redis {
 
     constructor() {
         this.client = redis.createClient({
-            host: '127.0.0.1',
-            port: 6379,
+            host: redis_config.host,
+            port: redis_config.port,
         });
 
         this.client.on("connect", () => {
-            console.log(`redis已连接到 ${this.client.address}`);
+            console.log(`redis已连接, 端口: ${redis_config.port}`);
         });
 
         this.client.on("error", function (error) {
@@ -45,7 +45,6 @@ class Redis {
                 // console.log(`key：${msg} 已过期... `);
                 // 广播二维码过期
                 new BroadcastChannel('SubscribeExpire').postMessage(msg);
-
             });
         })
     }
