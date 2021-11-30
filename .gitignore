@@ -1,1 +1,3 @@
 /node_modules
+/src/constants/keys/private.key
+/src/constants/keys/public.key
