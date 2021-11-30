@@ -45,8 +45,7 @@ io.on("connection", socket => {
             let qid = random(16, { numbers: true });
             // redis中的key是socke_id,确保二维码的唯一
             redis.set(socket.id, JSON.stringify({ sid: socket.id, qid }), 10);
-            // qrInfo: 用于用户在手机端扫码时比对信息使用
-            // TODO  2021-11-30 20:37:26 qrInfo在手机端好像没用到, 后面再看一下
+            // qrInfo: 用于用户在手机端扫码确认后在服务端再次比对信息、下发token使用
             io.to(socket.id).emit('sendQrCode', { qr: getQRcode({ sid: socket.id, qid }), qrInfo: { sid: socket.id, qid } })
         }
     });
