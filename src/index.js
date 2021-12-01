@@ -7,7 +7,7 @@ const errorHandler = require('./utils/errorHandle')
 const path = require('path');
 const { port } = require('../config.json').app_config;
 require('./db/db');//标记连接数据库, 正式发布时注释
-require('./socket/socket');//启动socket服务
+// require('./socket/socket');//启动socket服务
 
 const app = new Koa();
 
