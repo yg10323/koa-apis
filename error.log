@@ -256,3 +256,87 @@ Require stack:
 [2021-11-30T22:01:43.532] [ERROR] cheese - Seller==verifyScanLogin ReferenceError: account is not defined
 [2021-11-30T22:02:37.142] [ERROR] cheese - Seller==verifyScanLogin ReferenceError: account is not defined
 [2021-11-30T22:03:09.182] [ERROR] cheese - Seller==verifyScanLogin ReferenceError: account is not defined
+[2021-12-01T19:58:58.730] [ERROR] cheese - 匹配路由错误: ReferenceError: verifyAccount is not defined
+[2021-12-01T19:59:14.683] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T19:59:21.146] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T19:59:33.885] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:00:08.017] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:00:10.084] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:00:21.880] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:05:00.588] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:05:23.971] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:05:30.394] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:05:31.772] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:05:41.011] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:05:53.763] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:05:58.106] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:17:19.631] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:18:26.284] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:18:31.907] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:18:34.335] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:18:39.183] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:18:45.007] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:18:52.241] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:19:02.868] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:19:24.628] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:19:30.057] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:19:33.580] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:19:33.960] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:19:59.259] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:20:39.227] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:21:16.591] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:21:19.331] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:21:30.940] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:21:47.212] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:21:51.409] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:22:35.041] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:22:50.707] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:23:12.505] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:23:23.313] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:23:30.670] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:23:51.444] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:25:02.070] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:25:26.981] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:25:30.224] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:25:43.296] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:25:53.473] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:25:59.341] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:26:03.567] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:26:15.738] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:26:26.647] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:26:51.892] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:27:15.332] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:27:20.161] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:27:53.326] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:27:57.654] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:28:02.981] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:28:26.202] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:28:29.901] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:28:47.917] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:29:01.650] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:29:28.856] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:29:45.961] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:30:01.678] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:30:29.012] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:30:38.634] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:30:49.390] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:31:02.196] [ERROR] cheese - 匹配路由错误: TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+[2021-12-01T20:31:25.879] [ERROR] cheese - 匹配路由错误: Error: get `/2/menu`: `middleware` must be a function, not `undefined`
+[2021-12-01T20:31:37.710] [ERROR] cheese - 匹配路由错误: SyntaxError: Missing initializer in destructuring declaration
+[2021-12-01T20:31:52.773] [ERROR] cheese - 匹配路由错误: Error: get `/2/menu`: `middleware` must be a function, not `undefined`
+[2021-12-01T20:31:58.144] [ERROR] cheese - 匹配路由错误: Error: get `/2/menu`: `middleware` must be a function, not `undefined`
+[2021-12-01T21:13:20.475] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2021-12-01T21:13:25.158] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected identifier
+[2021-12-01T21:13:36.422] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2021-12-01T21:21:13.006] [ERROR] cheese - RoleService_getMenu ReferenceError: menu is not defined
+[2021-12-01T21:21:16.597] [ERROR] cheese - RoleService_getMenu ReferenceError: menu is not defined
+[2021-12-01T21:22:25.623] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2021-12-01T21:22:26.583] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2021-12-01T21:22:31.452] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2021-12-01T21:36:51.324] [ERROR] cheese - RoleService_getMenu Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'parent FROM menu m WHERE m.pid IS NULL AND m.role_id = 2' at line 1
+[2021-12-01T21:36:59.081] [ERROR] cheese - RoleService_getMenu Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as parent FROM menu m WHERE m.pid IS NULL AND m.role_id = 2' at line 1
+[2021-12-01T21:38:45.814] [ERROR] cheese - RoleService_getMenu Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as parent' at line 1
+[2021-12-01T21:44:30.650] [ERROR] cheese - 匹配路由错误: SyntaxError: Identifier 'statement' has already been declared
+[2021-12-01T21:44:31.829] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2021-12-01T21:46:09.455] [ERROR] cheese - RoleService_getMenu ReferenceError: parent is not defined
+[2021-12-01T21:47:06.271] [ERROR] cheese - RoleService_getMenu ReferenceError: parent is not defined

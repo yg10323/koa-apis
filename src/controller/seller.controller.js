@@ -36,6 +36,7 @@ class SellerController {
             ctx.body = {
                 code: 200,
                 message: `${account}登录成功`,
+                userInfo: { account, role_id },
                 token
             }
         } catch (error) {
@@ -65,6 +66,7 @@ class SellerController {
                 req: {
                     code: 200,
                     message: `${account}登录成功`,
+                    userInfo: { account, role_id },
                     token
                 }
             }

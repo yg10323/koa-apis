@@ -32,5 +32,5 @@ app.on('error', errorHandler)
 
 // express服务
 app.listen(port, () => {
-    console.log(`express服务已启动, 端口: ${port}`);
+    console.log(`koa服务已启动, 端口: ${port}`);
 })
