@@ -12,7 +12,7 @@ class SellerService {
             const [res] = await connection.execute(statement, [account, account])
             return res
         } catch (error) {
-            logger.error('判断seller是否存在 ' + error)
+            logger.error('SellerService_judgeSeller ' + error)
         }
     }
 
@@ -23,7 +23,7 @@ class SellerService {
             const [res] = await connection.execute(statement, [account, password, sid]);
             return res
         } catch (error) {
-            logger.error('添加seller时 ' + error);
+            logger.error('SellerService_addSeller ' + error);
         }
     }
 
@@ -34,9 +34,11 @@ class SellerService {
             const [res] = await connection.execute(statement, [account]);
             return res
         } catch (error) {
-            logger.error('添加seller进行seller是否存在判断 ' + error);
+            logger.error('SellerService_getSellerByAccount ' + error);
         }
     }
+
+
 }
 
 

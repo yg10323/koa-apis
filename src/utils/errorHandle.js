@@ -35,6 +35,11 @@ const errorHandler = (error, ctx) => {
             message = '无效token或缺少缺失'
             break;
 
+        case errorTypes.UNAUTHORIZED_OPERATION:
+            code = 401
+            message = '越权操作'
+            break;
+
         case errorTypes.REAL_NAME_INFORMATION_ALREADY_EXIST:
             code = 403
             message = '实名信息已经存在'

@@ -1,12 +1,13 @@
 const errorTypes = require('../constants/errorTypes')
 const SellerService = require('../service/seller.service')
+const ShopService = require('../service/shop.service')
 const { encryption } = require('./common.middleware')
 const looger = require('../utils/logHandle')
 const redis = require('../db/redis')
 const logger = require('../utils/logHandle')
 const jwt = require('jsonwebtoken')
 const { PUBLIC_KEY } = require('../constants/keys');
-
+const { staticPath } = require('../../config.json')
 
 class SellerVerify {
 
@@ -64,7 +65,7 @@ class SellerVerify {
                 return ctx.app.emit('error', error, ctx)
             }
             // 5. 保存信息, 准备下发token
-            ctx.seller = { sid: seller.sid, role_id: seller.role_id, account, longKeep }
+            ctx.seller = { id: seller.id, role_id: seller.role_id, account, longKeep }
             await next();
         } catch (error) {
             looger.error('Seller==verifyLogin ' + error)
@@ -103,7 +104,7 @@ class SellerVerify {
             }
             // 6. 方行, 准备给web端下发token
             ctx.seller = {
-                sid: seller.sid,
+                id: seller.id,
                 role_id: seller.role_id,
                 account: seller.account,
                 longKeep: false,
@@ -113,6 +114,95 @@ class SellerVerify {
 
         } catch (error) {
             logger.error('Seller==verifyScanLogin ' + error)
+        }
+    }
+
+    // 获取实名状态
+    async verifyRealName(ctx, next) {
+        try {
+            const { account } = ctx.user
+            const res = await SellerService.getSellerByAccount(account);
+            const seller = res[0];
+            if (!seller.name || !seller.iid || !seller.phone) {
+                const error = new Error(errorTypes.INCOMPLETE_REAL_NAME_INFORMATION);
+                return ctx.app.emit('error', error, ctx);
+            }
+            // console.log(seller);
+            ctx.body = {
+                code: 200,
+                message: '已实名'
+            }
+        } catch (error) {
+            logger.error('SellerController_getRealName ' + error)
+        }
+    }
+
+    // 注册店铺验证
+    async verifyCreateShop(ctx, next) {
+        try {
+            const { account, role_id } = ctx.user
+            // 1. 用户是否存在
+            const res = await SellerService.getSellerByAccount(account);
+            const seller = res[0];
+            if (!seller) {
+                const error = new Error(errorTypes.ACCOUNT_DOES_NOT_EXIST);
+                return ctx.app.emit('error', error, ctx);
+            }
+            // 2. 是否越权
+            if (seller.role_id !== role_id) {
+                const error = new Error(errorTypes.UNAUTHORIZED_OPERATION);
+                return ctx.app.emit('error', error, ctx)
+            }
+            // 3. 账号是否可用
+            if (seller.usable === 0) {
+                const error = new Error(errorTypes.ACCOUNT_HAS_BEEN_DISABLED)
+                return ctx.app.emit('error', error, ctx)
+            }
+            // 3. 是否已经实名认证
+            if (!seller.name || !seller.iid || !seller.phone) {
+                const error = new Error(errorTypes.INCOMPLETE_REAL_NAME_INFORMATION);
+                return ctx.app.emit('error', error, ctx);
+            }
+            // 4. 是否已经注册过店铺
+            const hasShop = await ShopService.getShopBySellerId(seller.id)
+            if (hasShop.length) {
+                const error = new Error(errorTypes.YOU_ALREADY_HAVE_A_SHOP);
+                return ctx.app.emit('error', error, ctx)
+            }
+
+            //TODO 由4查询的结果判断店铺是否被封禁 => 添加食品时验证
+
+            await next()
+
+        } catch (error) {
+            logger.error('SellerVerify_verifyCreateShop ' + error)
+        }
+
+    }
+
+    // 注册之前进行数据处理
+    async dealData(ctx, next) {
+        try {
+            const { id } = ctx.user
+            const files = ctx.request.files.file;
+            const shopInfo = JSON.parse(ctx.request.body.data);
+            let counter = 1;
+            // 拼接图片地址
+            files.forEach(file => {
+                const path = staticPath + '/' + file.path.match(/upload_.*/)
+                shopInfo[`url_${counter}`] = path;
+                counter++
+            });
+            // 格式化数据
+            shopInfo.seller_id = id;
+            shopInfo.op_id = shopInfo.classify[0];
+            shopInfo.ch_id = shopInfo.classify[1];
+            delete shopInfo.classify
+
+            ctx.user.arrayInfo = [...Object.values(shopInfo)]
+            await next();
+        } catch (error) {
+            logger.error('SellerVerify_dealData ' + error)
         }
     }
 }

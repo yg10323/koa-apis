@@ -1,4 +1,5 @@
 {
+    "staticPath": "http://124.70.20.215:2140/upload",
     "app_config": {
         "host": "localhost",
         "port": 2140

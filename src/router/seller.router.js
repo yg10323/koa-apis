@@ -2,15 +2,20 @@ const Router = require('koa-router')
 const {
     verifyRegister,
     verifyLogin,
-    verifyScanLogin
+    verifyScanLogin,
+    verifyRealName,
+    verifyCreateShop,
+    dealData
 } = require('../middleware/seller.middleware')
 const {
     register,
     login,
     saveDeviceId,
-    scanLogin
+    scanLogin,
+    createShop,
 } = require('../controller/seller.controller')
 const { verifyToken } = require('../middleware/common.middleware')
+// const { verify } = require('jsonwebtoken')
 
 
 const sellerRouter = new Router({ prefix: '/api/seller' })
@@ -29,5 +34,10 @@ sellerRouter.post('/login', verifyLogin, login)
 sellerRouter.post('/send_deviceid', saveDeviceId)
 // 扫码登录
 sellerRouter.post('/scan_login', verifyScanLogin, scanLogin)
+// 查询实名状态
+sellerRouter.get('/get_real_name', verifyToken, verifyRealName)
+// 注册店铺
+sellerRouter.post('/create_shop', verifyToken, verifyCreateShop, dealData, createShop)
+
 
 module.exports = sellerRouter

@@ -1,15 +1,16 @@
 const SellerService = require('../service/seller.service')
+const ShopService = require('../service/shop.service')
 const logger = require('../utils/logHandle');
 const { createToken } = require('../middleware/common.middleware')
 const redis = require('../db/redis')
 const { BroadcastChannel } = require('broadcast-channel')
 
 
+
 class SellerController {
 
     // 注册
     async register(ctx, next) {
-        // console.log(ctx.request.files.avatar.path.match(/upload_.*/));
         try {
             const { account, password } = ctx.seller;
             // sid 由当前时间的时间戳生成, 几乎保证唯一性
@@ -28,8 +29,8 @@ class SellerController {
     // 密码登录时, 下发token
     async login(ctx, next) {
         try {
-            const { sid, account, role_id, longKeep } = ctx.seller;
-            const payload = { sid, account, role_id };
+            const { id, account, role_id, longKeep } = ctx.seller;
+            const payload = { id, account, role_id };
             // 根据longKeep为web和app设置不同的有效期
             const expire = longKeep ? 60 * 60 * 24 * 365 * 100 : 60 * 60 * 24;
             const token = createToken(payload, expire);
@@ -56,8 +57,8 @@ class SellerController {
     // 与上方login的逻辑一致, 只是多了向socket广播下发token
     async scanLogin(ctx, next) {
         try {
-            const { sid, account, role_id, longKeep, socketId } = ctx.seller;
-            const payload = { sid, account, role_id };
+            const { id, account, role_id, longKeep, socketId } = ctx.seller;
+            const payload = { id, account, role_id };
             // 根据longKeep为web和app设置不同的有效期
             const expire = longKeep ? 60 * 60 * 24 * 365 * 100 : 60 * 60 * 24;
             const token = createToken(payload, expire);
@@ -76,6 +77,22 @@ class SellerController {
             await ScanCodeToWeb.close()
         } catch (error) {
             logger.error('登录seller时 ' + error)
+        }
+    }
+
+    // 注册店铺
+    async createShop(ctx, next) {
+        try {
+            const shopInfo = ctx.user.arrayInfo;
+            const res = await ShopService.createShop(shopInfo);
+            // console.log(res);
+            ctx.body = {
+                code: 200,
+                message: '注册店铺成功, 赶快添加食品吧~',
+            }
+
+        } catch (error) {
+            logger.error('SellerController_createShop ' + error)
         }
     }
 }

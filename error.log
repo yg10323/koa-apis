@@ -340,3 +340,109 @@ Require stack:
 [2021-12-01T21:44:31.829] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
 [2021-12-01T21:46:09.455] [ERROR] cheese - RoleService_getMenu ReferenceError: parent is not defined
 [2021-12-01T21:47:06.271] [ERROR] cheese - RoleService_getMenu ReferenceError: parent is not defined
+[2021-12-03T10:37:23.691] [ERROR] cheese - 匹配路由错误: ReferenceError: verifyCreateShop is not defined
+[2021-12-03T10:37:35.225] [ERROR] cheese - 匹配路由错误: ReferenceError: verifyCreateShop is not defined
+[2021-12-03T10:37:38.479] [ERROR] cheese - 匹配路由错误: Error: post `/create_shop`: `middleware` must be a function, not `undefined`
+[2021-12-03T10:38:13.791] [ERROR] cheese - 匹配路由错误: Error: post `/create_shop`: `middleware` must be a function, not `undefined`
+[2021-12-03T10:58:59.515] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token ')'
+[2021-12-03T11:00:54.595] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token ')'
+[2021-12-03T14:51:31.639] [ERROR] cheese - 匹配路由错误: ReferenceError: createShop is not defined
+[2021-12-03T14:51:36.232] [ERROR] cheese - 匹配路由错误: Error: post `/create_shop`: `middleware` must be a function, not `undefined`
+[2021-12-03T14:51:44.787] [ERROR] cheese - 匹配路由错误: Error: post `/create_shop`: `middleware` must be a function, not `undefined`
+[2021-12-03T14:58:59.705] [ERROR] cheese - 匹配路由错误: ReferenceError: getRealName is not defined
+[2021-12-03T14:59:07.788] [ERROR] cheese - 匹配路由错误: Error: get `/get_real_name`: `middleware` must be a function, not `undefined`
+[2021-12-03T14:59:14.502] [ERROR] cheese - 匹配路由错误: Error: get `/get_real_name`: `middleware` must be a function, not `undefined`
+[2021-12-03T15:02:56.864] [ERROR] cheese - SellerController_getRealName ReferenceError: errorTypes is not defined
+[2021-12-03T15:03:53.704] [ERROR] cheese - SellerController_getRealName ReferenceError: errorTypes is not defined
+[2021-12-03T15:04:09.400] [ERROR] cheese - SellerController_getRealName ReferenceError: errorTypes is not defined
+[2021-12-03T15:05:24.507] [ERROR] cheese - SellerController_getRealName ReferenceError: errorTypes is not defined
+[2021-12-03T15:06:08.113] [ERROR] cheese - SellerController_getRealName ReferenceError: errorTypes is not defined
+[2021-12-03T15:06:27.574] [ERROR] cheese - SellerController_getRealName ReferenceError: errorTypes is not defined
+[2021-12-03T15:08:00.163] [ERROR] cheese - SellerController_getRealName ReferenceError: errorTypes is not defined
+[2021-12-03T15:08:28.798] [ERROR] cheese - SellerController_getRealName ReferenceError: errorTypes is not defined
+[2021-12-03T15:08:53.928] [ERROR] cheese - SellerController_getRealName ReferenceError: errorTypes is not defined
+[2021-12-03T15:09:14.465] [ERROR] cheese - SellerController_getRealName ReferenceError: errorTypes is not defined
+[2021-12-03T15:09:56.417] [ERROR] cheese - SellerController_getRealName ReferenceError: errorTypes is not defined
+[2021-12-03T15:10:16.141] [ERROR] cheese - 匹配路由错误: Error: get `/get_real_name`: `middleware` must be a function, not `undefined`
+[2021-12-03T15:10:32.752] [ERROR] cheese - 匹配路由错误: Error: get `/get_real_name`: `middleware` must be a function, not `undefined`
+[2021-12-03T15:10:45.389] [ERROR] cheese - 匹配路由错误: Error: get `/get_real_name`: `middleware` must be a function, not `undefined`
+[2021-12-03T15:24:59.912] [ERROR] cheese - 匹配路由错误: TypeError: router.routes is not a function
+[2021-12-03T15:25:04.994] [ERROR] cheese - 匹配路由错误: TypeError: router.routes is not a function
+[2021-12-03T15:25:24.035] [ERROR] cheese - 匹配路由错误: TypeError: router.routes is not a function
+[2021-12-03T15:25:26.969] [ERROR] cheese - 匹配路由错误: TypeError: router.routes is not a function
+[2021-12-03T15:25:28.319] [ERROR] cheese - 匹配路由错误: TypeError: router.routes is not a function
+[2021-12-03T15:29:20.428] [ERROR] cheese - 匹配路由错误: ReferenceError: getClassify is not defined
+[2021-12-03T15:29:39.464] [ERROR] cheese - 匹配路由错误: Error: get `/get_classify`: `middleware` must be a function, not `undefined`
+[2021-12-03T15:29:45.087] [ERROR] cheese - 匹配路由错误: Error: get `/get_classify`: `middleware` must be a function, not `undefined`
+[2021-12-03T15:29:46.622] [ERROR] cheese - 匹配路由错误: Error: get `/get_classify`: `middleware` must be a function, not `undefined`
+[2021-12-03T15:30:00.087] [ERROR] cheese - 匹配路由错误: Error: Cannot find module '../controller/shop_controller'
+Require stack:
+- /home/yrj_work/koa-apis/src/router/shop.router.js
+- /home/yrj_work/koa-apis/src/router/index.js
+- /home/yrj_work/koa-apis/src/index.js
+[2021-12-03T15:30:05.852] [ERROR] cheese - 匹配路由错误: Error: get `/get_classify`: `middleware` must be a function, not `undefined`
+[2021-12-03T15:32:06.215] [ERROR] cheese - 匹配路由错误: Error: Cannot find module '../service/shop.cervice'
+Require stack:
+- /home/yrj_work/koa-apis/src/controller/shop.controller.js
+- /home/yrj_work/koa-apis/src/router/shop.router.js
+- /home/yrj_work/koa-apis/src/router/index.js
+- /home/yrj_work/koa-apis/src/index.js
+[2021-12-03T22:55:30.273] [ERROR] cheese - 匹配路由错误: ReferenceError: upload is not defined
+[2021-12-03T22:55:48.132] [ERROR] cheese - 匹配路由错误: Error: post `/upload`: `middleware` must be a function, not `undefined`
+[2021-12-03T22:56:24.670] [ERROR] cheese - 匹配路由错误: Error: post `/upload`: `middleware` must be a function, not `undefined`
+[2021-12-04T12:24:01.956] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected identifier
+[2021-12-04T14:49:28.950] [ERROR] cheese - 匹配路由错误: Error: post `/upload`: `middleware` must be a function, not `undefined`
+[2021-12-04T14:51:39.761] [ERROR] cheese - SellerService_getShopById Error: Table 'design.shop' doesn't exist
+[2021-12-04T14:51:39.762] [ERROR] cheese - SellerVerify_verifyCreateShop TypeError: Cannot read property 'length' of undefined
+[2021-12-04T14:52:16.389] [ERROR] cheese - SellerService_getShopById Error: Table 'design.shop' doesn't exist
+[2021-12-04T14:52:16.390] [ERROR] cheese - SellerVerify_verifyCreateShop TypeError: Cannot read property 'length' of undefined
+[2021-12-04T14:53:44.527] [ERROR] cheese - SellerService_getShopById Error: Table 'design.shop' doesn't exist
+[2021-12-04T14:53:44.528] [ERROR] cheese - SellerVerify_verifyCreateShop TypeError: Cannot read property 'length' of undefined
+[2021-12-04T14:54:06.207] [ERROR] cheese - SellerService_getShopById Error: Table 'design.shop' doesn't exist
+[2021-12-04T14:54:06.208] [ERROR] cheese - SellerVerify_verifyCreateShop TypeError: Cannot read property 'length' of undefined
+[2021-12-04T15:02:08.176] [ERROR] cheese - 匹配路由错误: ReferenceError: shop is not defined
+[2021-12-04T15:08:27.866] [ERROR] cheese - 匹配路由错误: ReferenceError: shopExist is not defined
+[2021-12-04T15:08:39.818] [ERROR] cheese - 匹配路由错误: Error: get `/shop_exist`: `middleware` must be a function, not `undefined`
+[2021-12-04T15:08:42.235] [ERROR] cheese - 匹配路由错误: Error: get `/shop_exist`: `middleware` must be a function, not `undefined`
+[2021-12-04T15:19:27.986] [ERROR] cheese - ShopController_shopExist ReferenceError: ctx is not defined
+[2021-12-04T15:19:37.706] [ERROR] cheese - ShopController_shopExist ReferenceError: ctx is not defined
+[2021-12-04T15:19:55.208] [ERROR] cheese - ShopController_shopExist ReferenceError: ctx is not defined
+[2021-12-04T16:38:47.430] [ERROR] cheese - 匹配路由错误: ReferenceError: hasShop is not defined
+[2021-12-04T16:39:08.783] [ERROR] cheese - 匹配路由错误: ReferenceError: hasShop is not defined
+[2021-12-04T16:39:16.136] [ERROR] cheese - 匹配路由错误: Error: get `/has_shop`: `middleware` must be a function, not `undefined`
+[2021-12-04T16:45:00.714] [ERROR] cheese - ShopController_hasShop ReferenceError: seller is not defined
+[2021-12-04T16:45:08.286] [ERROR] cheese - ShopController_hasShop ReferenceError: seller is not defined
+[2021-12-04T16:45:30.072] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-12-04T16:46:12.670] [ERROR] cheese - 匹配路由错误: SyntaxError: Identifier 'res' has already been declared
+[2021-12-04T16:46:19.362] [ERROR] cheese - 匹配路由错误: SyntaxError: Identifier 'res' has already been declared
+[2021-12-04T16:46:24.588] [ERROR] cheese - 匹配路由错误: SyntaxError: Identifier 'res' has already been declared
+[2021-12-04T16:46:26.046] [ERROR] cheese - 匹配路由错误: SyntaxError: Identifier 'res' has already been declared
+[2021-12-04T16:46:27.442] [ERROR] cheese - 匹配路由错误: SyntaxError: Identifier 'res' has already been declared
+[2021-12-04T16:46:28.794] [ERROR] cheese - 匹配路由错误: SyntaxError: Identifier 'res' has already been declared
+[2021-12-04T16:46:30.083] [ERROR] cheese - 匹配路由错误: SyntaxError: Identifier 'res' has already been declared
+[2021-12-04T16:46:31.470] [ERROR] cheese - 匹配路由错误: SyntaxError: Identifier 'res' has already been declared
+[2021-12-04T16:46:32.695] [ERROR] cheese - 匹配路由错误: SyntaxError: Identifier 'res' has already been declared
+[2021-12-04T16:46:34.005] [ERROR] cheese - 匹配路由错误: SyntaxError: Identifier 'res' has already been declared
+[2021-12-04T16:46:35.314] [ERROR] cheese - 匹配路由错误: SyntaxError: Identifier 'res' has already been declared
+[2021-12-04T16:46:36.486] [ERROR] cheese - 匹配路由错误: SyntaxError: Identifier 'res' has already been declared
+[2021-12-04T16:46:37.537] [ERROR] cheese - 匹配路由错误: SyntaxError: Identifier 'res' has already been declared
+[2021-12-04T17:01:46.394] [ERROR] cheese - 匹配路由错误: ReferenceError: dealUpload is not defined
+[2021-12-04T17:02:37.913] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2021-12-04T17:04:37.174] [ERROR] cheese - 匹配路由错误: SyntaxError: Missing initializer in destructuring declaration
+[2021-12-04T17:04:39.432] [ERROR] cheese - 匹配路由错误: SyntaxError: Missing initializer in destructuring declaration
+[2021-12-04T17:10:47.069] [ERROR] cheese - SellerVerify_dealUpload TypeError: files.forEach is not a function
+[2021-12-04T17:10:57.211] [ERROR] cheese - SellerVerify_dealUpload TypeError: files.forEach is not a function
+[2021-12-04T17:11:15.875] [ERROR] cheese - SellerVerify_dealUpload TypeError: files.forEach is not a function
+[2021-12-04T17:12:06.798] [ERROR] cheese - SellerVerify_dealUpload TypeError: files.forEach is not a function
+[2021-12-04T17:12:11.470] [ERROR] cheese - SellerVerify_dealUpload TypeError: files.forEach is not a function
+[2021-12-04T17:13:25.103] [ERROR] cheese - SellerVerify_dealUpload TypeError: file.match is not a function
+[2021-12-04T17:21:28.207] [ERROR] cheese - 匹配路由错误: Error: post `/create_shop`: `middleware` must be a function, not `undefined`
+[2021-12-04T17:29:35.298] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2021-12-04T17:34:42.796] [ERROR] cheese - SellerVerify_dealUpload TypeError: Assignment to constant variable.
+[2021-12-04T17:34:55.108] [ERROR] cheese - SellerVerify_dealUpload TypeError: Assignment to constant variable.
+[2021-12-04T17:39:10.559] [ERROR] cheese - SellerVerify_dealData ReferenceError: id is not defined
+[2021-12-04T17:40:45.399] [ERROR] cheese - SellerVerify_dealData ReferenceError: id is not defined
+[2021-12-04T17:58:20.932] [ERROR] cheese - ShopController_hasShop ReferenceError: id is not defined
+[2021-12-04T17:59:39.596] [ERROR] cheese - ShopController_hasShop ReferenceError: id is not defined
+[2021-12-04T17:59:51.848] [ERROR] cheese - ShopController_hasShop ReferenceError: id is not defined
+[2021-12-04T18:22:32.801] [ERROR] cheese - SellerController_createShop ReferenceError: Cannot access 'shopInfo' before initialization

@@ -4,6 +4,7 @@ const ACCOUNT_DOES_NOT_EXIST = 'account_does_not_exist';
 const PASSWORD_IS_WRONG = 'password_is_wrong;'
 const ACCOUNT_HAS_BEEN_DISABLED = 'account_has_been_disabled'
 const UNAUTHORIZATION = 'unauthorized'
+const UNAUTHORIZED_OPERATION = 'unauthorized_operation'
 const REAL_NAME_INFORMATION_ALREADY_EXIST = 'real_name_information_already_exists'
 const INCOMPLETE_REAL_NAME_INFORMATION = 'incomplete_real_name_information'
 const WRONG_PERMISSIONS = 'wrong_permissions'
@@ -24,6 +25,7 @@ module.exports = {
     PASSWORD_IS_WRONG,
     ACCOUNT_HAS_BEEN_DISABLED,
     UNAUTHORIZATION,
+    UNAUTHORIZED_OPERATION,
     REAL_NAME_INFORMATION_ALREADY_EXIST,
     INCOMPLETE_REAL_NAME_INFORMATION,
     WRONG_PERMISSIONS,
