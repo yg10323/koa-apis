@@ -8,7 +8,7 @@
         "host": "localhost",
         "port": 3306,
         "user": "root",
-        "password": "qqqw",
+        "password": "mysql密码",
         "database": "design"
     },
     "redis_config": {
