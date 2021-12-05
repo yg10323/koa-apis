@@ -48,6 +48,17 @@ class ShopService {
             logger.error('ShopService_createShop ' + error)
         }
     }
+
+    // 跟新实名信息
+    async updateAuthInfo(authInfo) {
+        try {
+            const statement = `UPDATE seller SET name= ? , iid = ?, phone = ? WHERE id = ?;`
+            const [res] = await connection.execute(statement, [...authInfo])
+            return res
+        } catch (error) {
+            logger.error('ShopService_updateAuthInfo ' + error)
+        }
+    }
 }
 
 module.exports = new ShopService()

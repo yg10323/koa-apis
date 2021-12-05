@@ -72,6 +72,21 @@ class SellerVerify {
         }
     }
 
+    // 验证账号状态, 接上面函数
+    async verifyUasble(ctx, next) {
+        try {
+            const { account } = ctx.seller;
+            const res = await SellerService.getSellerByAccount(account);
+            const seller = res[0];
+            if (seller.usable !== 1) {
+                const error = new Error(errorTypes.ACCOUNT_HAS_BEEN_DISABLED)
+                return ctx.app.emit('error', error, ctx)
+            }
+            await next();
+        } catch (error) {
+            logger.error('SellerVerify_verifyUasble ' + error)
+        }
+    }
     // 扫码登录验证
     async verifyScanLogin(ctx, next) {
         try {

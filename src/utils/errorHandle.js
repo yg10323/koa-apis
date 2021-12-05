@@ -27,7 +27,7 @@ const errorHandler = (error, ctx) => {
 
         case errorTypes.ACCOUNT_HAS_BEEN_DISABLED:
             code = 400
-            message = '该账号已被封禁'
+            message = '该账号已被封禁, 请联系管理员进行处理!'
             break;
 
         case errorTypes.UNAUTHORIZATION:

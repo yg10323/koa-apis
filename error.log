@@ -446,3 +446,15 @@ Require stack:
 [2021-12-04T17:59:39.596] [ERROR] cheese - ShopController_hasShop ReferenceError: id is not defined
 [2021-12-04T17:59:51.848] [ERROR] cheese - ShopController_hasShop ReferenceError: id is not defined
 [2021-12-04T18:22:32.801] [ERROR] cheese - SellerController_createShop ReferenceError: Cannot access 'shopInfo' before initialization
+[2021-12-04T19:47:24.028] [ERROR] cheese - 匹配路由错误: ReferenceError: getSelfInfo is not defined
+[2021-12-04T19:47:48.546] [ERROR] cheese - 匹配路由错误: Error: get `/self_info`: `middleware` must be a function, not `undefined`
+[2021-12-04T19:48:07.874] [ERROR] cheese - 匹配路由错误: Error: get `/self_info`: `middleware` must be a function, not `undefined`
+[2021-12-04T20:03:22.981] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected identifier
+[2021-12-04T21:25:08.539] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token ')'
+[2021-12-04T23:09:57.735] [ERROR] cheese - 匹配路由错误: ReferenceError: updateAuthInfo is not defined
+[2021-12-04T23:10:02.434] [ERROR] cheese - 匹配路由错误: Error: post `/update/auth`: `middleware` must be a function, not `undefined`
+[2021-12-04T23:10:13.081] [ERROR] cheese - 匹配路由错误: Error: post `/update/auth`: `middleware` must be a function, not `undefined`
+[2021-12-05T09:45:01.003] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2021-12-05T09:52:07.890] [ERROR] cheese - SellerVerify_verifyUasble TypeError: Cannot destructure property 'account' of 'ctx.user' as it is undefined.
+[2021-12-05T09:52:11.759] [ERROR] cheese - SellerVerify_verifyUasble TypeError: Cannot destructure property 'account' of 'ctx.user' as it is undefined.
+[2021-12-05T09:52:49.117] [ERROR] cheese - SellerVerify_verifyUasble TypeError: Cannot destructure property 'account' of 'ctx.user' as it is undefined.

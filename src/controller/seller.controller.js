@@ -95,6 +95,51 @@ class SellerController {
             logger.error('SellerController_createShop ' + error)
         }
     }
+
+    // 获取个人信息
+    async getSelfInfo(ctx, next) {
+        try {
+            const { id, account } = ctx.user;
+            const selfInfo = await SellerService.getSellerByAccount(account);
+            const shopInfo = await ShopService.getShopBySellerId(id)
+            // 信息脱敏
+            if (selfInfo[0].iid && selfInfo[0].phone) {
+                let iid = selfInfo[0].iid,
+                    phone = selfInfo[0].phone;
+                iid = iid.substr(0, 2) + '*****' + iid.substr(iid.length - 2, iid.length)
+                phone = phone.substr(0, 3) + '***' + phone.substr(phone.length - 2, phone.length)
+
+                selfInfo[0].iid = iid;
+                selfInfo[0].phone = phone;
+            }
+            ctx.body = {
+                code: 200,
+                data: {
+                    selfInfo: selfInfo[0],
+                    shopInfo
+                }
+            }
+        } catch (error) {
+            logger.error('SellerController_getSelfInfo ' + error)
+        }
+    }
+
+    // 更新实名信息
+    async updateAuthInfo(ctx, next) {
+        try {
+            const { id } = ctx.user;
+            const infoObj = ctx.request.body;
+            infoObj.id = id;
+            const authInfo = Object.values(infoObj)
+            const res = await ShopService.updateAuthInfo(authInfo)
+            ctx.body = {
+                code: 200,
+                message: '实名认证成功, 可以注册店铺啦~'
+            }
+        } catch (error) {
+            logger.error('SellerController_updateAuthInfo ' + error)
+        }
+    }
 }
 
 module.exports = new SellerController()
