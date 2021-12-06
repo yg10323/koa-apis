@@ -38,6 +38,28 @@ class SellerService {
         }
     }
 
+    // 跟新实名信息
+    async updateAuthInfo(authInfo) {
+        try {
+            const statement = `UPDATE seller SET name= ? , iid = ?, phone = ? WHERE id = ?;`
+            const [res] = await connection.execute(statement, [...authInfo])
+            return res
+        } catch (error) {
+            logger.error('ShopService_updateAuthInfo ' + error)
+        }
+    }
+
+    // 删除账号
+    async deleteSelfById(id) {
+        try {
+            const statement = `DELETE FROM seller WHERE id = ?; `
+            const [res] = await connection.execute(statement, [id])
+            return res
+        } catch (error) {
+            logger.error('SellerService_deleteSelfById ' + error)
+        }
+    }
+
 
 }
 

@@ -195,7 +195,7 @@ class SellerVerify {
 
     }
 
-    // 注册之前进行数据处理
+    // 注册店铺验证之后进行数据处理
     async dealData(ctx, next) {
         try {
             const { id } = ctx.user

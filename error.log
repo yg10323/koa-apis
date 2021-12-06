@@ -458,3 +458,37 @@ Require stack:
 [2021-12-05T09:52:07.890] [ERROR] cheese - SellerVerify_verifyUasble TypeError: Cannot destructure property 'account' of 'ctx.user' as it is undefined.
 [2021-12-05T09:52:11.759] [ERROR] cheese - SellerVerify_verifyUasble TypeError: Cannot destructure property 'account' of 'ctx.user' as it is undefined.
 [2021-12-05T09:52:49.117] [ERROR] cheese - SellerVerify_verifyUasble TypeError: Cannot destructure property 'account' of 'ctx.user' as it is undefined.
+[2021-12-05T12:29:25.160] [ERROR] cheese - SellerService_getShopById Error: Table 'design.shop' doesn't exist
+[2021-12-05T12:29:27.276] [ERROR] cheese - SellerService_getShopById Error: Table 'design.shop' doesn't exist
+[2021-12-05T12:29:27.276] [ERROR] cheese - ShopController_hasShop TypeError: Cannot read property 'length' of undefined
+[2021-12-05T12:48:40.786] [ERROR] cheese - 匹配路由错误: ReferenceError: deleteSelf is not defined
+[2021-12-05T12:48:51.344] [ERROR] cheese - 匹配路由错误: Error: delete `/delete`: `middleware` must be a function, not `undefined`
+[2021-12-05T12:50:28.780] [ERROR] cheese - 匹配路由错误: SyntaxError: missing ) after argument list
+[2021-12-05T12:50:28.783] [ERROR] cheese - 匹配路由错误: SyntaxError: missing ) after argument list
+[2021-12-05T12:57:41.003] [ERROR] cheese - SellerController_getSelfInfo TypeError: Cannot read property 'iid' of undefined
+[2021-12-05T12:57:52.892] [ERROR] cheese - SellerController_getRealName TypeError: Cannot read property 'name' of undefined
+[2021-12-05T12:57:57.491] [ERROR] cheese - SellerController_getRealName TypeError: Cannot read property 'name' of undefined
+[2021-12-05T12:59:12.511] [ERROR] cheese - SellerController_getRealName TypeError: Cannot read property 'name' of undefined
+[2021-12-05T12:59:32.631] [ERROR] cheese - SellerController_getRealName TypeError: Cannot read property 'name' of undefined
+[2021-12-05T13:00:03.296] [ERROR] cheese - SellerController_getRealName TypeError: Cannot read property 'name' of undefined
+[2021-12-05T13:00:11.796] [ERROR] cheese - SellerController_getRealName TypeError: Cannot read property 'name' of undefined
+[2021-12-05T13:18:00.832] [ERROR] cheese - 匹配路由错误: ReferenceError: getSelfShop is not defined
+[2021-12-05T13:18:06.606] [ERROR] cheese - 匹配路由错误: Error: get `/info`: `middleware` must be a function, not `undefined`
+[2021-12-05T13:22:43.345] [ERROR] cheese - ShopController_getSelfShop ReferenceError: TextTrackCue is not defined
+[2021-12-05T13:22:55.374] [ERROR] cheese - ShopController_getSelfShop ReferenceError: TextTrackCue is not defined
+[2021-12-06T15:54:21.234] [ERROR] cheese - 匹配路由错误: ReferenceError: updateShop is not defined
+[2021-12-06T15:54:26.072] [ERROR] cheese - 匹配路由错误: Error: post `/update`: `middleware` must be a function, not `undefined`
+[2021-12-06T15:54:35.328] [ERROR] cheese - 匹配路由错误: Error: post `/update`: `middleware` must be a function, not `undefined`
+[2021-12-06T15:54:44.118] [ERROR] cheese - 匹配路由错误: Error: post `/update`: `middleware` must be a function, not `undefined`
+[2021-12-06T16:04:15.108] [ERROR] cheese - 匹配路由错误: ReferenceError: verifyUpdateShop is not defined
+[2021-12-06T16:06:37.558] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '{'
+[2021-12-06T16:11:46.279] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2021-12-06T16:15:59.525] [ERROR] cheese - ShopVerify_dealData TypeError: Cannot read property 'forEach' of undefined
+[2021-12-06T16:31:27.625] [ERROR] cheese - ShopVerify_dealData TypeError: Cannot read property 'path' of undefined
+[2021-12-06T16:31:57.030] [ERROR] cheese - ShopController_updateShop TypeError: ShopService.updateShop is not a function
+[2021-12-06T16:45:08.873] [ERROR] cheese - ShopService_updateInfo ReferenceError: sql is not defined
+[2021-12-06T16:45:37.846] [ERROR] cheese - ShopService_updateInfo ReferenceError: sql is not defined
+[2021-12-06T16:46:01.765] [ERROR] cheese - ShopService_updateInfo ReferenceError: sql is not defined
+[2021-12-06T17:48:41.244] [ERROR] cheese - SellerService_getShopById TypeError: undefined is not a function
+[2021-12-06T17:49:47.910] [ERROR] cheese - SellerService_getShopById TypeError: undefined is not a function
+[2021-12-06T18:50:00.527] [ERROR] cheese - 匹配路由错误: Error: post `/update/activities`: `middleware` must be a function, not `undefined`

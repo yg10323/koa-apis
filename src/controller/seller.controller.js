@@ -131,13 +131,27 @@ class SellerController {
             const infoObj = ctx.request.body;
             infoObj.id = id;
             const authInfo = Object.values(infoObj)
-            const res = await ShopService.updateAuthInfo(authInfo)
+            const res = await SellerService.updateAuthInfo(authInfo)
             ctx.body = {
                 code: 200,
                 message: '实名认证成功, 可以注册店铺啦~'
             }
         } catch (error) {
             logger.error('SellerController_updateAuthInfo ' + error)
+        }
+    }
+
+    // 注销账号
+    async deleteSelf(ctx, next) {
+        try {
+            const { id } = ctx.user
+            const res = await SellerService.deleteSelfById(id);
+            ctx.body = {
+                code: 200,
+                message: '注销成功!'
+            }
+        } catch (error) {
+            logger.error('SellerController_deleteSelf ' + error)
         }
     }
 }

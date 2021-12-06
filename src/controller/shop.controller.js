@@ -44,6 +44,48 @@ class ShopController {
             logger.error('ShopController_hasShop ' + error)
         }
     }
+
+    // 获取个人店铺信息
+    async getSelfShop(ctx, next) {
+        try {
+            const { id } = ctx.user;
+            const res = await ShopService.getShopBySellerId(id);
+            ctx.body = res
+        } catch (error) {
+            logger.error('ShopController_getSelfShop ' + error)
+        }
+    }
+
+    // 更新除了活动外的店铺信息
+    async updateShop(ctx, next) {
+        try {
+            const { shopInfo } = ctx.user;
+            const res = await ShopService.updateShop(shopInfo);
+            ctx.body = {
+                code: 200,
+                message: '更新信息成功啦'
+            }
+        } catch (error) {
+            logger.error('ShopController_updateShop ' + error)
+        }
+    }
+
+    // 更新店铺活动信息
+    async updateActivities(ctx, next) {
+        try {
+            const { id } = ctx.user;
+            const activities = ctx.request.body;
+            const res = await ShopService.updateActivities(activities, id)
+            if (res) {
+                ctx.body = {
+                    code: 200,
+                    message: '店铺活动更新成功'
+                }
+            }
+        } catch (error) {
+            logger.error('ShopController_updateActivities ' + error)
+        }
+    }
 }
 
 

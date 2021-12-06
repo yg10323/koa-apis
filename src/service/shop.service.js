@@ -30,6 +30,10 @@ class ShopService {
         try {
             const statement = `SELECT * FROM shop WHERE seller_id = ?;`
             const [res] = await connection.execute(statement, [seller_id])
+            const { ch_id } = res[0]
+            const statement2 = `SELECT options,child FROM shop_classify WHERE ch_id = ?;`
+            const [res2] = await connection.execute(statement2, [ch_id])
+            res[0].classify = res2[0]
             return res
         } catch (error) {
             logger.error('SellerService_getShopById ' + error)
@@ -49,14 +53,31 @@ class ShopService {
         }
     }
 
-    // 跟新实名信息
-    async updateAuthInfo(authInfo) {
+    // 更新除活动以外的店铺信息
+    async updateShop(shopInfo) {
         try {
-            const statement = `UPDATE seller SET name= ? , iid = ?, phone = ? WHERE id = ?;`
-            const [res] = await connection.execute(statement, [...authInfo])
+            let statement = 'UPDATE shop SET'
+            for (let key in shopInfo) {
+                if (key !== 'seller_id') {
+                    statement += ` ${key} = ?, `
+                }
+            }
+            statement = statement.substr(0, statement.length - 2) + ' WHERE seller_id = ?;'
+            const [res] = await connection.execute(statement, [...Object.values(shopInfo)])
             return res
         } catch (error) {
-            logger.error('ShopService_updateAuthInfo ' + error)
+            logger.error('ShopService_updateInfo ' + error)
+        }
+    }
+
+    // 更细店铺活动
+    async updateActivities(activities, seller_id) {
+        try {
+            const statement = `UPDATE shop SET activities = ? WHERE seller_id = ?;`
+            const [res] = await connection.execute(statement, [activities, seller_id])
+            return res
+        } catch (error) {
+            logger.error('ShopService_updateActivities ' + error)
         }
     }
 }
