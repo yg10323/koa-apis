@@ -79,6 +79,11 @@ const errorHandler = (error, ctx) => {
             message = '店铺已关闭'
             break;
 
+        case errorTypes.SHOP_HSA_BEEN_BLOCKED:
+            code = 400
+            message = '店铺被封禁'
+            break;
+
         case errorTypes.FOOD_CLASSIFY_ALREADY_EXIST:
             code = 400
             message = '该食品分类已存在'

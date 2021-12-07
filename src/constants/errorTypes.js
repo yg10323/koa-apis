@@ -11,6 +11,7 @@ const WRONG_PERMISSIONS = 'wrong_permissions'
 const INFORMATION_MATCHING_FAILED = 'information_matching_failed'
 const SHOP_ALREADY_EXIST = 'shop_already_exists'
 const SHOP_DOES_NOT_EXIST = 'shop_does_not_exist'
+const SHOP_HSA_BEEN_BLOCKED = 'shop_has_been_blocked'
 const YOU_ALREADY_HAVE_A_SHOP = 'you_already_have_a_shop'
 const SHOP_WAS_CLOSED = 'shop_closed'
 const FOOD_CLASSIFY_ALREADY_EXIST = 'food_classify_already_exist'
@@ -32,6 +33,7 @@ module.exports = {
     INFORMATION_MATCHING_FAILED,
     SHOP_ALREADY_EXIST,
     SHOP_DOES_NOT_EXIST,
+    SHOP_HSA_BEEN_BLOCKED,
     YOU_ALREADY_HAVE_A_SHOP,
     SHOP_WAS_CLOSED,
     FOOD_CLASSIFY_ALREADY_EXIST,

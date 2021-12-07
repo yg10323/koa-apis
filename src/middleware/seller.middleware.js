@@ -185,8 +185,6 @@ class SellerVerify {
                 return ctx.app.emit('error', error, ctx)
             }
 
-            //TODO 由4查询的结果判断店铺是否被封禁 => 添加食品时验证
-
             await next()
 
         } catch (error) {

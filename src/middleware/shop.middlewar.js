@@ -39,7 +39,12 @@ class ShopVerify {
                 const error = new Error(errorTypes.SHOP_DOES_NOT_EXIST);
                 return ctx.app.emit('error', error, ctx)
             }
-
+            // 5. 店铺是否封禁
+            if (hasShop[0].usable != 1) {
+                const error = new Error(errorTypes.SHOP_HSA_BEEN_BLOCKED)
+                return ctx.app.emit('error', error, ctx)
+            }
+            ctx.user.shop = hasShop[0];
             await next()
 
         } catch (error) {

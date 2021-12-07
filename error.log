@@ -492,3 +492,18 @@ Require stack:
 [2021-12-06T17:48:41.244] [ERROR] cheese - SellerService_getShopById TypeError: undefined is not a function
 [2021-12-06T17:49:47.910] [ERROR] cheese - SellerService_getShopById TypeError: undefined is not a function
 [2021-12-06T18:50:00.527] [ERROR] cheese - 匹配路由错误: Error: post `/update/activities`: `middleware` must be a function, not `undefined`
+[2021-12-07T08:56:59.942] [ERROR] cheese - 匹配路由错误: TypeError: router.routes is not a function
+[2021-12-07T08:58:59.469] [ERROR] cheese - 匹配路由错误: TypeError: router.routes is not a function
+[2021-12-07T08:59:04.700] [ERROR] cheese - 匹配路由错误: TypeError: router.routes is not a function
+[2021-12-07T10:53:42.121] [ERROR] cheese - FoodVerify_dealData SyntaxError: Unexpected token u in JSON at position 0
+[2021-12-07T15:35:28.036] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2021-12-07T15:39:34.988] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected identifier
+[2021-12-07T15:53:04.440] [ERROR] cheese - FoodService_setFoodClassify Error: Unknown column '阿斯达' in 'field list'
+[2021-12-07T15:58:52.005] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'return'
+[2021-12-07T17:01:07.154] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token ')'
+[2021-12-07T17:03:44.532] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2021-12-07T17:14:34.727] [ERROR] cheese - 匹配路由错误: Error: post `/add`: `middleware` must be a function, not `undefined`
+[2021-12-07T17:16:24.177] [ERROR] cheese - 匹配路由错误: SyntaxError: Missing initializer in destructuring declaration
+[2021-12-07T17:16:32.510] [ERROR] cheese - 匹配路由错误: SyntaxError: Missing initializer in destructuring declaration
+[2021-12-07T17:16:36.282] [ERROR] cheese - 匹配路由错误: SyntaxError: Missing initializer in destructuring declaration
+[2021-12-07T17:44:08.223] [ERROR] cheese - 匹配路由错误: Error: post `/classify`: `middleware` must be a function, not `undefined`
