@@ -63,6 +63,68 @@ class FoodService {
             logger.error('FoodService_setFFC ' + error)
         }
     }
+
+    // 获取食品数据
+    async getFoodList(shop_id) {
+        try {
+            const statement = `SELECT f.*, fc.id food_classify_id, fc.classify food_classify FROM f_fc
+	                            LEFT JOIN food f on f.id = f_fc.f_id
+	                            LEFT JOIN food_classify fc on fc.id = f_fc.fc_id
+                                WHERE f_fc.s_id = ? GROUP BY f.id;`
+            const [res] = await connection.execute(statement, [shop_id])
+            return res
+        } catch (error) {
+            logger.error('FoodService_getFood ' + error)
+        }
+    }
+
+    // 删除食品
+    async deleteFood(food_id) {
+        try {
+            const statement = `DELETE FROM food WHERE id = ?;`
+            const [res] = await connection.execute(statement, [food_id])
+            return res
+        } catch (error) {
+            logger.error('FoodService_deleteFood ' + error)
+        }
+    }
+
+    // 根据食品id查对应的店铺
+    async getShopIdByFoodId(food_id) {
+        try {
+            const statement = `SELECT shop_id FROM food WHERE id = ?;`
+            const [res] = await connection.execute(statement, [food_id])
+            return res
+        } catch (error) {
+            logger.error('FoodService_getFoodIdByShopId ' + error)
+        }
+    }
+
+    // 更新食品信息
+    async updateFood(foodInfo, food_id) {
+        try {
+            let statement = 'UPDATE food SET'
+            for (let key in foodInfo) {
+                statement += ` ${key} = ?, `
+            }
+            statement = statement.substr(0, statement.length - 2) + ' WHERE id = ?;'
+            const [res] = await connection.execute(statement, [...Object.values(foodInfo), food_id])
+            return res
+        } catch (error) {
+            logger.error('FoodService_updateFood ' + error)
+        }
+    }
+
+    // 根据food_id删除f_fc表的数据
+    async deleteFFCByFoodId(food_id) {
+        try {
+            const statement = `DELETE FROM f_fc WHERE f_id = ?;`
+            const [res] = await connection.execute(statement, [food_id])
+            return res
+        } catch (error) {
+            logger.error('FoodService_deleteFFCByFoodId ' + error)
+        }
+    }
 }
 
 

@@ -30,10 +30,12 @@ class ShopService {
         try {
             const statement = `SELECT * FROM shop WHERE seller_id = ?;`
             const [res] = await connection.execute(statement, [seller_id])
-            const { ch_id } = res[0]
-            const statement2 = `SELECT options,child FROM shop_classify WHERE ch_id = ?;`
-            const [res2] = await connection.execute(statement2, [ch_id])
-            res[0].classify = res2[0]
+            if (res.length) {
+                const { ch_id } = res[0]
+                const statement2 = `SELECT options,child FROM shop_classify WHERE ch_id = ?;`
+                const [res2] = await connection.execute(statement2, [ch_id])
+                res[0].classify = res2[0]
+            }
             return res
         } catch (error) {
             logger.error('SellerService_getShopById ' + error)

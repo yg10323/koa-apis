@@ -507,3 +507,106 @@ Require stack:
 [2021-12-07T17:16:32.510] [ERROR] cheese - 匹配路由错误: SyntaxError: Missing initializer in destructuring declaration
 [2021-12-07T17:16:36.282] [ERROR] cheese - 匹配路由错误: SyntaxError: Missing initializer in destructuring declaration
 [2021-12-07T17:44:08.223] [ERROR] cheese - 匹配路由错误: Error: post `/classify`: `middleware` must be a function, not `undefined`
+[2021-12-07T18:10:03.852] [ERROR] cheese - SellerService_getShopById TypeError: Cannot destructure property 'ch_id' of 'res[0]' as it is undefined.
+[2021-12-07T18:10:03.853] [ERROR] cheese - ShopController_hasShop TypeError: Cannot read property 'length' of undefined
+[2021-12-07T18:10:07.406] [ERROR] cheese - SellerService_getShopById TypeError: Cannot destructure property 'ch_id' of 'res[0]' as it is undefined.
+[2021-12-07T18:10:59.714] [ERROR] cheese - SellerService_getShopById TypeError: Cannot destructure property 'ch_id' of 'res[0]' as it is undefined.
+[2021-12-07T18:11:03.489] [ERROR] cheese - SellerService_getShopById TypeError: Cannot destructure property 'ch_id' of 'res[0]' as it is undefined.
+[2021-12-07T18:11:03.489] [ERROR] cheese - ShopController_hasShop TypeError: Cannot read property 'length' of undefined
+[2021-12-07T18:11:05.299] [ERROR] cheese - SellerService_getShopById TypeError: Cannot destructure property 'ch_id' of 'res[0]' as it is undefined.
+[2021-12-07T18:11:08.800] [ERROR] cheese - SellerService_getShopById TypeError: Cannot destructure property 'ch_id' of 'res[0]' as it is undefined.
+[2021-12-07T18:11:08.800] [ERROR] cheese - FoodController_getFoodClassify TypeError: Cannot read property '0' of undefined
+[2021-12-07T18:13:51.085] [ERROR] cheese - SellerService_getShopById TypeError: Cannot destructure property 'ch_id' of 'res[0]' as it is undefined.
+[2021-12-07T18:13:51.086] [ERROR] cheese - FoodController_getFoodClassify TypeError: Cannot read property '0' of undefined
+[2021-12-07T18:14:20.581] [ERROR] cheese - SellerService_getShopById TypeError: Cannot destructure property 'ch_id' of 'res[0]' as it is undefined.
+[2021-12-07T18:14:20.582] [ERROR] cheese - FoodController_getFoodClassify TypeError: Cannot read property '0' of undefined
+[2021-12-07T18:15:23.845] [ERROR] cheese - SellerService_getShopById TypeError: Cannot destructure property 'ch_id' of 'res[0]' as it is undefined.
+[2021-12-07T18:15:23.845] [ERROR] cheese - FoodController_getFoodClassify TypeError: Cannot read property '0' of undefined
+[2021-12-07T18:15:29.620] [ERROR] cheese - SellerService_getShopById TypeError: Cannot destructure property 'ch_id' of 'res[0]' as it is undefined.
+[2021-12-07T18:15:29.620] [ERROR] cheese - FoodController_getFoodClassify TypeError: Cannot read property '0' of undefined
+[2021-12-07T18:15:34.829] [ERROR] cheese - SellerService_getShopById TypeError: Cannot destructure property 'ch_id' of 'res[0]' as it is undefined.
+[2021-12-07T18:15:34.829] [ERROR] cheese - FoodController_getFoodClassify TypeError: Cannot read property '0' of undefined
+[2021-12-07T18:15:36.104] [ERROR] cheese - SellerService_getShopById TypeError: Cannot destructure property 'ch_id' of 'res[0]' as it is undefined.
+[2021-12-07T18:15:36.104] [ERROR] cheese - FoodController_getFoodClassify TypeError: Cannot read property '0' of undefined
+[2021-12-07T18:15:37.469] [ERROR] cheese - SellerService_getShopById TypeError: Cannot destructure property 'ch_id' of 'res[0]' as it is undefined.
+[2021-12-07T18:15:37.469] [ERROR] cheese - FoodController_getFoodClassify TypeError: Cannot read property '0' of undefined
+[2021-12-07T18:15:40.789] [ERROR] cheese - SellerService_getShopById TypeError: Cannot destructure property 'ch_id' of 'res[0]' as it is undefined.
+[2021-12-07T18:15:40.789] [ERROR] cheese - FoodController_getFoodClassify TypeError: Cannot read property '0' of undefined
+[2021-12-07T18:15:58.550] [ERROR] cheese - SellerService_getShopById TypeError: Cannot destructure property 'ch_id' of 'res[0]' as it is undefined.
+[2021-12-07T18:15:58.550] [ERROR] cheese - FoodController_getFoodClassify TypeError: Cannot read property '0' of undefined
+[2021-12-07T18:16:00.785] [ERROR] cheese - SellerService_getShopById TypeError: Cannot destructure property 'ch_id' of 'res[0]' as it is undefined.
+[2021-12-07T18:16:00.785] [ERROR] cheese - FoodController_getFoodClassify TypeError: Cannot read property '0' of undefined
+[2021-12-07T18:16:07.548] [ERROR] cheese - SellerService_getShopById TypeError: Cannot destructure property 'ch_id' of 'res[0]' as it is undefined.
+[2021-12-07T18:16:07.549] [ERROR] cheese - FoodController_getFoodClassify TypeError: Cannot read property '0' of undefined
+[2021-12-07T18:16:17.296] [ERROR] cheese - SellerService_getShopById TypeError: Cannot destructure property 'ch_id' of 'res[0]' as it is undefined.
+[2021-12-07T18:16:17.296] [ERROR] cheese - FoodController_getFoodClassify TypeError: Cannot read property '0' of undefined
+[2021-12-07T18:16:21.071] [ERROR] cheese - SellerService_getShopById TypeError: Cannot destructure property 'ch_id' of 'res[0]' as it is undefined.
+[2021-12-07T18:16:21.071] [ERROR] cheese - FoodController_getFoodClassify TypeError: Cannot read property '0' of undefined
+[2021-12-07T18:16:42.400] [ERROR] cheese - SellerService_getShopById TypeError: Cannot destructure property 'ch_id' of 'res[0]' as it is undefined.
+[2021-12-07T18:16:42.401] [ERROR] cheese - FoodController_getFoodClassify TypeError: Cannot read property '0' of undefined
+[2021-12-07T18:17:37.126] [ERROR] cheese - SellerService_getShopById TypeError: Cannot destructure property 'ch_id' of 'res[0]' as it is undefined.
+[2021-12-07T18:17:37.127] [ERROR] cheese - FoodController_getFoodClassify TypeError: Cannot read property '0' of undefined
+[2021-12-07T18:18:12.309] [ERROR] cheese - FoodController_getFoodClassify TypeError: Cannot read property 'id' of undefined
+[2021-12-07T18:18:46.535] [ERROR] cheese - FoodController_getFoodClassify TypeError: Cannot read property 'id' of undefined
+[2021-12-07T18:19:30.899] [ERROR] cheese - FoodController_getFoodClassify ReferenceError: food_classify is not defined
+[2021-12-07T19:10:14.536] [ERROR] cheese - 匹配路由错误: ReferenceError: getFood is not defined
+[2021-12-07T19:10:24.872] [ERROR] cheese - 匹配路由错误: Error: get `/`: `middleware` must be a function, not `undefined`
+[2021-12-07T19:29:25.151] [ERROR] cheese - 匹配路由错误: Error: get `/`: `middleware` must be a function, not `undefined`
+[2021-12-07T19:32:44.366] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2021-12-07T19:32:55.303] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2021-12-07T20:04:58.914] [ERROR] cheese - 匹配路由错误: ReferenceError: deleteFood is not defined
+[2021-12-07T20:05:29.389] [ERROR] cheese - 匹配路由错误: Error: delete `/delete`: `middleware` must be a function, not `undefined`
+[2021-12-07T20:42:08.213] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token ')'
+[2021-12-07T22:49:23.269] [ERROR] cheese - 匹配路由错误: ReferenceError: verifyUpdate is not defined
+[2021-12-07T22:49:28.838] [ERROR] cheese - 匹配路由错误: ReferenceError: verifyUpdate is not defined
+[2021-12-07T22:49:38.359] [ERROR] cheese - 匹配路由错误: ReferenceError: verifyUpdateFood is not defined
+[2021-12-07T22:49:44.194] [ERROR] cheese - 匹配路由错误: Error: post `/update`: `middleware` must be a function, not `undefined`
+[2021-12-07T22:55:25.387] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-12-07T23:03:02.890] [ERROR] cheese - FoodVerify_verifyUpdateFood ReferenceError: SellerService is not defined
+[2021-12-07T23:06:45.543] [ERROR] cheese - FoodVerify_verifyUpdateFood SyntaxError: Unexpected token , in JSON at position 36
+[2021-12-07T23:06:49.500] [ERROR] cheese - FoodVerify_verifyUpdateFood SyntaxError: Unexpected token , in JSON at position 36
+[2021-12-07T23:09:23.504] [ERROR] cheese - FoodVerify_verifyUpdateFood SyntaxError: Unexpected token , in JSON at position 36
+[2021-12-07T23:13:18.291] [ERROR] cheese - FoodVerify_verifyUpdateFood SyntaxError: Unexpected token , in JSON at position 38
+[2021-12-07T23:13:31.959] [ERROR] cheese - FoodVerify_verifyUpdateFood SyntaxError: Unexpected token , in JSON at position 36
+[2021-12-07T23:13:34.509] [ERROR] cheese - FoodVerify_verifyUpdateFood SyntaxError: Unexpected token , in JSON at position 36
+[2021-12-07T23:16:07.281] [ERROR] cheese - FoodVerify_verifyUpdateFood ReferenceError: Cannot access 'food_ids' before initialization
+[2021-12-07T23:16:55.477] [ERROR] cheese - FoodVerify_verifyUpdateFood SyntaxError: Unexpected token , in JSON at position 39
+[2021-12-08T11:10:00.877] [ERROR] cheese - FoodVerify_verifyUpdateFood SyntaxError: Unexpected token , in JSON at position 36
+[2021-12-08T11:10:54.293] [ERROR] cheese - FoodVerify_verifyUpdateFood SyntaxError: Unexpected token , in JSON at position 36
+[2021-12-08T11:14:09.229] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected strict mode reserved word
+[2021-12-08T11:42:34.283] [ERROR] cheese - FoodVerify_verifyUpdateFood SyntaxError: Unexpected token , in JSON at position 36
+[2021-12-08T11:43:06.089] [ERROR] cheese - FoodVerify_verifyUpdateFood SyntaxError: Unexpected token , in JSON at position 36
+[2021-12-08T11:44:46.264] [ERROR] cheese - FoodVerify_verifyUpdateFood SyntaxError: Unexpected token , in JSON at position 36
+[2021-12-08T11:45:11.909] [ERROR] cheese - FoodVerify_verifyUpdateFood ReferenceError: db_shopId is not defined
+[2021-12-08T11:46:09.001] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token ')'
+[2021-12-08T11:48:12.229] [ERROR] cheese - 匹配路由错误: ReferenceError: updateFood is not defined
+[2021-12-08T11:48:18.787] [ERROR] cheese - 匹配路由错误: Error: post `/update`: `middleware` must be a function, not `undefined`
+[2021-12-08T11:49:36.013] [ERROR] cheese - FoodVerify_verifyUpdateFood SyntaxError: Unexpected token , in JSON at position 38
+[2021-12-08T11:56:37.119] [ERROR] cheese - FoodVerify_verifyUpdateFood SyntaxError: Unexpected token , in JSON at position 38
+[2021-12-08T11:57:48.892] [ERROR] cheese - FoodVerify_verifyUpdateFood SyntaxError: Unexpected token , in JSON at position 23
+[2021-12-08T11:57:58.395] [ERROR] cheese - FoodVerify_verifyUpdateFood SyntaxError: Unexpected token , in JSON at position 23
+[2021-12-08T11:58:07.546] [ERROR] cheese - FoodVerify_verifyUpdateFood SyntaxError: Unexpected token , in JSON at position 23
+[2021-12-08T11:58:18.605] [ERROR] cheese - FoodVerify_verifyUpdateFood SyntaxError: Unexpected token , in JSON at position 23
+[2021-12-08T11:59:14.011] [ERROR] cheese - FoodVerify_verifyUpdateFood SyntaxError: Unexpected token , in JSON at position 36
+[2021-12-08T12:00:02.805] [ERROR] cheese - FoodVerify_verifyUpdateFood SyntaxError: Unexpected token , in JSON at position 38
+[2021-12-08T12:14:16.495] [ERROR] cheese - FoodService_updateFood Error: Unknown column 'foodClassify' in 'field list'
+[2021-12-08T12:14:16.496] [ERROR] cheese - FoodController_updateFood TypeError: Cannot read property 'affectedRows' of undefined
+[2021-12-08T12:14:27.454] [ERROR] cheese - FoodService_updateFood Error: Unknown column 'foodClassify' in 'field list'
+[2021-12-08T12:14:27.454] [ERROR] cheese - FoodController_updateFood TypeError: Cannot read property 'affectedRows' of undefined
+[2021-12-08T12:15:14.727] [ERROR] cheese - FoodService_updateFood Error: Unknown column 'foodClassify' in 'field list'
+[2021-12-08T12:15:14.727] [ERROR] cheese - FoodController_updateFood TypeError: Cannot read property 'affectedRows' of undefined
+[2021-12-08T12:15:59.721] [ERROR] cheese - FoodService_updateFood Error: Unknown column 'foodClassify' in 'field list'
+[2021-12-08T12:54:27.784] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected identifier
+[2021-12-08T12:56:18.199] [ERROR] cheese - FoodVerify_verifyUpdateFood ReferenceError: classifyIdArray is not defined
+[2021-12-08T13:04:34.344] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token ')'
+[2021-12-08T13:04:48.540] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2021-12-08T13:07:55.371] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token ','
+[2021-12-08T13:08:19.193] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token ','
+[2021-12-08T13:09:59.359] [ERROR] cheese - FoodController_updateFood ReferenceError: shop_id is not defined
+[2021-12-08T14:37:36.826] [ERROR] cheese - FoodVerify_dealData ReferenceError: foodInfo is not defined
+[2021-12-08T14:58:09.888] [ERROR] cheese - FoodService_updateFood Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'desc = ? WHERE id = ?' at line 1
+[2021-12-08T15:06:29.962] [ERROR] cheese - FoodService_updateFood Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'desc = ? WHERE id = ?' at line 1
+[2021-12-08T15:09:16.227] [ERROR] cheese - FoodService_updateFood Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'desc = ? WHERE id = ?' at line 1
+[2021-12-08T15:12:24.583] [ERROR] cheese - FoodService_updateFood Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'desc = ? WHERE id = ?' at line 1
+[2021-12-08T15:12:56.685] [ERROR] cheese - FoodService_updateFood Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'desc = ? WHERE id = ?' at line 1
+[2021-12-08T15:13:37.399] [ERROR] cheese - FoodService_updateFood Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'desc = ? WHERE id = ?' at line 1
