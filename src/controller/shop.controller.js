@@ -86,6 +86,34 @@ class ShopController {
             logger.error('ShopController_updateActivities ' + error)
         }
     }
+
+    // 获取店铺今日订单
+    async getOrdersToday(ctx, next) {
+        try {
+            const shop_id = ctx.shop_id
+            const res = await ShopService.getOrdersToday(shop_id)
+            ctx.body = {
+                code: 200,
+                data: res
+            }
+        } catch (error) {
+            logger.error('ShopController_getOrderstoday ' + error)
+        }
+    }
+
+    // 获取店铺所有订单
+    async getOrdersAll(ctx, next) {
+        try {
+            const shop_id = ctx.shop_id
+            const res = await ShopService.getOrdersAll(shop_id)
+            ctx.body = {
+                code: 200,
+                data: res
+            }
+        } catch (error) {
+            logger.error('ShopController_getOrderstoday ' + error)
+        }
+    }
 }
 
 

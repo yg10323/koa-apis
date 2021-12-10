@@ -2,7 +2,8 @@ const Router = require('koa-router')
 
 const {
     verifyUpdateShop,
-    dealData
+    dealData,
+    verifyGetOrders
 } = require('../middleware/shop.middlewar')
 
 const {
@@ -11,7 +12,9 @@ const {
     hasShop,
     getSelfShop,
     updateShop,
-    updateActivities
+    updateActivities,
+    getOrdersToday,
+    getOrdersAll
 } = require('../controller/shop.controller')
 
 const { verifyToken } = require('../middleware/common.middleware')
@@ -32,5 +35,10 @@ shopRouter.get('/info', verifyToken, getSelfShop)
 shopRouter.post('/update', verifyToken, verifyUpdateShop, dealData, updateShop)
 // 更新店铺活动
 shopRouter.post('/update/activities', verifyToken, verifyUpdateShop, updateActivities)
+// 查询店铺今日订单
+shopRouter.get('/orders/today', verifyToken, verifyGetOrders, getOrdersToday)
+// 查询店铺所有订单
+shopRouter.get('/orders/all', verifyToken, verifyGetOrders, getOrdersAll)
+
 
 module.exports = shopRouter

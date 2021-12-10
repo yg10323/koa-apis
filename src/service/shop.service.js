@@ -82,6 +82,42 @@ class ShopService {
             logger.error('ShopService_updateActivities ' + error)
         }
     }
+
+    // 获取店铺今日订单
+    async getOrdersToday(shop_id) {
+        try {
+            const statement = `SELECT 
+	                                o.*, JSON_OBJECT('name', b.name, 'address',b.address,'phone',b.phone) buyer_info,
+			                        JSON_OBJECT('name',f.name, 'price',f.price,'discount',f.discount,'extra',f.extra) food_info
+                               FROM o_f
+	                                LEFT JOIN orders o ON o.id = o_f.o_id
+	                                LEFT JOIN buyer b ON b.id = o.buyer_id
+	                                LEFT JOIN food f ON f.id = o_f.f_id
+                               WHERE o_f.s_id = ? AND o.update_flag = 1 `;
+            const [res] = await connection.execute(statement, [shop_id])
+            return res
+        } catch (error) {
+            logger.error('ShopService_getOrderstoday ' + error)
+        }
+    }
+
+    // 获取店铺所有订单
+    async getOrdersAll(shop_id) {
+        try {
+            const statement = `SELECT 
+	                                o.*, JSON_OBJECT('name', b.name, 'address',b.address,'phone',b.phone) buyer_info,
+			                        JSON_OBJECT('name',f.name, 'price',f.price,'discount',f.discount,'extra',f.extra) food_info
+                               FROM o_f
+	                                LEFT JOIN orders o ON o.id = o_f.o_id
+	                                LEFT JOIN buyer b ON b.id = o.buyer_id
+	                                LEFT JOIN food f ON f.id = o_f.f_id
+                               WHERE o_f.s_id = ?`;
+            const [res] = await connection.execute(statement, [shop_id])
+            return res
+        } catch (error) {
+            logger.error('ShopService_getOrderstoday ' + error)
+        }
+    }
 }
 
 module.exports = new ShopService()

@@ -68,7 +68,7 @@ class SellerVerify {
             ctx.seller = { id: seller.id, role_id: seller.role_id, account, longKeep }
             await next();
         } catch (error) {
-            looger.error('Seller==verifyLogin ' + error)
+            looger.error('SellerVerify_verifyLogin ' + error)
         }
     }
 

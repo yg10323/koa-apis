@@ -76,6 +76,36 @@ class ShopVerify {
             logger.error('ShopVerify_dealData ' + error)
         }
     }
+
+    // 获取店铺订单时验证
+    async verifyGetOrders(ctx, next) {
+        try {
+            const { account } = ctx.user;
+            const res = await SellerService.getSellerByAccount(account);
+            const seller = res[0];
+            // 1. 账号是否被封禁
+            if (seller.usable !== 1) {
+                const error = new Error(errorTypes.SHOP_HSA_BEEN_BLOCKED)
+                return ctx.app.emit('error', error, ctx)
+            }
+            // 2. 是否有店铺
+            const hasShop = await ShopService.getShopBySellerId(seller.id)
+            if (!hasShop.length) {
+                const error = new Error(errorTypes.SHOP_DOES_NOT_EXIST);
+                return ctx.app.emit('error', error, ctx)
+            }
+            // 3. 店铺是否被封禁
+            if (hasShop[0].usable != 1) {
+                const error = new Error(errorTypes.SHOP_HSA_BEEN_BLOCKED)
+                return ctx.app.emit('error', error, ctx)
+            }
+
+            ctx.shop_id = hasShop[0].id
+            await next()
+        } catch (error) {
+            logger.error('ShopVerify_verifyGetOrders ' + error)
+        }
+    }
 }
 
 

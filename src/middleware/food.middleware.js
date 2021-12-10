@@ -1,8 +1,8 @@
 const errorTypes = require('../constants/errorTypes')
+const logger = require('../utils/logHandle')
 const FoodService = require('../service/food.service')
 const ShopService = require('../service/shop.service')
 const SellerService = require('../service/seller.service')
-const logger = require('../utils/logHandle')
 const { staticPath } = require('../../config.json')
 
 
