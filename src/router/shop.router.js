@@ -14,7 +14,8 @@ const {
     updateShop,
     updateActivities,
     getOrdersToday,
-    getOrdersAll
+    getOrdersAll,
+    getBill
 } = require('../controller/shop.controller')
 
 const { verifyToken } = require('../middleware/common.middleware')
@@ -39,6 +40,7 @@ shopRouter.post('/update/activities', verifyToken, verifyUpdateShop, updateActiv
 shopRouter.get('/orders/today', verifyToken, verifyGetOrders, getOrdersToday)
 // 查询店铺所有订单
 shopRouter.get('/orders/all', verifyToken, verifyGetOrders, getOrdersAll)
-
+// 流水相关的数据 => 做图标用
+shopRouter.get('/bill', verifyToken, verifyGetOrders, getBill)
 
 module.exports = shopRouter

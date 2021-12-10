@@ -30,7 +30,7 @@ mapRoutes(app);
 app.on('error', errorHandler)
 
 
-// express服务
+// koa服务
 app.listen(port, () => {
     console.log(`koa服务已启动, 端口: ${port}`);
 })

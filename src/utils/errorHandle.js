@@ -1,5 +1,7 @@
 const errorTypes = require('../constants/errorTypes')
 
+// 状态码 401 请勿重复设置
+
 // 异常处理方法
 const errorHandler = (error, ctx) => {
     let message, code;
@@ -36,7 +38,7 @@ const errorHandler = (error, ctx) => {
             break;
 
         case errorTypes.UNAUTHORIZED_OPERATION:
-            code = 401
+            code = 400
             message = '越权操作'
             break;
 

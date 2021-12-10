@@ -1,6 +1,7 @@
 const logger = require('../utils/logHandle');
 const { createToken } = require('../middleware/common.middleware')
 const BuyerService = require('../service/buyer.service')
+const FoodService = require('../service/food.service')
 
 
 class BuyerController {
@@ -48,6 +49,8 @@ class BuyerController {
             const orderRes = await BuyerService.createOrder(order_nu, id, taotal_price, pay_price);
             if (orderRes.insertId) {
                 const o_f_Res = await BuyerService.setOF(food_info, orderRes.insertId)
+                const foodSoldRes = await FoodService.updateSold(food_info)
+                // 更新已售字段
                 ctx.body = {
                     code: 200,
                     message: '下单成功'

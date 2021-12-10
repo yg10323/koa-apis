@@ -88,7 +88,7 @@ class ShopService {
         try {
             const statement = `SELECT 
 	                                o.*, JSON_OBJECT('name', b.name, 'address',b.address,'phone',b.phone) buyer_info,
-			                        JSON_OBJECT('name',f.name, 'price',f.price,'discount',f.discount,'extra',f.extra) food_info
+			                        JSON_OBJECT('name',f.name,'cost', f.cost,'price',f.price,'discount',f.discount,'extra',f.extra) food_info
                                FROM o_f
 	                                LEFT JOIN orders o ON o.id = o_f.o_id
 	                                LEFT JOIN buyer b ON b.id = o.buyer_id
@@ -106,16 +106,30 @@ class ShopService {
         try {
             const statement = `SELECT 
 	                                o.*, JSON_OBJECT('name', b.name, 'address',b.address,'phone',b.phone) buyer_info,
-			                        JSON_OBJECT('name',f.name, 'price',f.price,'discount',f.discount,'extra',f.extra) food_info
+			                        JSON_OBJECT('name',f.name,'cost',f.cost, 'price',f.price,'discount',f.discount,'extra',f.extra) food_info
                                FROM o_f
 	                                LEFT JOIN orders o ON o.id = o_f.o_id
 	                                LEFT JOIN buyer b ON b.id = o.buyer_id
 	                                LEFT JOIN food f ON f.id = o_f.f_id
-                               WHERE o_f.s_id = ?`;
+                               WHERE o_f.s_id = ? ORDER BY id`;
             const [res] = await connection.execute(statement, [shop_id])
             return res
         } catch (error) {
             logger.error('ShopService_getOrderstoday ' + error)
+        }
+    }
+
+    // 获取流水相关
+    async getBill(shop_id) {
+        try {
+            const soldStatement = `SELECT id, name ,price, sold FROM food WHERE shop_id = ?;`;
+            const billStatement = ``;
+            const slodRes = await connection.execute(soldStatement, [shop_id]);
+            const billRes = await connection.execute(billStatement, [shop_id]);
+
+            return { slodRes, billRes }
+        } catch (error) {
+            logger.error('ShopService_getBill ' + error)
         }
     }
 }

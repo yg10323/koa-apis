@@ -114,6 +114,15 @@ class ShopController {
             logger.error('ShopController_getOrderstoday ' + error)
         }
     }
+
+    // 获取流水相关的数据
+    async getBill(ctx, next) {
+        try {
+            const shop_id = ctx.shop_id
+        } catch (error) {
+            logger.error('ShopController_getBill ' + error)
+        }
+    }
 }
 
 

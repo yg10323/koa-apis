@@ -708,3 +708,59 @@ Require stack:
 [2021-12-09T19:52:49.314] [ERROR] cheese - 匹配路由错误: Error: get `/orders/today`: `middleware` must be a function, not `undefined`
 [2021-12-09T19:52:55.887] [ERROR] cheese - 匹配路由错误: ReferenceError: getOrderstoday is not defined
 [2021-12-09T19:54:20.393] [ERROR] cheese - ShopController_getOrderstoday TypeError: ShopService.getOrderstoday is not a function
+[2021-12-10T17:55:26.952] [ERROR] cheese - 匹配路由错误: TypeError: Cannot read property 'length' of undefined
+[2021-12-10T17:56:47.066] [ERROR] cheese - 匹配路由错误: ReferenceError: getBill is not defined
+[2021-12-10T17:56:58.602] [ERROR] cheese - 匹配路由错误: ReferenceError: getBill is not defined
+[2021-12-10T17:57:01.846] [ERROR] cheese - 匹配路由错误: ReferenceError: getBill is not defined
+[2021-12-10T17:57:16.483] [ERROR] cheese - 匹配路由错误: ReferenceError: getBill is not defined
+[2021-12-10T17:57:23.906] [ERROR] cheese - 匹配路由错误: Error: get `/bill`: `middleware` must be a function, not `undefined`
+[2021-12-10T17:58:14.619] [ERROR] cheese - 匹配路由错误: Error: get `/bill`: `middleware` must be a function, not `undefined`
+[2021-12-10T18:14:54.845] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2021-12-10T18:14:54.859] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2021-12-10T18:14:54.860] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2021-12-10T19:18:46.880] [ERROR] cheese - 匹配路由错误: TypeError: router.routes is not a function
+[2021-12-10T19:18:55.023] [ERROR] cheese - 匹配路由错误: TypeError: router.routes is not a function
+[2021-12-10T19:19:00.520] [ERROR] cheese - 匹配路由错误: TypeError: router.routes is not a function
+[2021-12-10T19:19:05.024] [ERROR] cheese - 匹配路由错误: TypeError: router.routes is not a function
+[2021-12-10T19:19:13.764] [ERROR] cheese - 匹配路由错误: ReferenceError: buyerRouter is not defined
+[2021-12-10T19:20:00.380] [ERROR] cheese - 匹配路由错误: TypeError: router.routes is not a function
+[2021-12-10T19:20:52.271] [ERROR] cheese - 匹配路由错误: ReferenceError: verifyLogin is not defined
+[2021-12-10T19:20:59.337] [ERROR] cheese - 匹配路由错误: ReferenceError: verifyLogin is not defined
+[2021-12-10T19:21:03.613] [ERROR] cheese - 匹配路由错误: Error: post `/login`: `middleware` must be a function, not `undefined`
+[2021-12-10T19:21:07.558] [ERROR] cheese - 匹配路由错误: Error: post `/login`: `middleware` must be a function, not `undefined`
+[2021-12-10T19:21:22.069] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2021-12-10T19:25:38.062] [ERROR] cheese - 匹配路由错误: ReferenceError: login is not defined
+[2021-12-10T19:25:40.230] [ERROR] cheese - 匹配路由错误: Error: post `/login`: `middleware` must be a function, not `undefined`
+[2021-12-10T19:36:42.199] [ERROR] cheese - RoleVerify_verifyLogin TypeError: SellerService.getAdminByAccount is not a function
+[2021-12-10T19:37:17.015] [ERROR] cheese - RoleVerify_verifyLogin TypeError: SellerService.getAdminByAccount is not a function
+[2021-12-10T19:42:23.605] [ERROR] cheese - RoleController_login ReferenceError: createToken is not defined
+[2021-12-10T19:43:12.554] [ERROR] cheese - role_middleware_verifyUser TypeError: Service.getSellerByAccount is not a function
+[2021-12-10T19:55:04.669] [ERROR] cheese - 匹配路由错误: ReferenceError: getSellerMenu is not defined
+[2021-12-10T19:55:07.526] [ERROR] cheese - 匹配路由错误: Error: get `/2/menu`: `middleware` must be a function, not `undefined`
+[2021-12-10T19:55:10.609] [ERROR] cheese - 匹配路由错误: ReferenceError: getMenu is not defined
+[2021-12-10T19:55:16.269] [ERROR] cheese - 匹配路由错误: ReferenceError: getMenu is not defined
+[2021-12-10T19:55:21.689] [ERROR] cheese - 匹配路由错误: ReferenceError: getMenu is not defined
+[2021-12-10T19:55:30.143] [ERROR] cheese - 匹配路由错误: ReferenceError: getMenu is not defined
+[2021-12-10T19:55:32.132] [ERROR] cheese - 匹配路由错误: ReferenceError: getMenu is not defined
+[2021-12-10T19:55:37.409] [ERROR] cheese - 匹配路由错误: ReferenceError: getMenu is not defined
+[2021-12-10T19:55:47.956] [ERROR] cheese - 匹配路由错误: ReferenceError: getMenu is not defined
+[2021-12-10T19:55:57.376] [ERROR] cheese - 匹配路由错误: Error: get `/2/menu`: `middleware` must be a function, not `undefined`
+[2021-12-10T19:56:02.790] [ERROR] cheese - 匹配路由错误: ReferenceError: getSellerMenu is not defined
+[2021-12-10T19:56:31.807] [ERROR] cheese - 匹配路由错误: ReferenceError: getSellerMenu is not defined
+[2021-12-10T19:56:34.302] [ERROR] cheese - 匹配路由错误: ReferenceError: getSellerMenu is not defined
+[2021-12-10T19:56:39.990] [ERROR] cheese - 匹配路由错误: ReferenceError: getSellerMenu is not defined
+[2021-12-10T19:56:53.046] [ERROR] cheese - 匹配路由错误: ReferenceError: getSellerMenu is not defined
+[2021-12-10T19:57:03.889] [ERROR] cheese - 匹配路由错误: ReferenceError: getSellerMenu is not defined
+[2021-12-10T19:57:31.409] [ERROR] cheese - 匹配路由错误: ReferenceError: getSellerMenu is not defined
+[2021-12-10T19:57:36.100] [ERROR] cheese - 匹配路由错误: ReferenceError: getSellerMenu is not defined
+[2021-12-10T19:58:26.743] [ERROR] cheese - 匹配路由错误: ReferenceError: getSellerMenu is not defined
+[2021-12-10T19:58:34.132] [ERROR] cheese - 匹配路由错误: ReferenceError: getSellerMenu is not defined
+[2021-12-10T19:58:42.982] [ERROR] cheese - 匹配路由错误: ReferenceError: getSellerMenu is not defined
+[2021-12-10T19:58:51.722] [ERROR] cheese - 匹配路由错误: ReferenceError: getSellerMenu is not defined
+[2021-12-10T19:58:53.861] [ERROR] cheese - 匹配路由错误: ReferenceError: getSellerMenu is not defined
+[2021-12-10T19:58:58.922] [ERROR] cheese - 匹配路由错误: ReferenceError: getSellerMenu is not defined
+[2021-12-10T20:08:12.815] [ERROR] cheese - 匹配路由错误: ReferenceError: verifyRegister is not defined
+[2021-12-10T20:08:17.725] [ERROR] cheese - 匹配路由错误: Error: post `/login`: `middleware` must be a function, not `undefined`
+[2021-12-10T20:09:49.170] [ERROR] cheese - 匹配路由错误: Error: post `/login`: `middleware` must be a function, not `undefined`
+[2021-12-10T20:09:54.512] [ERROR] cheese - 匹配路由错误: Error: post `/login`: `middleware` must be a function, not `undefined`
+[2021-12-10T20:16:42.401] [ERROR] cheese - RoleVerify_verifyLogin ReferenceError: AdminService is not defined

@@ -20,8 +20,8 @@ class FoodService {
     // 插入食品信息
     async setFoodInfo(foodInfo) {
         try {
-            const statement = `INSERT INTO food (shop_id,name,price,discount,extra,least,single_point,avatar_url)
-						VALUES (?,?,?,?,?,?,?,?);`
+            const statement = `INSERT INTO food (shop_id,name,cost,price,discount,extra,least,single_point,avatar_url)
+						VALUES (?,?,?,?,?,?,?,?,?);`
             const [res] = await connection.execute(statement, [...foodInfo])
             return res.insertId
         } catch (error) {
@@ -123,6 +123,23 @@ class FoodService {
             return res
         } catch (error) {
             logger.error('FoodService_deleteFFCByFoodId ' + error)
+        }
+    }
+
+    // 更新已售字段
+    async updateSold(food_info) {
+        try {
+            const res = [];
+            for (let item of food_info) {
+                item.food_ids.forEach(async food_id => {
+                    const statement = `UPDATE food SET sold = sold + 1 WHERE id = ?;`
+                    const [r] = await connection.execute(statement, [food_id])
+                    res.push(r)
+                })
+            }
+            return res
+        } catch (error) {
+            logger.error('FoodService_updateSold ' + error)
         }
     }
 }
