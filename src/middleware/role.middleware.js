@@ -3,7 +3,7 @@ const SellerService = require('../service/seller.service')
 const RoleService = require('../service/role.service')
 const logger = require('../utils/logHandle')
 const { encryption } = require('./common.middleware')
-
+const { nowTime } = require('../utils/formatTime')
 
 class RoleVerify {
 
@@ -109,6 +109,75 @@ class RoleVerify {
 
         } catch (error) {
             looger.error('RoleVerify_verifyRegister ' + error)
+        }
+    }
+
+    // 删除admin时验证level
+    async verifyAdminLevel(ctx, next) {
+        try {
+            const deleteAccount = ctx.request.body.account;
+            const { account } = ctx.user;
+            const deleteAdmin = await RoleService.getAdminByAccount(deleteAccount);
+            // 眼删除的账号是否存在
+            if (!deleteAdmin.length) {
+                const error = new Error(errorTypes.ACCOUNT_DOES_NOT_EXIST)
+                return ctx.app.emit('error', error, ctx)
+            }
+            const adminInfo = await RoleService.getAdminByAccount(account);
+            // 登录账号是否封禁
+            if (adminInfo[0].usable !== 1) {
+                const error = new Error(errorTypes.ACCOUNT_HAS_BEEN_DISABLED)
+                return ctx.app.emit('error', error, ctx)
+            }
+            // 不允许level非1的admin删除其他admin账号
+            if (adminInfo[0].level !== 1) {
+                const error = new Error(errorTypes.UNAUTHORIZED_OPERATION)
+                return ctx.app.emit('error', error, ctx)
+            }
+
+            await next()
+        } catch (error) {
+            logger.error('RoleVerify_verifyAdminLevel ' + error)
+        }
+    }
+
+    // 根据query获取admin/seller/buyer
+    async dealUserData(ctx, next) {
+        try {
+            const queryData = ctx.request.body;
+            ctx.body = queryData
+            // 表名
+            const tableName = queryData.role;
+            delete queryData.role
+            // 分页
+            let page = queryData.page;
+            let offset = queryData.offset
+            if (!page || !offset || page < 1 || offset < 1) {
+                page = 1, offset = 10;
+            }
+            page = (page - 1) * offset;
+            delete queryData.page
+            delete queryData.offset
+            // 如果有时间筛选
+            const timeQuery = {};
+            if (queryData.time) {
+                let startTime = nowTime(new Date(queryData.time[0]).getTime())
+                let endTime = nowTime(new Date(queryData.time[1]).getTime())
+                delete queryData.time
+
+                timeQuery.startTime = startTime
+                timeQuery.endTime = endTime
+            }
+            // sql的keys与values
+            const keys = Object.keys(queryData)
+            const values = Object.values(queryData)
+
+
+            ctx.queryInfo = { tableName, page, offset, keys, values, timeQuery }
+            await next();
+
+        } catch (error) {
+            logger.error('RoleVerify_dealUserData ' + error)
         }
     }
 }

@@ -53,6 +53,82 @@ class RoleController {
             logger.error('RoleController_register ' + error)
         }
     }
+
+    // 根据id删除admin
+    async deleteAdminById(ctx, next) {
+        try {
+            const { id } = ctx.request.body;
+            const res = await RoleService.deleteAdminById(id)
+            ctx.body = {
+                code: 200,
+                message: '删除成功'
+            }
+        } catch (error) {
+            logger.error('RoleController_deleteAdminById ' + error)
+        }
+    }
+
+    // 根据id删除seller
+    async deleteSellerById(ctx, next) {
+        try {
+            const { id } = ctx.request.body;
+            const res = await RoleService.deleteSellerById(id)
+            ctx.body = {
+                code: 200,
+                message: '删除成功'
+            }
+        } catch (error) {
+            logger.error('RoleController_deleteSellerById ' + error)
+        }
+    }
+
+    // 根据id删除buyer
+    async deleteBuyerById(ctx, next) {
+        try {
+            const { id } = ctx.request.body;
+            const res = await RoleService.deleteBuyerById(id)
+            ctx.body = {
+                code: 200,
+                message: '删除成功'
+            }
+        } catch (error) {
+            logger.error('RoleController_deleteSellerById ' + error)
+        }
+    }
+
+    // 根据query获取admin/seller/buyer
+    async getUserByQuery(ctx, next) {
+        try {
+            const { tableName, page, offset, keys, values, timeQuery } = ctx.queryInfo
+            const res = await RoleService.getUserByQuery(tableName, page, offset, keys, values, timeQuery);
+            ctx.body = {
+                code: 200,
+                data: res
+            }
+
+        } catch (error) {
+            logger.error('RoleController_getUserByQuery ' + error)
+        }
+    }
+
+    // 更改user的usable
+    async changeUserUsable(ctx, next) {
+        try {
+            const { usable, id, role_id } = ctx.request.body;
+            let tableName;
+            if (role_id == 1) tableName = "admin"
+            if (role_id == 2) tableName = "seller"
+            if (role_id == 3) tableName = "buyer"
+            const res = await RoleService.changeUserUsable(tableName, usable, id)
+            ctx.body = {
+                code: 200,
+                message: '更新成功'
+            }
+
+        } catch (error) {
+            logger.error('RoleController_changeUserUsable ' + error)
+        }
+    }
 }
 
 

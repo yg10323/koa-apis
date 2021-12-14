@@ -764,3 +764,92 @@ Require stack:
 [2021-12-10T20:09:49.170] [ERROR] cheese - 匹配路由错误: Error: post `/login`: `middleware` must be a function, not `undefined`
 [2021-12-10T20:09:54.512] [ERROR] cheese - 匹配路由错误: Error: post `/login`: `middleware` must be a function, not `undefined`
 [2021-12-10T20:16:42.401] [ERROR] cheese - RoleVerify_verifyLogin ReferenceError: AdminService is not defined
+[2021-12-14T08:48:53.157] [ERROR] cheese - 匹配路由错误: ReferenceError: getBuyers is not defined
+[2021-12-14T08:48:57.531] [ERROR] cheese - 匹配路由错误: ReferenceError: getBuyerList is not defined
+[2021-12-14T08:49:03.818] [ERROR] cheese - 匹配路由错误: Error: get `/buyer/list`: `middleware` must be a function, not `undefined`
+[2021-12-14T08:49:13.874] [ERROR] cheese - 匹配路由错误: Error: get `/buyer/list`: `middleware` must be a function, not `undefined`
+[2021-12-14T09:09:44.124] [ERROR] cheese - 匹配路由错误: ReferenceError: geSellerList is not defined
+[2021-12-14T09:09:52.004] [ERROR] cheese - 匹配路由错误: Error: get `/seller/list`: `middleware` must be a function, not `undefined`
+[2021-12-14T09:10:07.302] [ERROR] cheese - 匹配路由错误: ReferenceError: geSellerList is not defined
+[2021-12-14T09:10:18.750] [ERROR] cheese - 匹配路由错误: ReferenceError: geSellerList is not defined
+[2021-12-14T09:10:21.005] [ERROR] cheese - 匹配路由错误: ReferenceError: geSellerList is not defined
+[2021-12-14T09:11:50.159] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-12-14T11:49:14.717] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2021-12-14T16:28:03.441] [ERROR] cheese - 匹配路由错误: ReferenceError: verifyLevel is not defined
+[2021-12-14T16:28:08.599] [ERROR] cheese - 匹配路由错误: ReferenceError: verifyLevel is not defined
+[2021-12-14T16:28:11.970] [ERROR] cheese - 匹配路由错误: Error: delete `admin/delete`: `middleware` must be a function, not `undefined`
+[2021-12-14T16:28:18.247] [ERROR] cheese - 匹配路由错误: ReferenceError: verifyAdminLevel is not defined
+[2021-12-14T16:28:22.658] [ERROR] cheese - 匹配路由错误: Error: delete `admin/delete`: `middleware` must be a function, not `undefined`
+[2021-12-14T16:33:00.007] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2021-12-14T16:33:19.951] [ERROR] cheese - 匹配路由错误: SyntaxError: Missing initializer in destructuring declaration
+[2021-12-14T16:41:05.034] [ERROR] cheese - RoleVerify_verifyAdminLevel TypeError: Cannot read property 'body' of undefined
+[2021-12-14T16:46:06.351] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2021-12-14T16:48:00.261] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected identifier
+[2021-12-14T16:50:06.459] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-12-14T16:50:09.556] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-12-14T16:51:44.115] [ERROR] cheese - 匹配路由错误: ReferenceError: deleteAdminById is not defined
+[2021-12-14T16:51:50.574] [ERROR] cheese - 匹配路由错误: Error: post `/admin/delete`: `middleware` must be a function, not `undefined`
+[2021-12-14T16:55:39.333] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2021-12-14T17:19:47.994] [ERROR] cheese - 匹配路由错误: ReferenceError: deleteSeller is not defined
+[2021-12-14T17:19:56.358] [ERROR] cheese - 匹配路由错误: ReferenceError: deleteSellerById is not defined
+[2021-12-14T17:21:14.391] [ERROR] cheese - 匹配路由错误: ReferenceError: deleteSellerById is not defined
+[2021-12-14T17:21:18.959] [ERROR] cheese - 匹配路由错误: ReferenceError: deleteSellerById is not defined
+[2021-12-14T17:21:22.830] [ERROR] cheese - 匹配路由错误: ReferenceError: deleteSellerById is not defined
+[2021-12-14T17:23:23.091] [ERROR] cheese - 匹配路由错误: ReferenceError: deleteSellerById is not defined
+[2021-12-14T17:23:29.334] [ERROR] cheese - 匹配路由错误: ReferenceError: deleteSellerById is not defined
+[2021-12-14T17:25:44.400] [ERROR] cheese - 匹配路由错误: Error: post `/seller/delete`: `middleware` must be a function, not `undefined`
+[2021-12-14T17:25:58.527] [ERROR] cheese - 匹配路由错误: Error: post `/seller/delete`: `middleware` must be a function, not `undefined`
+[2021-12-14T17:26:10.156] [ERROR] cheese - 匹配路由错误: Error: post `/seller/delete`: `middleware` must be a function, not `undefined`
+[2021-12-14T17:26:46.587] [ERROR] cheese - 匹配路由错误: SyntaxError: Invalid left-hand side in assignment
+[2021-12-14T18:49:31.362] [ERROR] cheese - 匹配路由错误: ReferenceError: getAdminByQuery is not defined
+[2021-12-14T19:11:32.992] [ERROR] cheese - 匹配路由错误: ReferenceError: dealUserData is not defined
+[2021-12-14T19:11:38.770] [ERROR] cheese - 匹配路由错误: Error: post `/admin/by_query`: `middleware` must be a function, not `undefined`
+[2021-12-14T19:20:10.369] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected strict mode reserved word
+[2021-12-14T19:27:25.701] [ERROR] cheese - RoleVerify_dealUserData ReferenceError: Cannot access 'queryData' before initialization
+[2021-12-14T19:36:33.166] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token 'const'
+[2021-12-14T19:38:23.443] [ERROR] cheese - 匹配路由错误: SyntaxError: Missing initializer in destructuring declaration
+[2021-12-14T19:51:22.893] [ERROR] cheese - 匹配路由错误: ReferenceError: getUserByQuery is not defined
+[2021-12-14T19:51:29.895] [ERROR] cheese - 匹配路由错误: Error: post `/user/by_query`: `middleware` must be a function, not `undefined`
+[2021-12-14T19:52:35.548] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2021-12-14T19:59:10.249] [ERROR] cheese - RoleService_getUserByQuery TypeError: statement.splice is not a function
+[2021-12-14T20:04:03.318] [ERROR] cheese - 匹配路由错误: SyntaxError: Missing initializer in const declaration
+[2021-12-14T20:40:16.732] [ERROR] cheese - RoleService_getUserByQuery Error: Incorrect arguments to mysqld_stmt_execute
+[2021-12-14T20:43:51.631] [ERROR] cheese - RoleService_getUserByQuery Error: Incorrect arguments to mysqld_stmt_execute
+[2021-12-14T20:47:28.911] [ERROR] cheese - RoleService_getUserByQuery Error: Incorrect arguments to mysqld_stmt_execute
+[2021-12-14T20:55:50.674] [ERROR] cheese - RoleService_getUserByQuery Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%?% AND LIMIT ?, ?' at line 1
+[2021-12-14T21:14:25.260] [ERROR] cheese - RoleService_getUserByQuery TypeError: Assignment to constant variable.
+[2021-12-14T21:19:37.360] [ERROR] cheese - RoleService_getUserByQuery Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%?%LIMIT ?, ?' at line 1
+[2021-12-14T21:21:39.557] [ERROR] cheese - RoleService_getUserByQuery Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%?% LIMIT ?, ?' at line 1
+[2021-12-14T21:22:02.928] [ERROR] cheese - RoleService_getUserByQuery Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%?% LIMIT ?, ?' at line 1
+[2021-12-14T21:22:32.152] [ERROR] cheese - RoleService_getUserByQuery Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '% LIMIT ?, ?' at line 1
+[2021-12-14T21:25:14.032] [ERROR] cheese - RoleService_getUserByQuery Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%?% LIMIT ?, ?' at line 1
+[2021-12-14T21:25:31.684] [ERROR] cheese - RoleService_getUserByQuery Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%?% LIMIT ?, ?' at line 1
+[2021-12-14T21:25:35.479] [ERROR] cheese - RoleService_getUserByQuery Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%?% LIMIT ?, ?' at line 1
+[2021-12-14T21:25:42.206] [ERROR] cheese - RoleService_getUserByQuery Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%?% LIMIT ?, ?' at line 1
+[2021-12-14T21:36:00.060] [ERROR] cheese - RoleService_getUserByQuery Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'BETWEEN ? AND ? LIMIT ?, ?' at line 1
+[2021-12-14T21:38:01.382] [ERROR] cheese - RoleService_getUserByQuery Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'BETWEEN ? AND ? LIMIT ?, ?' at line 1
+[2021-12-14T21:40:09.440] [ERROR] cheese - RoleService_getUserByQuery Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'BETWEEN ? AND ? LIMIT ?, ?' at line 1
+[2021-12-14T21:40:26.014] [ERROR] cheese - RoleService_getUserByQuery Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'BETWEEN ? AND ? LIMIT ?, ?' at line 1
+[2021-12-14T21:51:56.815] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token ']'
+[2021-12-14T22:04:34.227] [ERROR] cheese - 匹配路由错误: ReferenceError: veri is not defined
+[2021-12-14T22:08:17.205] [ERROR] cheese - 匹配路由错误: SyntaxError: Identifier 'verifyUser' has already been declared
+[2021-12-14T22:08:35.347] [ERROR] cheese - 匹配路由错误: SyntaxError: Identifier 'verifyUser' has already been declared
+[2021-12-14T22:08:41.892] [ERROR] cheese - 匹配路由错误: SyntaxError: Identifier 'verifyUser' has already been declared
+[2021-12-14T22:08:45.866] [ERROR] cheese - 匹配路由错误: SyntaxError: Identifier 'verifyUser' has already been declared
+[2021-12-14T22:09:02.582] [ERROR] cheese - 匹配路由错误: SyntaxError: Identifier 'verifyUser' has already been declared
+[2021-12-14T22:09:06.072] [ERROR] cheese - 匹配路由错误: SyntaxError: Identifier 'verifyUser' has already been declared
+[2021-12-14T22:10:46.347] [ERROR] cheese - 匹配路由错误: SyntaxError: Identifier 'verifyUser' has already been declared
+[2021-12-14T22:10:48.045] [ERROR] cheese - 匹配路由错误: SyntaxError: Identifier 'verifyUser' has already been declared
+[2021-12-14T22:10:52.686] [ERROR] cheese - 匹配路由错误: SyntaxError: Identifier 'verifyUser' has already been declared
+[2021-12-14T22:11:10.350] [ERROR] cheese - 匹配路由错误: Error: post `/user/usable`: `middleware` must be a function, not `undefined`
+[2021-12-14T22:20:36.019] [ERROR] cheese - 匹配路由错误: ReferenceError: changeUserUsable is not defined
+[2021-12-14T22:20:39.680] [ERROR] cheese - 匹配路由错误: Error: post `/user/usable`: `middleware` must be a function, not `undefined`
+[2021-12-14T22:29:24.833] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2021-12-14T22:29:34.714] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2021-12-14T22:29:37.818] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2021-12-14T22:29:41.629] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2021-12-14T22:29:45.760] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2021-12-14T22:29:58.841] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2021-12-14T22:32:07.067] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2021-12-14T22:32:58.668] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected identifier
+[2021-12-14T22:35:22.869] [ERROR] cheese - RoleController_changeUserUsable ReferenceError: tableName is not defined

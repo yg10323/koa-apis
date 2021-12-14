@@ -29,6 +29,9 @@ const sellerRouter = new Router({ prefix: '/api/seller' })
 sellerRouter.post('/register', verifyRegister, register)
 // 登录
 sellerRouter.post('/login', verifyLogin, verifyUasble, login)
+// 找回密码 
+// TODO
+sellerRouter.post('/update/password')
 // 保存app扫码后发送的device_id
 sellerRouter.post('/send_deviceid', saveDeviceId)
 // 扫码登录

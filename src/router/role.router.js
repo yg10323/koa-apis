@@ -4,12 +4,19 @@ const {
     verifyUser,
     verifyAdmin,
     verifyLogin,
-    verifyRegister
+    verifyRegister,
+    verifyAdminLevel,
+    dealUserData,
 } = require('../middleware/role.middleware')
 const {
     getMenu,
     login,
-    register
+    register,
+    deleteAdminById,
+    deleteSellerById,
+    deleteBuyerById,
+    getUserByQuery,
+    changeUserUsable
 } = require('../controller/role.controller')
 
 const { verifyToken } = require('../middleware/common.middleware')
@@ -25,6 +32,18 @@ roleRouter.get('/1/menu', verifyToken, verifyAdmin, getMenu)
 roleRouter.post('/login', verifyLogin, login)
 // admin注册
 roleRouter.post('/register', verifyRegister, register)
+// 根据id删除admin
+roleRouter.post('/admin/delete', verifyToken, verifyAdminLevel, deleteAdminById)
+// 根据id删除seller
+roleRouter.post('/seller/delete', verifyToken, verifyAdmin, deleteSellerById)
+// 根据id删除buyer
+roleRouter.post('/buyer/delete', verifyToken, verifyAdmin, deleteBuyerById)
+// 根据query获取admin/seller/buyer
+roleRouter.post('/user/by_query', verifyToken, verifyAdmin, dealUserData, getUserByQuery)
+// 更改user的usable
+roleRouter.post('/user/usable', verifyToken, verifyAdmin, changeUserUsable)
+
+
 
 
 
