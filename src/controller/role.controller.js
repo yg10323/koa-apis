@@ -129,6 +129,21 @@ class RoleController {
             logger.error('RoleController_changeUserUsable ' + error)
         }
     }
+
+    // 添加user
+    async addUser(ctx, next) {
+        try {
+            const tableName = ctx.tableName;
+            const data = ctx.data
+            const res = await RoleService.addUser(tableName, data)
+            ctx.body = {
+                code: 200,
+                message: '添加用户成功'
+            }
+        } catch (error) {
+            logger.error('RoleController_addUser ' + error)
+        }
+    }
 }
 
 

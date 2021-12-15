@@ -94,6 +94,7 @@ class RoleService {
                     statement += `WHERE ${keys[i]} LIKE '%${values[i]}%' AND `
                     values.splice(i, 1);
                 }
+                statement = statement.substr(0, statement.length - 4)
             }
 
             // 有时间筛选时
@@ -103,7 +104,7 @@ class RoleService {
                     statement += `WHERE createTime BETWEEN ? AND ? `
                 } else {
                     // 既有其他筛选也有时间筛选
-                    statement += `createTime BETWEEN ? AND ? `
+                    statement += `AND createTime BETWEEN ? AND ? `
                 }
                 values.push(...Object.values(timeQuery))
             }
@@ -116,7 +117,9 @@ class RoleService {
 
             return {
                 totalCount,
-                data: res,
+                data: res
+                // values,
+                // statement
             }
 
         } catch (error) {
@@ -132,6 +135,26 @@ class RoleService {
             return res
         } catch (error) {
             logger.error('RoleService_changeUserUsable ' + error)
+        }
+    }
+
+    // 添加user
+    async addUser(tableName, data) {
+        try {
+            let statementPrev = `INSERT INTO ${tableName} (`
+            let statementRear = `) VALUES (`
+            for (let item of Object.keys(data)) {
+                statementPrev += `${item},`
+                statementRear += `?,`
+            }
+            statementPrev = statementPrev.substr(0, statementPrev.length - 1)
+            statementRear = statementRear.substr(0, statementRear.length - 1)
+            let statement = statementPrev + statementRear + ')'
+
+            const [res] = await connection.execute(statement, [...Object.values(data)])
+            return res
+        } catch (error) {
+            logger.error('RoleService_addUser ' + error)
         }
     }
 }

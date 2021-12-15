@@ -6,7 +6,8 @@ const {
     verifyLogin,
     verifyRegister,
     verifyAdminLevel,
-    dealUserData,
+    dealUserQueryData,
+    dealUserAddData
 } = require('../middleware/role.middleware')
 const {
     getMenu,
@@ -16,7 +17,8 @@ const {
     deleteSellerById,
     deleteBuyerById,
     getUserByQuery,
-    changeUserUsable
+    changeUserUsable,
+    addUser
 } = require('../controller/role.controller')
 
 const { verifyToken } = require('../middleware/common.middleware')
@@ -39,10 +41,11 @@ roleRouter.post('/seller/delete', verifyToken, verifyAdmin, deleteSellerById)
 // 根据id删除buyer
 roleRouter.post('/buyer/delete', verifyToken, verifyAdmin, deleteBuyerById)
 // 根据query获取admin/seller/buyer
-roleRouter.post('/user/by_query', verifyToken, verifyAdmin, dealUserData, getUserByQuery)
+roleRouter.post('/user/by_query', verifyToken, verifyAdmin, dealUserQueryData, getUserByQuery)
 // 更改user的usable
 roleRouter.post('/user/usable', verifyToken, verifyAdmin, changeUserUsable)
-
+// 添加user
+roleRouter.post('/user/add', verifyToken, verifyAdmin, dealUserAddData, addUser)
 
 
 

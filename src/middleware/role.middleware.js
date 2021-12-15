@@ -1,5 +1,6 @@
 const errorTypes = require('../constants/errorTypes')
 const SellerService = require('../service/seller.service')
+const BuyerService = require('../service/buyer.service')
 const RoleService = require('../service/role.service')
 const logger = require('../utils/logHandle')
 const { encryption } = require('./common.middleware')
@@ -142,7 +143,7 @@ class RoleVerify {
     }
 
     // 根据query获取admin/seller/buyer
-    async dealUserData(ctx, next) {
+    async dealUserQueryData(ctx, next) {
         try {
             const queryData = ctx.request.body;
             ctx.body = queryData
@@ -178,6 +179,37 @@ class RoleVerify {
 
         } catch (error) {
             logger.error('RoleVerify_dealUserData ' + error)
+        }
+    }
+
+    // 添加user时数据处理
+    async dealUserAddData(ctx, next) {
+        try {
+            const data = ctx.request.body;
+            const tableName = data.option;
+            delete data.option;
+            // 1.判断账号是否已经存在
+            if (tableName == 'admin' || 'seller') {
+                const res = await SellerService.judgeSeller(data.account)
+                if (res.length) {
+                    const error = new Error(errorTypes.ACCOUNT_ALREADY_EXIST);
+                    return ctx.app.emit('error', error, ctx);
+                }
+            }
+            if (tableName == 'buyer') {
+                const res = await BuyerService.getBuyerByAccount(data.account)
+                if (res.length) {
+                    const error = new Error(errorTypes.ACCOUNT_ALREADY_EXIST);
+                    return ctx.app.emit('error', error, ctx);
+                }
+            }
+            // 2. 密码加密
+            data.password = encryption(data.password);
+            ctx.tableName = tableName;
+            ctx.data = data;
+            await next()
+        } catch (error) {
+            logger.error('RoleVerify_dealUserAddData ' + error)
         }
     }
 }

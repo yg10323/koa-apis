@@ -853,3 +853,31 @@ Require stack:
 [2021-12-14T22:32:07.067] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
 [2021-12-14T22:32:58.668] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected identifier
 [2021-12-14T22:35:22.869] [ERROR] cheese - RoleController_changeUserUsable ReferenceError: tableName is not defined
+[2021-12-15T09:13:29.975] [ERROR] cheese - RoleService_getUserByQuery Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT ?, ?' at line 1
+[2021-12-15T09:13:50.505] [ERROR] cheese - RoleService_getUserByQuery Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT ?, ?' at line 1
+[2021-12-15T09:18:41.927] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token ')'
+[2021-12-15T09:29:59.260] [ERROR] cheese - RoleService_getUserByQuery Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE id LIKE '%undefined%' LIMIT ?, ?' at line 1
+[2021-12-15T09:30:01.555] [ERROR] cheese - RoleService_getUserByQuery Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE id LIKE '%undefined%' LIMIT ?, ?' at line 1
+[2021-12-15T09:30:01.699] [ERROR] cheese - RoleService_getUserByQuery Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE id LIKE '%undefined%' LIMIT ?, ?' at line 1
+[2021-12-15T09:30:01.844] [ERROR] cheese - RoleService_getUserByQuery Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE id LIKE '%undefined%' LIMIT ?, ?' at line 1
+[2021-12-15T09:30:01.989] [ERROR] cheese - RoleService_getUserByQuery Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE id LIKE '%undefined%' LIMIT ?, ?' at line 1
+[2021-12-15T10:18:23.251] [ERROR] cheese - 匹配路由错误: ReferenceError: addUser is not defined
+[2021-12-15T10:18:29.049] [ERROR] cheese - 匹配路由错误: Error: post `/user/add`: `middleware` must be a function, not `undefined`
+[2021-12-15T10:19:35.451] [ERROR] cheese - 匹配路由错误: ReferenceError: dealQueryData is not defined
+[2021-12-15T10:19:43.316] [ERROR] cheese - 匹配路由错误: Error: post `/user/by_query`: `middleware` must be a function, not `undefined`
+[2021-12-15T10:20:06.934] [ERROR] cheese - 匹配路由错误: ReferenceError: dealUserAddData is not defined
+[2021-12-15T10:20:11.632] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token ','
+[2021-12-15T10:20:13.408] [ERROR] cheese - 匹配路由错误: Error: post `/user/add`: `middleware` must be a function, not `undefined`
+[2021-12-15T10:22:16.056] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected identifier
+[2021-12-15T10:24:51.468] [ERROR] cheese - RoleVerify_dealUserAddData ReferenceError: options is not defined
+[2021-12-15T10:28:19.730] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2021-12-15T10:28:38.171] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2021-12-15T10:28:58.876] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2021-12-15T10:29:12.367] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2021-12-15T10:29:25.858] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2021-12-15T10:31:50.336] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2021-12-15T10:34:09.766] [ERROR] cheese - 匹配路由错误: SyntaxError: Identifier 'statementPre' has already been declared
+[2021-12-15T10:37:57.009] [ERROR] cheese - RoleService_addUser ReferenceError: ctx is not defined
+[2021-12-15T10:41:29.845] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token ']'
+[2021-12-15T11:10:38.400] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2021-12-15T11:13:01.671] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
