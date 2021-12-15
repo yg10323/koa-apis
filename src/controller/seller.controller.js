@@ -154,6 +154,24 @@ class SellerController {
             logger.error('SellerController_deleteSelf ' + error)
         }
     }
+
+    // 工单反馈
+    async postFeedBack(ctx, next) {
+        try {
+            const { id } = ctx.user;
+            const { title, content } = ctx.request.body
+            const res = await SellerService.postFeedBack(id, title, content);
+            if (res.insertId) {
+                ctx.body = {
+                    code: 200,
+                    message: '已添加反馈, 请等待工作人员处理',
+                    feedback_id: res.insertId
+                }
+            }
+        } catch (error) {
+            logger.error('SellerController_postFeedBack ' + error)
+        }
+    }
 }
 
 module.exports = new SellerController()

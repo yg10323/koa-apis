@@ -61,8 +61,10 @@ roleRouter.post('/shop/delete', verifyToken, verifyAdmin, deleteShopById)
 roleRouter.post('/order/list', verifyToken, verifyAdmin, dealQueryData, getDataByQuery)
 // 更改订单状态
 roleRouter.post('/order/status', verifyToken, verifyAdmin, changeOrderUsable)
-
-
+// 获取工单
+roleRouter.post('/feedback/list', verifyToken, verifyAdmin, dealQueryData, getDataByQuery)
+// 回复工单
+roleRouter.post('/feedback/reply', verifyToken, verifyAdmin, dealAddData, addData)
 
 
 

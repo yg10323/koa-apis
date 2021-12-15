@@ -16,7 +16,8 @@ const {
     createShop,
     getSelfInfo,
     updateAuthInfo,
-    deleteSelf
+    deleteSelf,
+    postFeedBack
 } = require('../controller/seller.controller')
 const { verifyToken } = require('../middleware/common.middleware')
 
@@ -46,5 +47,10 @@ sellerRouter.get('/self_info', verifyToken, getSelfInfo)
 sellerRouter.post('/update/auth', verifyToken, updateAuthInfo)
 // 注销账号 => 数据库联动将店铺一块删除
 sellerRouter.delete('/delete', verifyToken, deleteSelf)
+// 工单反馈
+sellerRouter.post('/feedback/post', verifyToken, postFeedBack)
+
+
+
 
 module.exports = sellerRouter

@@ -189,7 +189,7 @@ class RoleVerify {
             const tableName = data.option;
             delete data.option;
             // 1.判断账号是否已经存在(添加user时)
-            if (tableName == 'admin' || 'seller') {
+            if (tableName == 'admin' || tableName == 'seller') {
                 const res = await SellerService.judgeSeller(data.account)
                 if (res.length) {
                     const error = new Error(errorTypes.ACCOUNT_ALREADY_EXIST);

@@ -138,7 +138,7 @@ class RoleController {
             const res = await RoleService.addData(tableName, data)
             ctx.body = {
                 code: 200,
-                message: '添加用户成功'
+                message: '操作成功'
             }
         } catch (error) {
             logger.error('RoleController_addUser ' + error)

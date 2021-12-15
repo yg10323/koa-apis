@@ -60,6 +60,17 @@ class SellerService {
         }
     }
 
+    // 工单反馈
+    async postFeedBack(seller_id, title, content) {
+        try {
+            const statement = `INSERT INTO feedback (title,content,seller_id) VALUES (?,?,?);`;
+            const [res] = await connection.execute(statement, [title, content, seller_id])
+            return res
+        } catch (error) {
+            logger.error('SellerService_postFeedBack ' + error)
+        }
+    }
+
 
 }
 

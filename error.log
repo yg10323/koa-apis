@@ -923,3 +923,9 @@ Require stack:
 [2021-12-15T17:47:12.773] [ERROR] cheese - RoleService_changeOrderUsable Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order SET usable = ? WHERE id = ?' at line 1
 [2021-12-15T17:47:16.428] [ERROR] cheese - RoleService_changeOrderUsable Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order SET usable = ? WHERE id = ?' at line 1
 [2021-12-15T17:47:44.689] [ERROR] cheese - RoleService_changeOrderUsable Error: Unknown column 'usable' in 'field list'
+[2021-12-15T18:31:26.028] [ERROR] cheese - 匹配路由错误: ReferenceError: postFeedBack is not defined
+[2021-12-15T18:31:32.826] [ERROR] cheese - 匹配路由错误: Error: post `/feedback/post`: `middleware` must be a function, not `undefined`
+[2021-12-15T18:31:55.471] [ERROR] cheese - 匹配路由错误: Error: post `/feedback/post`: `middleware` must be a function, not `undefined`
+[2021-12-15T18:35:23.390] [ERROR] cheese - SellerVerify_verifyUasble TypeError: Cannot destructure property 'account' of 'ctx.seller' as it is undefined.
+[2021-12-15T18:35:36.041] [ERROR] cheese - SellerVerify_verifyUasble TypeError: Cannot destructure property 'account' of 'ctx.seller' as it is undefined.
+[2021-12-15T19:08:08.981] [ERROR] cheese - 匹配路由错误: SyntaxError: Missing initializer in const declaration
