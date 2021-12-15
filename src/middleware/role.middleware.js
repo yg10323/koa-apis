@@ -143,7 +143,7 @@ class RoleVerify {
     }
 
     // 根据query获取admin/seller/buyer
-    async dealUserQueryData(ctx, next) {
+    async dealQueryData(ctx, next) {
         try {
             const queryData = ctx.request.body;
             ctx.body = queryData
@@ -183,12 +183,12 @@ class RoleVerify {
     }
 
     // 添加user时数据处理
-    async dealUserAddData(ctx, next) {
+    async dealAddData(ctx, next) {
         try {
             const data = ctx.request.body;
             const tableName = data.option;
             delete data.option;
-            // 1.判断账号是否已经存在
+            // 1.判断账号是否已经存在(添加user时)
             if (tableName == 'admin' || 'seller') {
                 const res = await SellerService.judgeSeller(data.account)
                 if (res.length) {
@@ -203,8 +203,10 @@ class RoleVerify {
                     return ctx.app.emit('error', error, ctx);
                 }
             }
-            // 2. 密码加密
-            data.password = encryption(data.password);
+            // 2. 密码加密(添加user时)
+            if (data.password) {
+                data.password = encryption(data.password);
+            }
             ctx.tableName = tableName;
             ctx.data = data;
             await next()

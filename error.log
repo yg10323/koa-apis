@@ -881,3 +881,25 @@ Require stack:
 [2021-12-15T10:41:29.845] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token ']'
 [2021-12-15T11:10:38.400] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
 [2021-12-15T11:13:01.671] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2021-12-15T11:21:22.781] [ERROR] cheese - 匹配路由错误: ReferenceError: getShopList is not defined
+[2021-12-15T11:21:28.474] [ERROR] cheese - 匹配路由错误: Error: get `/shop/list`: `middleware` must be a function, not `undefined`
+[2021-12-15T11:29:12.342] [ERROR] cheese - 匹配路由错误: Error: post `/user/by_query`: `middleware` must be a function, not `undefined`
+[2021-12-15T11:29:45.431] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2021-12-15T15:29:33.875] [ERROR] cheese - 匹配路由错误: ReferenceError: getQueryData is not defined
+[2021-12-15T15:29:44.359] [ERROR] cheese - 匹配路由错误: Error: post `/user/by_query`: `middleware` must be a function, not `undefined`
+[2021-12-15T15:30:56.267] [ERROR] cheese - 匹配路由错误: Error: post `/user/by_query`: `middleware` must be a function, not `undefined`
+[2021-12-15T15:31:00.560] [ERROR] cheese - 匹配路由错误: ReferenceError: getQueryData is not defined
+[2021-12-15T15:52:15.282] [ERROR] cheese - 匹配路由错误: ReferenceError: changeShopUsable is not defined
+[2021-12-15T15:52:20.225] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token ','
+[2021-12-15T15:52:22.340] [ERROR] cheese - 匹配路由错误: Error: post `/shop/usable`: `middleware` must be a function, not `undefined`
+[2021-12-15T15:53:13.906] [ERROR] cheese - RoleService_getUserByQuery Error: Unknown column 'account' in 'where clause'
+[2021-12-15T15:56:35.770] [ERROR] cheese - 匹配路由错误: SyntaxError: Missing initializer in destructuring declaration
+[2021-12-15T15:56:38.350] [ERROR] cheese - 匹配路由错误: SyntaxError: Missing initializer in destructuring declaration
+[2021-12-15T15:56:42.756] [ERROR] cheese - 匹配路由错误: SyntaxError: Missing initializer in destructuring declaration
+[2021-12-15T16:04:15.941] [ERROR] cheese - 匹配路由错误: ReferenceError: deleteShopById is not defined
+[2021-12-15T16:04:22.865] [ERROR] cheese - 匹配路由错误: Error: post `/shop/delete`: `middleware` must be a function, not `undefined`
+[2021-12-15T16:21:56.320] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token ')'
+[2021-12-15T16:22:40.992] [ERROR] cheese - 匹配路由错误: Error: post `/user/add`: `middleware` must be a function, not `undefined`
+[2021-12-15T16:22:45.839] [ERROR] cheese - 匹配路由错误: ReferenceError: dealAddData is not defined
+[2021-12-15T16:23:13.245] [ERROR] cheese - 匹配路由错误: Error: post `/user/add`: `middleware` must be a function, not `undefined`
+[2021-12-15T16:23:21.879] [ERROR] cheese - 匹配路由错误: ReferenceError: addData is not defined

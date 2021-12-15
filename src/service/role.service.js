@@ -77,8 +77,8 @@ class RoleService {
         }
     }
 
-    // 根据query获取admin/seller/buyer
-    async getUserByQuery(tableName, page, offset, keys, values, timeQuery) {
+    // 通用: 根据query获取数据
+    async getDataByQuery(tableName, page, offset, keys, values, timeQuery) {
         try {
 
             // 查询总数
@@ -139,7 +139,7 @@ class RoleService {
     }
 
     // 添加user
-    async addUser(tableName, data) {
+    async addData(tableName, data) {
         try {
             let statementPrev = `INSERT INTO ${tableName} (`
             let statementRear = `) VALUES (`
@@ -155,6 +155,28 @@ class RoleService {
             return res
         } catch (error) {
             logger.error('RoleService_addUser ' + error)
+        }
+    }
+
+    // 更改shop的usable
+    async changeShopUsable(usable, id) {
+        try {
+            const statement = `UPDATE shop SET usable = ? WHERE id = ?;`;
+            const [res] = await connection.execute(statement, [usable, id])
+            return res
+        } catch (error) {
+            logger.error('RoleService_changeShopUsable ' + error)
+        }
+    }
+
+    // 删除店铺
+    async deleteShopById(id) {
+        try {
+            const statement = `DELETE FROM shop WHERE id = ?;`;
+            const [res] = await connection.execute(statement, [id])
+            return res
+        } catch (error) {
+            logger.error('RoleService_deleteShopById ' + error)
         }
     }
 }

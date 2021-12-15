@@ -96,18 +96,18 @@ class RoleController {
         }
     }
 
-    // 根据query获取admin/seller/buyer
-    async getUserByQuery(ctx, next) {
+    //通用:  根据query获取数据
+    async getDataByQuery(ctx, next) {
         try {
             const { tableName, page, offset, keys, values, timeQuery } = ctx.queryInfo
-            const res = await RoleService.getUserByQuery(tableName, page, offset, keys, values, timeQuery);
+            const res = await RoleService.getDataByQuery(tableName, page, offset, keys, values, timeQuery);
             ctx.body = {
                 code: 200,
                 data: res
             }
 
         } catch (error) {
-            logger.error('RoleController_getUserByQuery ' + error)
+            logger.error('RoleController_getDataByQuery ' + error)
         }
     }
 
@@ -130,18 +130,46 @@ class RoleController {
         }
     }
 
-    // 添加user
-    async addUser(ctx, next) {
+    //通用: 添加数据
+    async addData(ctx, next) {
         try {
             const tableName = ctx.tableName;
             const data = ctx.data
-            const res = await RoleService.addUser(tableName, data)
+            const res = await RoleService.addData(tableName, data)
             ctx.body = {
                 code: 200,
                 message: '添加用户成功'
             }
         } catch (error) {
             logger.error('RoleController_addUser ' + error)
+        }
+    }
+
+    // 更改shop的usable
+    async changeShopUsable(ctx, next) {
+        try {
+            const { usable, id } = ctx.request.body;
+            const res = await RoleService.changeShopUsable(usable, id)
+            ctx.body = {
+                code: 200,
+                message: '更新成功'
+            }
+        } catch (error) {
+            logger.error('RoleController_changeShopUsable ' + error)
+        }
+    }
+
+    // 删除店铺
+    async deleteShopById(ctx, next) {
+        try {
+            const { id } = ctx.request.body;
+            const res = await RoleService.deleteShopById(id)
+            ctx.body = {
+                code: 200,
+                message: '删除成功'
+            }
+        } catch (error) {
+            logger.error('RoleController_deleteShopById ' + error)
         }
     }
 }
