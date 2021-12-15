@@ -20,7 +20,8 @@ const {
     changeUserUsable,
     addData,
     changeShopUsable,
-    deleteShopById
+    deleteShopById,
+    changeOrderUsable
 } = require('../controller/role.controller')
 
 const { verifyToken } = require('../middleware/common.middleware')
@@ -56,6 +57,12 @@ roleRouter.post('/shop/usable', verifyToken, verifyAdmin, changeShopUsable)
 roleRouter.post('/shop/delete', verifyToken, verifyAdmin, deleteShopById)
 // 添加店铺  =>  因数据库字段以及此处没有图片处理, 因此请不要使用该接口
 // roleRouter.post('/shop/add', verifyToken, verifyAdmin, dealAddData, addData)
+// 获取订单
+roleRouter.post('/order/list', verifyToken, verifyAdmin, dealQueryData, getDataByQuery)
+// 更改订单状态
+roleRouter.post('/order/status', verifyToken, verifyAdmin, changeOrderUsable)
+
+
 
 
 

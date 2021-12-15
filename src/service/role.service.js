@@ -179,6 +179,17 @@ class RoleService {
             logger.error('RoleService_deleteShopById ' + error)
         }
     }
+
+    // 更改order的usable
+    async changeOrderUsable(done, id) {
+        try {
+            const statement = `UPDATE orders SET done = ? WHERE id = ?;`;
+            const [res] = await connection.execute(statement, [done, id])
+            return res
+        } catch (error) {
+            logger.error('RoleService_changeOrderUsable ' + error)
+        }
+    }
 }
 
 module.exports = new RoleService()

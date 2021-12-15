@@ -172,6 +172,20 @@ class RoleController {
             logger.error('RoleController_deleteShopById ' + error)
         }
     }
+
+    // 更改订单状态
+    async changeOrderUsable(ctx, next) {
+        try {
+            const { done, id } = ctx.request.body;
+            const res = await RoleService.changeOrderUsable(done, id)
+            ctx.body = {
+                code: 200,
+                message: '更新成功'
+            }
+        } catch (error) {
+            logger.error('RoleController_changeOrderUsable ' + error)
+        }
+    }
 }
 
 

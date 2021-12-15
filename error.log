@@ -903,3 +903,23 @@ Require stack:
 [2021-12-15T16:22:45.839] [ERROR] cheese - 匹配路由错误: ReferenceError: dealAddData is not defined
 [2021-12-15T16:23:13.245] [ERROR] cheese - 匹配路由错误: Error: post `/user/add`: `middleware` must be a function, not `undefined`
 [2021-12-15T16:23:21.879] [ERROR] cheese - 匹配路由错误: ReferenceError: addData is not defined
+[2021-12-15T17:27:23.228] [ERROR] cheese - RoleService_getUserByQuery Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order' at line 1
+[2021-12-15T17:27:30.480] [ERROR] cheese - RoleService_getUserByQuery Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order' at line 1
+[2021-12-15T17:27:32.999] [ERROR] cheese - RoleService_getUserByQuery Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order' at line 1
+[2021-12-15T17:27:43.218] [ERROR] cheese - RoleService_getUserByQuery Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order' at line 1
+[2021-12-15T17:27:53.558] [ERROR] cheese - RoleService_getUserByQuery Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order' at line 1
+[2021-12-15T17:29:46.349] [ERROR] cheese - RoleService_getUserByQuery Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order' at line 1
+[2021-12-15T17:29:50.663] [ERROR] cheese - RoleService_getUserByQuery Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order' at line 1
+[2021-12-15T17:29:55.264] [ERROR] cheese - RoleService_getUserByQuery Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order' at line 1
+[2021-12-15T17:30:58.231] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected identifier
+[2021-12-15T17:31:04.431] [ERROR] cheese - RoleService_getUserByQuery Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order' at line 1
+[2021-12-15T17:31:13.496] [ERROR] cheese - RoleService_getUserByQuery Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order' at line 1
+[2021-12-15T17:31:20.473] [ERROR] cheese - RoleService_getUserByQuery Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order' at line 1
+[2021-12-15T17:31:51.258] [ERROR] cheese - RoleService_getUserByQuery Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order' at line 1
+[2021-12-15T17:31:56.555] [ERROR] cheese - RoleService_getUserByQuery Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order' at line 1
+[2021-12-15T17:32:39.160] [ERROR] cheese - RoleService_getUserByQuery Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order' at line 1
+[2021-12-15T17:39:17.927] [ERROR] cheese - 匹配路由错误: ReferenceError: deleteOrderById is not defined
+[2021-12-15T17:39:28.709] [ERROR] cheese - 匹配路由错误: Error: post `/order/delete`: `middleware` must be a function, not `undefined`
+[2021-12-15T17:47:12.773] [ERROR] cheese - RoleService_changeOrderUsable Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order SET usable = ? WHERE id = ?' at line 1
+[2021-12-15T17:47:16.428] [ERROR] cheese - RoleService_changeOrderUsable Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order SET usable = ? WHERE id = ?' at line 1
+[2021-12-15T17:47:44.689] [ERROR] cheese - RoleService_changeOrderUsable Error: Unknown column 'usable' in 'field list'
