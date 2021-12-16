@@ -943,3 +943,8 @@ Require stack:
 [2021-12-16T10:01:10.462] [ERROR] cheese - 匹配路由错误: ReferenceError: dealAddData is not defined
 [2021-12-16T10:01:21.203] [ERROR] cheese - 匹配路由错误: ReferenceError: dealAddData is not defined
 [2021-12-16T10:51:31.393] [ERROR] cheese - RoleService_addUser Error: Table 'design.undefined' doesn't exist
+[2021-12-16T16:17:16.819] [ERROR] cheese - 匹配路由错误: ReferenceError: getSold is not defined
+[2021-12-16T16:17:23.621] [ERROR] cheese - 匹配路由错误: Error: get `/sold`: `middleware` must be a function, not `undefined`
+[2021-12-16T19:31:40.056] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '.'
+[2021-12-16T19:33:08.729] [ERROR] cheese - 匹配路由错误: ReferenceError: getMapData is not defined
+[2021-12-16T19:33:10.764] [ERROR] cheese - 匹配路由错误: ReferenceError: getMapData is not defined

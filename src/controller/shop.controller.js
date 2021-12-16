@@ -119,8 +119,41 @@ class ShopController {
     async getBill(ctx, next) {
         try {
             const shop_id = ctx.shop_id
+            const res = await ShopService.getBill(shop_id)
+            ctx.body = {
+                code: 200,
+                data: res
+            }
         } catch (error) {
             logger.error('ShopController_getBill ' + error)
+        }
+    }
+
+    // 获取店铺食品销售数量
+    async getSold(ctx, next) {
+        try {
+            const shop_id = ctx.shop_id;
+            const res = await ShopService.getSold(shop_id)
+            ctx.body = {
+                code: 200,
+                data: res
+            }
+        } catch (error) {
+            logger.error('ShopController_getSold ' + error)
+        }
+    }
+
+    // 获取订单地点数量分布
+    async getMapData(ctx, next) {
+        try {
+            const shop_id = ctx.shop_id;
+            const res = await ShopService.getMapData(shop_id)
+            ctx.body = {
+                code: 200,
+                data: res
+            }
+        } catch (error) {
+            logger.error('ShopController_getMapData ' + error)
         }
     }
 }

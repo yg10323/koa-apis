@@ -122,15 +122,45 @@ class ShopService {
     // 获取流水相关
     async getBill(shop_id) {
         try {
-            const soldStatement = `SELECT id, name ,price, sold FROM food WHERE shop_id = ?;`;
-            const billStatement = ``;
-            const slodRes = await connection.execute(soldStatement, [shop_id]);
-            const billRes = await connection.execute(billStatement, [shop_id]);
-
-            return { slodRes, billRes }
+            const statement = `SELECT 
+	                            SUM(o.pay_price) '收入', SUM(f.cost) '成本', (SUM(o.pay_price)-SUM(f.cost)) '利润'
+                            FROM o_f 
+	                        LEFT JOIN orders o ON o.id = o_f.o_id
+	                        LEFT JOIN food f ON f.id = o_f.f_id
+                            WHERE o_f.s_id = ?;`
+            const [res] = await connection.execute(statement, [shop_id]);
+            return res
         } catch (error) {
             logger.error('ShopService_getBill ' + error)
         }
+    }
+
+    // 获取店铺食品销售数量
+    async getSold(shop_id) {
+        try {
+            const statement = `SELECT id, name, sold FROM food WHERE shop_id = ?;`
+            const [res] = await connection.execute(statement, [shop_id])
+            return res
+        } catch (error) {
+            logger.error('ShopService_getSold ' + error)
+        }
+    }
+
+    // 获取订单地点数量分布
+    async getMapData(shop_id) {
+        try {
+            const statement = `SELECT 
+	                            LEFT(b.address,2) name,count(1) value 
+                                FROM o_f 
+	                            LEFT JOIN orders o ON o.id = o_f.o_id
+	                            LEFT JOIN buyer b ON b.id = o.buyer_id
+                            WHERE o_f.s_id = ? GROUP BY b.address;`
+            const [res] = await connection.execute(statement, [shop_id])
+            return res
+        } catch (error) {
+            logger.error('ShopService_getMapData ' + error)
+        }
+
     }
 }
 
