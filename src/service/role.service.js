@@ -190,6 +190,17 @@ class RoleService {
             logger.error('RoleService_changeOrderUsable ' + error)
         }
     }
+
+    // 更改订单的update_flag
+    async changeUpdateFlag(update_flag, id) {
+        try {
+            const statement = `UPDATE orders SET update_flag = ? WHERE id = ?;`;
+            const [res] = await connection.execute(statement, [update_flag, id])
+            return res
+        } catch (error) {
+            logger.error('RoleService_changeUpdateFlag ' + error)
+        }
+    }
 }
 
 module.exports = new RoleService()

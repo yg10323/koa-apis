@@ -186,6 +186,20 @@ class RoleController {
             logger.error('RoleController_changeOrderUsable ' + error)
         }
     }
+
+    // 更改订单日期归属
+    async changeUpdateFlag(ctx, next) {
+        try {
+            const { update_flag, id } = ctx.request.body;
+            const res = await RoleService.changeUpdateFlag(update_flag, id)
+            ctx.body = {
+                code: 200,
+                message: '更新成功'
+            }
+        } catch (error) {
+            logger.error('RoleController_changeUpdateFlag ' + error)
+        }
+    }
 }
 
 

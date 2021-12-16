@@ -20,6 +20,7 @@ const {
     changeUserUsable,
     addData,
     changeShopUsable,
+    changeUpdateFlag,
     deleteShopById,
     changeOrderUsable
 } = require('../controller/role.controller')
@@ -61,6 +62,8 @@ roleRouter.post('/shop/delete', verifyToken, verifyAdmin, deleteShopById)
 roleRouter.post('/order/list', verifyToken, verifyAdmin, dealQueryData, getDataByQuery)
 // 更改订单状态
 roleRouter.post('/order/status', verifyToken, verifyAdmin, changeOrderUsable)
+// 更改订单日期归属
+roleRouter.post('/order/update_flag', verifyToken, verifyAdmin, changeUpdateFlag)
 // 获取工单
 roleRouter.post('/feedback/list', verifyToken, verifyAdmin, dealQueryData, getDataByQuery)
 // 回复工单
