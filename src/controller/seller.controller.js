@@ -159,8 +159,8 @@ class SellerController {
     async postFeedBack(ctx, next) {
         try {
             const { id } = ctx.user;
-            const { title, content } = ctx.request.body
-            const res = await SellerService.postFeedBack(id, title, content);
+            const { title, content, type } = ctx.request.body
+            const res = await SellerService.postFeedBack(id, title, content, type);
             if (res.insertId) {
                 ctx.body = {
                     code: 200,
@@ -170,6 +170,20 @@ class SellerController {
             }
         } catch (error) {
             logger.error('SellerController_postFeedBack ' + error)
+        }
+    }
+
+    // 获取我的工单
+    async getMyFeedback(ctx, next) {
+        try {
+            const { id } = ctx.user;
+            const res = await SellerService.getMyFeedback(id);
+            ctx.body = {
+                code: 200,
+                data: res
+            }
+        } catch (error) {
+            logger.error('SellerController_getMyFeedback ' + error)
         }
     }
 }

@@ -929,3 +929,17 @@ Require stack:
 [2021-12-15T18:35:23.390] [ERROR] cheese - SellerVerify_verifyUasble TypeError: Cannot destructure property 'account' of 'ctx.seller' as it is undefined.
 [2021-12-15T18:35:36.041] [ERROR] cheese - SellerVerify_verifyUasble TypeError: Cannot destructure property 'account' of 'ctx.seller' as it is undefined.
 [2021-12-15T19:08:08.981] [ERROR] cheese - 匹配路由错误: SyntaxError: Missing initializer in const declaration
+[2021-12-15T20:40:36.223] [ERROR] cheese - 匹配路由错误: ReferenceError: getMyFeedback is not defined
+[2021-12-15T20:40:40.769] [ERROR] cheese - 匹配路由错误: Error: post `/feedback/self`: `middleware` must be a function, not `undefined`
+[2021-12-15T20:41:24.974] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2021-12-15T20:42:45.928] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2021-12-15T20:42:45.930] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2021-12-15T20:42:45.931] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2021-12-15T20:42:45.932] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2021-12-15T21:21:20.603] [ERROR] cheese - SellerService_postFeedBack Error: Field 'type' doesn't have a default value
+[2021-12-15T21:21:20.604] [ERROR] cheese - SellerController_postFeedBack TypeError: Cannot read property 'insertId' of undefined
+[2021-12-16T10:00:44.592] [ERROR] cheese - 匹配路由错误: ReferenceError: dealAddData is not defined
+[2021-12-16T10:01:06.263] [ERROR] cheese - 匹配路由错误: ReferenceError: dealAddData is not defined
+[2021-12-16T10:01:10.462] [ERROR] cheese - 匹配路由错误: ReferenceError: dealAddData is not defined
+[2021-12-16T10:01:21.203] [ERROR] cheese - 匹配路由错误: ReferenceError: dealAddData is not defined
+[2021-12-16T10:51:31.393] [ERROR] cheese - RoleService_addUser Error: Table 'design.undefined' doesn't exist

@@ -182,7 +182,7 @@ class RoleVerify {
         }
     }
 
-    // 添加user时数据处理
+    // 添加时数据处理
     async dealAddData(ctx, next) {
         try {
             const data = ctx.request.body;

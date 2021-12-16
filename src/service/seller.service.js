@@ -61,13 +61,24 @@ class SellerService {
     }
 
     // 工单反馈
-    async postFeedBack(seller_id, title, content) {
+    async postFeedBack(seller_id, title, content, type) {
         try {
-            const statement = `INSERT INTO feedback (title,content,seller_id) VALUES (?,?,?);`;
-            const [res] = await connection.execute(statement, [title, content, seller_id])
+            const statement = `INSERT INTO feedback (title,content,seller_id,type) VALUES (?,?,?,?);`;
+            const [res] = await connection.execute(statement, [title, content, seller_id, type])
             return res
         } catch (error) {
             logger.error('SellerService_postFeedBack ' + error)
+        }
+    }
+
+    // 获取我的工单
+    async getMyFeedback(seller_id) {
+        try {
+            const statement = `SELECT * FROM feedback WHERE seller_id = ?;`;
+            const [res] = await connection.execute(statement, [seller_id])
+            return res
+        } catch (error) {
+            logger.error('SellerService_getMyFeedback ' + error)
         }
     }
 

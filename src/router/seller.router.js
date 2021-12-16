@@ -17,11 +17,12 @@ const {
     getSelfInfo,
     updateAuthInfo,
     deleteSelf,
-    postFeedBack
+    postFeedBack,
+    getMyFeedback
 } = require('../controller/seller.controller')
 const { verifyToken } = require('../middleware/common.middleware')
-
-
+const { dealAddData } = require('../middleware/role.middleware')
+const { addData } = require('../controller/role.controller')
 
 const sellerRouter = new Router({ prefix: '/api/seller' })
 
@@ -49,8 +50,10 @@ sellerRouter.post('/update/auth', verifyToken, updateAuthInfo)
 sellerRouter.delete('/delete', verifyToken, deleteSelf)
 // 工单反馈
 sellerRouter.post('/feedback/post', verifyToken, postFeedBack)
-
-
+// 获取我的工单
+sellerRouter.get('/feedback/self', verifyToken, getMyFeedback)
+// 回复工单
+sellerRouter.post('/feedback/reply', verifyToken, dealAddData, addData)
 
 
 module.exports = sellerRouter
