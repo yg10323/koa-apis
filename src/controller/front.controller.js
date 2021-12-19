@@ -28,6 +28,20 @@ class FrontController {
             logger.error('FrontController_getShopAll ' + error)
         }
     }
+
+    // 获取全部食品信息
+    async getFoodAll(ctx, next) {
+        try {
+            const { shop_id } = ctx.request.body;
+            const res = await FrontService.getFoodAll(shop_id)
+            ctx.body = {
+                code: 200,
+                data: res
+            }
+        } catch (error) {
+            logger.error('FrontController_getFoodAll ' + error)
+        }
+    }
 }
 
 

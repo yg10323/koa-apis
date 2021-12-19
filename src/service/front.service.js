@@ -25,6 +25,20 @@ class FrontService {
         }
     }
 
+    // 获取全部食品信息
+    async getFoodAll(shop_id) {
+        try {
+            const statement = `SELECT f.*, fc.id food_classify_id, fc.classify food_classify FROM f_fc 
+	                            LEFT JOIN food f on f.id = f_fc.f_id 
+	                            LEFT JOIN food_classify fc on fc.id = f_fc.fc_id
+                            WHERE f_fc.s_id = ?`
+            const [res] = await connection.execute(statement, [shop_id])
+            return res
+        } catch (error) {
+            logger.error('FrontService_getFoodAll ' + error)
+        }
+    }
+
 }
 
 

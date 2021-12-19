@@ -959,3 +959,5 @@ Require stack:
 [2021-12-18T20:04:05.844] [ERROR] cheese - 匹配路由错误: TypeError: router.routes is not a function
 [2021-12-18T20:04:13.246] [ERROR] cheese - 匹配路由错误: ReferenceError: foodRouter is not defined
 [2021-12-19T09:06:10.849] [ERROR] cheese - 匹配路由错误: Error: get `/shop/all`: `middleware` must be a function, not `undefined`
+[2021-12-19T22:11:38.099] [ERROR] cheese - 匹配路由错误: ReferenceError: getFoodAll is not defined
+[2021-12-19T22:11:41.911] [ERROR] cheese - 匹配路由错误: Error: get `/shop/food`: `middleware` must be a function, not `undefined`
