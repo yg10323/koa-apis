@@ -35,7 +35,7 @@ class BuyerVerify {
     // 登录验证
     async verifyLogin(ctx, next) {
         try {
-            let { account, password } = ctx.request.body
+            let { account, password, longKeep } = ctx.request.body
             // 1. 用户信息是否完整
             if (!account || !password) {
                 const error = new Error(errorTypes.ACCOUNT_OR_PASSWORD_IS_EMPTY);
@@ -60,7 +60,8 @@ class BuyerVerify {
                 return ctx.app.emit('error', error, ctx)
             }
             // 5. 保存信息, 准备下发token
-            ctx.buyer = { id: buyer.id, role_id: buyer.role_id, account }
+            ctx.buyer = { id: buyer.id, role_id: buyer.role_id, account, longKeep }
+            ctx.buyerInfo = buyer
             await next();
         } catch (error) {
             logger.error('BuyerVerify_verifyLogin ' + error)

@@ -55,6 +55,17 @@ class BuyerService {
         }
     }
 
+    // 更新收货信息
+    async updateAddress(address, name, phone, id) {
+        try {
+            const statement = `UPDATE buyer SET address = ? , name = ?, phone = ? WHERE id = ?;`
+            const [res] = await connection.execute(statement, [address, name, phone, id])
+            return res
+        } catch (error) {
+            logger.error('BuyerService_updateAddress ' + error)
+        }
+    }
+
 }
 
 

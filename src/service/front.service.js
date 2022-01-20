@@ -39,6 +39,16 @@ class FrontService {
         }
     }
 
+    // 根据一级分类获取店铺
+    async getShopByOpId(op_id) {
+        try {
+            const statement = `SELECT * FROM shop WHERE op_id = ?;`;
+            const [res] = await connection.execute(statement, [op_id]);
+            return res
+        } catch (error) {
+            logger.error('FrontService_getShopByOpId ' + error)
+        }
+    }
 }
 
 

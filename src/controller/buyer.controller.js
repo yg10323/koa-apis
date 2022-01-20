@@ -25,14 +25,14 @@ class BuyerController {
     // 登录, 下发token
     async login(ctx, next) {
         try {
-            const { id, account, role_id } = ctx.buyer;
+            const { id, account, role_id, longKeep } = ctx.buyer;
             const payload = { id, account, role_id };
-            const expire = 60 * 60 * 24;
+            const expire = longKeep ? 60 * 60 * 24 * 365 * 100 : 60 * 60 * 24;
             const token = createToken(payload, expire);
             ctx.body = {
                 code: 200,
                 message: `${account}登录成功`,
-                userInfo: { account, role_id },
+                userInfo: ctx.buyerInfo,
                 token
             }
         } catch (error) {
@@ -64,6 +64,21 @@ class BuyerController {
 
         } catch (error) {
             logger.error('BuyerController_purchase ' + error)
+        }
+    }
+
+    // 更新收货信息
+    async updateAddress(ctx, next) {
+        try {
+            const { id } = ctx.user;
+            const { address, name, phone } = ctx.request.body
+            const res = await BuyerService.updateAddress(address, name, phone, id)
+            ctx.body = {
+                code: 200,
+                message: '更新收货信息成功'
+            }
+        } catch (error) {
+            logger.error('BuyerController_updateAddress ' + error)
         }
     }
 }

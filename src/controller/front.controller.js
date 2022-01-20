@@ -42,6 +42,20 @@ class FrontController {
             logger.error('FrontController_getFoodAll ' + error)
         }
     }
+
+    // 根据一级分类获取店铺
+    async getShopByOpId(ctx, next) {
+        try {
+            const { op_id } = ctx.request.body
+            const res = await FrontService.getShopByOpId(op_id)
+            ctx.body = {
+                code: 200,
+                data: res
+            }
+        } catch (error) {
+            logger.error('FrontController_getShopByOpId ' + error)
+        }
+    }
 }
 
 

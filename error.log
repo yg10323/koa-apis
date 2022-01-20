@@ -961,3 +961,18 @@ Require stack:
 [2021-12-19T09:06:10.849] [ERROR] cheese - 匹配路由错误: Error: get `/shop/all`: `middleware` must be a function, not `undefined`
 [2021-12-19T22:11:38.099] [ERROR] cheese - 匹配路由错误: ReferenceError: getFoodAll is not defined
 [2021-12-19T22:11:41.911] [ERROR] cheese - 匹配路由错误: Error: get `/shop/food`: `middleware` must be a function, not `undefined`
+[2021-12-31T17:33:36.137] [ERROR] cheese - RoleService_getUserByQuery Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE account LIKE '%undefined%' LIMIT ?, ?' at line 1
+[2021-12-31T17:33:38.913] [ERROR] cheese - RoleService_getUserByQuery Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE account LIKE '%undefined%' LIMIT ?, ?' at line 1
+[2021-12-31T17:33:40.000] [ERROR] cheese - RoleService_getUserByQuery Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE account LIKE '%undefined%' LIMIT ?, ?' at line 1
+[2021-12-31T17:33:43.742] [ERROR] cheese - RoleService_getUserByQuery Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE account LIKE '%undefined%' LIMIT ?, ?' at line 1
+[2022-01-18T18:12:57.902] [ERROR] cheese - 匹配路由错误: ReferenceError: updateAddress is not defined
+[2022-01-18T18:13:03.147] [ERROR] cheese - 匹配路由错误: Error: post `/update/address`: `middleware` must be a function, not `undefined`
+[2022-01-18T18:13:13.770] [ERROR] cheese - 匹配路由错误: Error: post `/update/address`: `middleware` must be a function, not `undefined`
+[2022-01-18T18:14:06.916] [ERROR] cheese - 匹配路由错误: SyntaxError: Missing initializer in destructuring declaration
+[2022-01-18T18:14:12.222] [ERROR] cheese - 匹配路由错误: SyntaxError: Missing initializer in destructuring declaration
+[2022-01-18T18:14:14.326] [ERROR] cheese - 匹配路由错误: SyntaxError: Missing initializer in destructuring declaration
+[2022-01-18T18:14:15.937] [ERROR] cheese - 匹配路由错误: SyntaxError: Missing initializer in destructuring declaration
+[2022-01-18T18:18:06.285] [ERROR] cheese - 匹配路由错误: SyntaxError: Invalid left-hand side expression in postfix operation
+[2022-01-19T13:38:49.562] [ERROR] cheese - 匹配路由错误: ReferenceError: getShopByOpId is not defined
+[2022-01-19T13:39:00.222] [ERROR] cheese - 匹配路由错误: Error: post `/shop/all/op_id`: `middleware` must be a function, not `undefined`
+[2022-01-19T13:39:18.048] [ERROR] cheese - 匹配路由错误: Error: post `/shop/all/op_id`: `middleware` must be a function, not `undefined`
