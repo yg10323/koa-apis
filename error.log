@@ -976,3 +976,10 @@ Require stack:
 [2022-01-19T13:38:49.562] [ERROR] cheese - 匹配路由错误: ReferenceError: getShopByOpId is not defined
 [2022-01-19T13:39:00.222] [ERROR] cheese - 匹配路由错误: Error: post `/shop/all/op_id`: `middleware` must be a function, not `undefined`
 [2022-01-19T13:39:18.048] [ERROR] cheese - 匹配路由错误: Error: post `/shop/all/op_id`: `middleware` must be a function, not `undefined`
+[2022-01-24T09:43:18.349] [ERROR] cheese - 匹配路由错误: ReferenceError: getOrder is not defined
+[2022-01-24T09:43:27.794] [ERROR] cheese - 匹配路由错误: Error: post `/order`: `middleware` must be a function, not `undefined`
+[2022-01-24T09:43:45.725] [ERROR] cheese - 匹配路由错误: Error: post `/order`: `middleware` must be a function, not `undefined`
+[2022-01-26T13:16:54.054] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2022-01-26T13:16:54.101] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2022-01-26T13:16:54.400] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2022-01-26T14:30:00.438] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'

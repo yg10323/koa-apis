@@ -81,6 +81,20 @@ class BuyerController {
             logger.error('BuyerController_updateAddress ' + error)
         }
     }
+
+    // 获取个人订单
+    async getOrder(ctx, next) {
+        try {
+            const { id } = ctx.user
+            const orderData = await BuyerService.getOrder(id)
+            ctx.body = {
+                code: 200,
+                data: res
+            }
+        } catch (error) {
+            logger.error('BuyerController_getOrder ' + error)
+        }
+    }
 }
 
 
