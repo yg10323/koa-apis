@@ -983,3 +983,6 @@ Require stack:
 [2022-01-26T13:16:54.101] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
 [2022-01-26T13:16:54.400] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
 [2022-01-26T14:30:00.438] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2022-01-27T18:50:25.538] [ERROR] cheese - BuyerController_getOrder ReferenceError: res is not defined
+[2022-01-27T18:50:49.454] [ERROR] cheese - BuyerController_getOrder ReferenceError: res is not defined
+[2022-01-27T18:50:53.346] [ERROR] cheese - BuyerController_getOrder ReferenceError: res is not defined

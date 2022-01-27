@@ -86,7 +86,7 @@ class BuyerController {
     async getOrder(ctx, next) {
         try {
             const { id } = ctx.user
-            const orderData = await BuyerService.getOrder(id)
+            const res = await BuyerService.getOrder(id)
             ctx.body = {
                 code: 200,
                 data: res

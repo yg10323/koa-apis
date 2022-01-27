@@ -42,6 +42,7 @@ class BuyerService {
     async setOF(food_info, order_id) {
         try {
             const res = [];
+            // 遍历, 支持一次性购买多个店铺的食品
             for (let item of food_info) {
                 item.food_ids.forEach(async food_id => {
                     const statement = `INSERT INTO o_f (s_id, f_id, o_id) VALUES (?, ?, ?);`;
@@ -70,13 +71,16 @@ class BuyerService {
     async getOrder(buyer_id) {
         try {
             const statement = `SELECT 
-	                    o.*, JSON_OBJECT('name', b.name, 'address',b.address,'phone',b.phone) buyer_info,
-			 JSON_OBJECT('name',f.name, 'cost',f.cost, 'price',f.price,'discount',f.discount,'extra',f.extra) food_info
-            FROM o_f 
-	                LEFT JOIN orders o ON o.id = o_f.o_id
-	                LEFT JOIN buyer b ON b.id = o.buyer_id
-	                LEFT JOIN food f ON f.id = o_f.f_id
-            WHERE o.buyer_id = ? ORDER BY id`
+	                            o.*,
+	                            JSON_OBJECT('id',s.id,'name', s.name, 'avatar_url',s.shop_avatar_url) shop_info, 
+	                            JSON_OBJECT('name', b.name, 'address',b.address,'phone',b.phone) buyer_info, 
+	                            JSON_OBJECT('shop_id',f.shop_id,'name',f.name, 'avatar_url',f.avatar_url, 'price',f.price,'discount',f.discount,'extra',f.extra) food_info
+                            FROM o_f 
+	                            LEFT JOIN orders o ON o.id = o_f.o_id
+	                            LEFT JOIN shop s ON s.id = o_f.s_id
+	                            LEFT JOIN buyer b ON b.id = o.buyer_id
+	                            LEFT JOIN food f ON f.id = o_f.f_id
+                            WHERE o.buyer_id = ? ORDER BY id`
             const [res] = await connection.execute(statement, [buyer_id])
 
             return res
