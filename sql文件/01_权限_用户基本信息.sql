@@ -21,40 +21,6 @@ INSERT INTO `role` (`role_id`, `role`,`identity`) VALUES (1004,'user','rider');
 -- --------------------------------权限表 end------------------------------------
 
 
--- --------------------------------feedback start------------------------------------
-DROP TABLE IF EXISTS `feedback`;
-
-CREATE TABLE IF NOT EXISTS `feedback`(
-	`id` int NOT NULL AUTO_INCREMENT,
-	`title` VARCHAR(500) NOT NULL,
-  `content` varchar(5000) NOT NULL,
-  `seller_id` int NOT NULL,
-  `feedback_id` int DEFAULT NULL,
-	`type` VARCHAR(30) NOT NULL COMMENT 'feedback: 卖家首次创建的工单, reply: 之后的互相回复',
-	`belong` INT DEFAULT NULL COMMENT '属于哪一个工单',
-  `createTime` timestamp  DEFAULT CURRENT_TIMESTAMP,
-	`updateTime` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-	
-	 PRIMARY KEY(`id`),
-	 FOREIGN KEY (`seller_id`) REFERENCES `seller` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-	 FOREIGN KEY (`feedback_id`) REFERENCES `feedback` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-)
-
-INSERT INTO feedback (title,content,seller_id) VALUES (?,?,?);
-
-SELECT * FROM feedback WHERE seller_id = 7;
-
-
-SELECT
-	fb.*, json_object('item',fbk.content) reply
-FROM feedback fb
-LEFT JOIN feedback fbk on fbk.id = fb.feedback_id
-WHERE fb.seller_id = 7
-
--- --------------------------------feedback end------------------------------------
-
-
-
 
 -- --------------------------------管理员表 start------------------------------------
 DROP TABLE IF EXISTS `admin`;
@@ -98,13 +64,6 @@ SELECT * FROM admin createTime BETWEEN ? AND ? LIMIT ?, ?
 UPDATE admin SET usable = ? WHERE id = ?;
 
 
-INSERT INTO ? (?) VALUES (?);
-
-SELECT * FROM admin;
-
-SELECT COUNT(*) totalCount FROM orders;
-
-
 -- --------------------------------管理员表 end------------------------------------
 
 
@@ -132,6 +91,15 @@ CREATE TABLE IF NOT EXISTS `buyer`(
 SELECT * FROM buyer WHERE account = ?;
 INSERT INTO buyer (account, `password`) VALUES (?, ?);
 
+UPDATE buyer SET address = ? , name = ?, phone = ? WHERE id = ?;
+
+
+
+-- --------------------------------评论表 start------------------------------------
+
+
+
+-- --------------------------------评论表 end------------------------------------
 
 
 -- --------------------------------卖家表 start------------------------------------
@@ -215,38 +183,6 @@ UPDATE shop SET                  WHERE seller_id = ?;
 UPDATE shop SET activities = ? WHERE seller_id = ?;
 
 
-
-SELECT id, name, sold FROM food WHERE shop_id = 2;
-
-
-
-SELECT 
-	SUM(o.pay_price) '收入', SUM(f.cost) '成本', (SUM(o.pay_price)-SUM(f.cost)) '利润'
-FROM o_f 
-	LEFT JOIN orders o ON o.id = o_f.o_id
-	LEFT JOIN food f ON f.id = o_f.f_id
-WHERE o_f.s_id = 2
-
-
-SELECT
- type, 
- count(1) AS counts 
-FROM
- material 
-GROUP BY
- type
-
--- 查询订单在全国的分布数量
-SELECT 
-	LEFT(b.address,2) name,count(1) value 
-FROM o_f 
-	LEFT JOIN orders o ON o.id = o_f.o_id
-	LEFT JOIN buyer b ON b.id = o.buyer_id
-WHERE o_f.s_id = 2 GROUP BY b.address
-
-
-
-
 -- 店铺分类
 
 DROP TABLE IF EXISTS `shop_classify`;
@@ -260,7 +196,10 @@ CREATE TABLE IF NOT EXISTS `shop_classify`(
 		PRIMARY KEY(`id`)
 );
 
-SELECT * FROM shop_classify;
+SELECT * FROM shop_classify GROUP BY op_id;
+
+
+
 
 -- --------------------------------------food-------------------------------------
 
@@ -301,7 +240,6 @@ INSERT INTO food (shop_id,name,cost,price,discount,extra,least,single_point,avat
 
 
 SELECT food.* FROM food WHERE shop_id = 2;
-
 
 SELECT f.*, fc.id food_classify_id, fc.classify food_classify FROM f_fc 
 	LEFT JOIN food f on f.id = f_fc.f_id 
@@ -384,6 +322,7 @@ CREATE TABLE IF NOT EXISTS `orders`(
 	`total_price` FLOAT(5,2) NOT NULL COMMENT '订单总金额',
 	`pay_price` FLOAT(5,2) NOT NULL COMMENT '实际支付金额',
 	`done` INT(2) DEFAULT 1 COMMENT '订单状态: 0 已完成  1 进行中 2 已取消',
+	`evaluated` INT(2) DEFAULT 0 COMMENT '订单是否评价: 0 未评价 1已评价',
 	`update_flag` INT(2) DEFAULT 1 COMMENT '用于定时任务, 1 今天的订单  0  往日的订单',
 	`createTime` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 	`updateTime` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
@@ -405,15 +344,31 @@ FROM o_f
 	LEFT JOIN food f ON f.id = o_f.f_id
 WHERE o_f.s_id = 2 AND o.update_flag = 1
 
--- 所有订单
+-- 所有
 SELECT 
-	o.*, JSON_OBJECT('name', b.name, 'address',b.address,'phone',b.phone) buyer_info,
-			 JSON_OBJECT('name',f.name, 'cost',f.cost, 'price',f.price,'discount',f.discount,'extra',f.extra) food_info
+	o.*,
+	JSON_OBJECT('id',s.id,'name', s.name, 'avatar_url',s.shop_avatar_url, 'op_id',s.op_id) shop_info, 
+	JSON_OBJECT('name', b.name, 'address',b.address,'phone',b.phone) buyer_info, 
+	JSON_OBJECT('shop_id',f.shop_id,'name',f.name, 'avatar_url',f.avatar_url, 'price',f.price,'discount',f.discount,'extra',f.extra) food_info
 FROM o_f 
 	LEFT JOIN orders o ON o.id = o_f.o_id
+	LEFT JOIN shop s ON s.id = o_f.s_id
 	LEFT JOIN buyer b ON b.id = o.buyer_id
 	LEFT JOIN food f ON f.id = o_f.f_id
-WHERE o_f.s_id = 2 ORDER BY id
+WHERE o_f.s_id = 2 ORDER BY o.id
+
+-- 个人订单
+SELECT 
+	o.*,
+	JSON_OBJECT('id',s.id,'name', s.name) shop_info, 
+	JSON_OBJECT('name', b.name, 'address',b.address,'phone',b.phone) buyer_info, 
+	JSON_OBJECT('shop_id',f.shop_id,'name',f.name, 'avatar_url',f.avatar_url, 'price',f.price,'discount',f.discount,'extra',f.extra) food_info
+FROM o_f 
+	LEFT JOIN orders o ON o.id = o_f.o_id
+	LEFT JOIN shop s ON s.id = o_f.s_id
+	LEFT JOIN buyer b ON b.id = o.buyer_id
+	LEFT JOIN food f ON f.id = o_f.f_id
+WHERE o.buyer_id = 1 ORDER BY id
 
 
 
@@ -439,7 +394,28 @@ INSERT INTO o_f (s_id, f_id, o_id) VALUES (?, ?, ?);
 
 
 
+-- -------------------------------evaluate  评价------------------------------------
 
+DROP TABLE IF EXISTS `evaluate`;
+
+CREATE TABLE IF NOT EXISTS `evaluate`(
+	`id` INT NOT NULL AUTO_INCREMENT,
+	`order_id` INT NOT NULL COMMENT '订单id',
+	`shop_id` INT NOT NULL COMMENT '店铺id',
+	`food_id` INT NOT NULL COMMENT '食品id',
+	`buyer_id` INT DEFAULT NULL COMMENT '买家id',
+	`seller_id` INT DEFAULT NULL COMMENT '卖家id',
+	`content` VARCHAR(1500) DEFAULT NULL COMMENT '评论内容',
+	`evaluate_id` INT DEFAULT NULL COMMENT 'evaluate_id',
+	`createTime` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	`updateTime` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+	
+	PRIMARY KEY(`id`),
+	FOREIGN KEY(`evaluate_id`) REFERENCES `evaluate`(`id`) ON DELETE CASCADE
+);
+
+
+INSERT INTO `evaluate` (order_id, shop_id, food_id, buyer_id, content) VALUES (?, ?, ?, ?, ?);
 
 -- -------------------------------menu------------------------------------
 DROP TABLE IF EXISTS `menu`;
@@ -466,14 +442,17 @@ INSERT INTO `menu` (id, pid, type, role_id, path, `name`, icon, title)
 VALUES (1016,NULL,1, 1,NULL,'admin','el-icon-coordinate','系统管理');
 INSERT INTO `menu` (id, pid, type, role_id, path, `name`, icon, title)
 VALUES (1017,1016,2, 1,'/main/admin/user','user',NULL,'用户管理');
+
+
+
 INSERT INTO `menu` (id, pid, type, role_id, path, `name`, icon, title)
 VALUES (1018,1016,2, 1,'/main/admin/shop','shop',NULL,'店铺管理');
-INSERT INTO `menu` (id, pid, type, role_id, path, `name`, icon, title)
-VALUES (1019,1016,2, 1,'/main/admin/order','order',NULL,'订单管理');
-INSERT INTO `menu` (id, pid, type, role_id, path, `name`, icon, title)
-VALUES (1020,1016,2, 1,'/main/admin/feedback','feedback',NULL,'工单反馈');
 
+INSERT INTO `menu` (id, pid, type, role_id, path, `name`, icon, title)
+VALUES (1019,1016,2, 1,'/main/admin/comment','bill',NULL,'评价管理');
 
+INSERT INTO `menu` (id, pid, type, role_id, path, `name`, icon, title)
+VALUES (1020,1016,2, 1,'/main/shop/comment','comment',NULL,'工单管理');
 
 
 INSERT INTO `menu` (id, pid, type, role_id, path, `name`, icon, title)
@@ -527,8 +506,7 @@ INSERT INTO `menu` (id, pid, type, role_id, path, `name`, icon, title)
 VALUES (1013,1012,2, 2,'/main/profile/myself','myself',NULL,'我的信息');
 INSERT INTO `menu` (id, pid, type, role_id, path, `name`,  icon, title)
 VALUES (1014,1012,2, 2,'/main/profile/feedback','feedback',NULL,'工单反馈');
-INSERT INTO `menu` (id, pid, type, role_id, path, `name`,  icon, title)
-VALUES (1021,1012,2, 2,'/main/profile/my_feedback','my_feedback',NULL,'我的工单');
+
 
 
 SELECT * FROM menu m WHERE m.pid IS NULL AND m.role_id = 2;
