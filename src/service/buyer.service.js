@@ -72,7 +72,7 @@ class BuyerService {
         try {
             const statement = `SELECT 
 	                            o.*,
-	                            JSON_OBJECT('id',s.id,'name', s.name, 'avatar_url',s.shop_avatar_url) shop_info, 
+	                            JSON_OBJECT('id',s.id,'name', s.name, 'avatar_url',s.shop_avatar_url,'op_id',s.op_id) shop_info, 
 	                            JSON_OBJECT('name', b.name, 'address',b.address,'phone',b.phone) buyer_info, 
 	                            JSON_OBJECT('shop_id',f.shop_id,'name',f.name, 'avatar_url',f.avatar_url, 'price',f.price,'discount',f.discount,'extra',f.extra) food_info
                             FROM o_f 
@@ -86,6 +86,18 @@ class BuyerService {
             return res
         } catch (error) {
             logger.error('BuyerService_')
+        }
+    }
+
+    // 用户评价订单
+    async evaluate(order_id, shop_id, food_id, buyer_id, content) {
+        try {
+            const statement = `INSERT INTO evaluate (order_id, shop_id, food_id, buyer_id, content) VALUES (?, ?, ?, ?, ?);`
+            const [res] = await connection.execute(statement, [order_id, shop_id, food_id, buyer_id, content])
+
+            return res
+        } catch (error) {
+            logger.error('BuyerService_evaluate ' + error)
         }
     }
 

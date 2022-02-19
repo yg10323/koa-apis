@@ -95,6 +95,20 @@ class BuyerController {
             logger.error('BuyerController_getOrder ' + error)
         }
     }
+
+    // 评价订单
+    async evaluate(ctx, next) {
+        try {
+            const { order_id, shop_id, food_id, buyer_id, content } = ctx.request.body
+            const res = await BuyerService.evaluate(order_id, shop_id, food_id, buyer_id, content)
+            ctx.body = {
+                code: 200,
+                message: '提交评价成功'
+            }
+        } catch (error) {
+            logger.error('BuyerController_evaluate ' + error)
+        }
+    }
 }
 
 

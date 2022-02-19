@@ -11,7 +11,8 @@ const {
     login,
     purchase,
     updateAddress,
-    getOrder
+    getOrder,
+    evaluate
 } = require('../controller/buyer.controller')
 
 const { verifyToken } = require('../middleware/common.middleware')
@@ -29,7 +30,8 @@ buyerRouter.post('/purchase', verifyToken, verifySelfInfo, purchase)
 buyerRouter.post('/update/address', verifyToken, updateAddress)
 // 获取订单
 buyerRouter.get('/order', verifyToken, getOrder)
-
+// 评价订单  未做校验
+buyerRouter.post('/evaluate', verifyToken, evaluate)
 
 
 

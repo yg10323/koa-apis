@@ -986,3 +986,12 @@ Require stack:
 [2022-01-27T18:50:25.538] [ERROR] cheese - BuyerController_getOrder ReferenceError: res is not defined
 [2022-01-27T18:50:49.454] [ERROR] cheese - BuyerController_getOrder ReferenceError: res is not defined
 [2022-01-27T18:50:53.346] [ERROR] cheese - BuyerController_getOrder ReferenceError: res is not defined
+[2022-01-28T13:39:08.818] [ERROR] cheese - 匹配路由错误: ReferenceError: getShopById is not defined
+[2022-01-28T13:39:12.210] [ERROR] cheese - 匹配路由错误: Error: post `/shop/by_id`: `middleware` must be a function, not `undefined`
+[2022-02-19T14:23:11.452] [ERROR] cheese - 匹配路由错误: Error: post `/evaluate`: `middleware` must be a function, not `undefined`
+[2022-02-19T14:34:20.976] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected identifier
+[2022-02-19T14:34:21.050] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected identifier
+[2022-02-19T14:34:21.601] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected identifier
+[2022-02-19T14:34:30.227] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected identifier
+[2022-02-19T14:34:30.238] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected identifier
+[2022-02-19T14:34:30.705] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected identifier

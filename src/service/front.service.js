@@ -25,6 +25,17 @@ class FrontService {
         }
     }
 
+    // 根据id获取店铺
+    async getShopById(shop_id) {
+        try {
+            const statement = `SELECT * FROM shop WHERE id = ?;`
+            const [res] = await connection.execute(statement, [shop_id]);
+            return res
+        } catch (error) {
+            logger.error('FrontService_getShopById ' + errror)
+        }
+    }
+
     // 获取全部食品信息
     async getFoodAll(shop_id) {
         try {

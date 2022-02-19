@@ -29,6 +29,20 @@ class FrontController {
         }
     }
 
+    // 根据店铺id获取店铺信息
+    async getShopById(ctx, next) {
+        try {
+            const { shop_id } = ctx.request.body
+            const res = await FrontService.getShopById(shop_id)
+            ctx.body = {
+                code: 200,
+                data: res[0]
+            }
+        } catch (error) {
+            logger.error('FrontController_getShopById ' + error)
+        }
+    }
+
     // 获取全部食品信息
     async getFoodAll(ctx, next) {
         try {
