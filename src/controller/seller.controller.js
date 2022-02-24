@@ -186,6 +186,24 @@ class SellerController {
             logger.error('SellerController_getMyFeedback ' + error)
         }
     }
+
+    // 回复
+    async replyEvaluate(ctx, next) {
+        try {
+            const { id } = ctx.user
+            const { reply, evaluate_id } = ctx.request.body
+            const filed_id = evaluate_id
+            const res = await SellerService.replyEvaluate(id, evaluate_id, reply, filed_id)
+            if (res) {
+                ctx.body = {
+                    code: 200,
+                    data: res
+                }
+            }
+        } catch (error) {
+            logger.error('SellerController_replyEvaluate ' + error)
+        }
+    }
 }
 
 module.exports = new SellerController()

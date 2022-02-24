@@ -82,6 +82,18 @@ class SellerService {
         }
     }
 
+    // 回复订单评论
+    async replyEvaluate(id, evaluate_id, reply, filed_id) {
+        try {
+            const statement = `UPDATE evaluate SET seller_id = ?, evaluate_id = ?, reply = ? WHERE id = ?;`
+            const [res] = await connection.execute(statement, [id, evaluate_id, reply, filed_id])
+
+            return res
+        } catch (error) {
+            logger.error('SellerService_replyEvaluate ' + error)
+        }
+    }
+
 
 }
 

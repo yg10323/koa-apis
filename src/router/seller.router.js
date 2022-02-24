@@ -18,7 +18,8 @@ const {
     updateAuthInfo,
     deleteSelf,
     postFeedBack,
-    getMyFeedback
+    getMyFeedback,
+    replyEvaluate
 } = require('../controller/seller.controller')
 const { verifyToken } = require('../middleware/common.middleware')
 const { dealAddData } = require('../middleware/role.middleware')
@@ -54,6 +55,7 @@ sellerRouter.post('/feedback/post', verifyToken, postFeedBack)
 sellerRouter.get('/feedback/self', verifyToken, getMyFeedback)
 // 回复工单
 sellerRouter.post('/feedback/reply', verifyToken, dealAddData, addData)
-
+// 回复用户的订单评价
+sellerRouter.post('/evaluate/reply', verifyToken, replyEvaluate)
 
 module.exports = sellerRouter
