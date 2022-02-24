@@ -12,7 +12,10 @@ const {
     purchase,
     updateAddress,
     getOrder,
-    evaluate
+    evaluate,
+    updateOrder,
+    getEvaluates,
+    deleteEvaluate
 } = require('../controller/buyer.controller')
 
 const { verifyToken } = require('../middleware/common.middleware')
@@ -32,7 +35,12 @@ buyerRouter.post('/update/address', verifyToken, updateAddress)
 buyerRouter.get('/order', verifyToken, getOrder)
 // 评价订单  未做校验
 buyerRouter.post('/evaluate', verifyToken, evaluate)
-
+// 评价完成后更新订单
+buyerRouter.post('/update/order', verifyToken, updateOrder)
+// 用户获取个人评价
+buyerRouter.get('/self/evaluate', verifyToken, getEvaluates)
+// 删除个人评价
+buyerRouter.post('/delete/evaluate', verifyToken, deleteEvaluate)
 
 
 module.exports = buyerRouter

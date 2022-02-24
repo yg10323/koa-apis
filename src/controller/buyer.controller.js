@@ -99,14 +99,65 @@ class BuyerController {
     // 评价订单
     async evaluate(ctx, next) {
         try {
-            const { order_id, shop_id, food_id, buyer_id, content } = ctx.request.body
-            const res = await BuyerService.evaluate(order_id, shop_id, food_id, buyer_id, content)
-            ctx.body = {
-                code: 200,
-                message: '提交评价成功'
+            const { order_id, shop_id, food_id, buyer_id, content, rate } = ctx.request.body
+            const res = await BuyerService.evaluate(order_id, shop_id, food_id, buyer_id, content, rate)
+            if (res) {
+                ctx.body = {
+                    code: 200,
+                    message: '提交评价成功'
+                }
             }
         } catch (error) {
             logger.error('BuyerController_evaluate ' + error)
+        }
+    }
+
+    // 评价完成后更新订单信息
+    async updateOrder(ctx, next) {
+        try {
+            const { order_id } = ctx.request.body
+            const res = await BuyerService.updateOrder(order_id)
+            if (res) {
+                ctx.body = {
+                    code: 200,
+                    message: '订单已评价'
+                }
+            }
+        } catch (error) {
+            logger.error('BuyerController_updateOrder ' + error)
+        }
+    }
+
+    // 用户获取个人评价
+    async getEvaluates(ctx, next) {
+        try {
+            const { id } = ctx.user
+            const res = await BuyerService.getEvaluates(id)
+            if (res) {
+                ctx.body = {
+                    code: 200,
+                    data: res
+                }
+            }
+        } catch (error) {
+            logger.error('BuyerController_getEvaluates ' + error)
+        }
+    }
+
+    // 删除个人评价
+    async deleteEvaluate(ctx, next) {
+        try {
+            const { id } = ctx.user
+            const { evaluate_id } = ctx.request.body
+            const res = await BuyerService.deleteEvaluate(id, evaluate_id)
+            if (res) {
+                ctx.body = {
+                    code: 200,
+                    message: '删除成功'
+                }
+            }
+        } catch (error) {
+            logger.error('BuyerController_deleteEvaluate ' + error)
         }
     }
 }

@@ -74,7 +74,7 @@ class BuyerService {
 	                            o.*,
 	                            JSON_OBJECT('id',s.id,'name', s.name, 'avatar_url',s.shop_avatar_url,'op_id',s.op_id) shop_info, 
 	                            JSON_OBJECT('name', b.name, 'address',b.address,'phone',b.phone) buyer_info, 
-	                            JSON_OBJECT('shop_id',f.shop_id,'name',f.name, 'avatar_url',f.avatar_url, 'price',f.price,'discount',f.discount,'extra',f.extra) food_info
+	                            JSON_OBJECT('shop_id',f.shop_id,'name',f.name, 'avatar_url',f.avatar_url, 'price',f.price,'discount',f.discount,'extra',f.extra, 'id', f.id) food_info
                             FROM o_f 
 	                            LEFT JOIN orders o ON o.id = o_f.o_id
 	                            LEFT JOIN shop s ON s.id = o_f.s_id
@@ -90,10 +90,10 @@ class BuyerService {
     }
 
     // 用户评价订单
-    async evaluate(order_id, shop_id, food_id, buyer_id, content) {
+    async evaluate(order_id, shop_id, food_id, buyer_id, content, rate) {
         try {
-            const statement = `INSERT INTO evaluate (order_id, shop_id, food_id, buyer_id, content) VALUES (?, ?, ?, ?, ?);`
-            const [res] = await connection.execute(statement, [order_id, shop_id, food_id, buyer_id, content])
+            const statement = `INSERT INTO evaluate (order_id, shop_id, food_id, buyer_id, content, rate) VALUES (?, ?, ?, ?, ?, ?);`
+            const [res] = await connection.execute(statement, [order_id, shop_id, food_id, buyer_id, content, rate])
 
             return res
         } catch (error) {
@@ -101,6 +101,52 @@ class BuyerService {
         }
     }
 
+    // 评价完成后更新订单
+    async updateOrder(order_id) {
+        try {
+            const statement = `UPDATE orders SET evaluated = 1 WHERE id = ?;`
+            const res = await connection.execute(statement, [order_id])
+
+            return res
+        } catch (error) {
+            logger.error('BuyerService_updateOrder ' + error)
+        }
+    }
+
+    // 用户获取个人评价数据
+    async getEvaluates(buyer_id) {
+        try {
+            const statement = `SELECT 
+	                                e.*,
+	                                JSON_OBJECT('id',s.id,'name', s.name, 'avatar_url',s.shop_avatar_url, 'op_id',s.op_id) shop_info, 
+	                                JSON_OBJECT('name', b.name, 'address',b.address,'phone',b.phone) buyer_info, 
+	                                JSON_OBJECT('shop_id',f.shop_id,'name',f.name, 'avatar_url',f.avatar_url, 'price',f.price,
+	                                'discount',f.discount,'extra',f.extra, 'id', f.id) food_info
+                                FROM o_f 
+	                            LEFT JOIN evaluate e ON e.order_id = o_f.o_id
+	                            LEFT JOIN shop s ON s.id = o_f.s_id
+	                            LEFT JOIN buyer b ON b.id = e.buyer_id
+	                            LEFT JOIN food f ON f.id = o_f.f_id
+                                WHERE e.buyer_id = 1 ORDER BY id`
+            const [res] = await connection.execute(statement, [buyer_id])
+
+            return res
+        } catch (error) {
+            logger.error('BuyerService_getEvaluates ' + error)
+        }
+    }
+
+    // 删除个人评价
+    async deleteEvaluate(buyer_id, evaluate_id) {
+        try {
+            const statement = `DELETE FROM evaluate WHERE id = ? AND buyer_id = ?;`
+            const [res] = await connection.execute(statement, [evaluate_id, buyer_id])
+
+            return res
+        } catch (error) {
+            logger.error('BuyerService_deleteEvaluate ' + error)
+        }
+    }
 }
 
 
