@@ -162,6 +162,28 @@ class ShopService {
         }
 
     }
+
+    // 获取店铺评价
+    async getshopEvaluates(shop_id) {
+        try {
+            const statement = `SELECT 
+	                                e.*,
+	                                JSON_OBJECT('id',s.id,'name', s.name, 'avatar_url',s.shop_avatar_url, 'op_id',s.op_id) shop_info, 
+	                                JSON_OBJECT('name', b.name, 'address',b.address,'phone',b.phone) buyer_info,
+	                                JSON_OBJECT('shop_id',f.shop_id,'name',f.name, 'avatar_url',f.avatar_url, 'price',f.price,
+	                                'discount',f.discount,'extra',f.extra, 'id', f.id) food_info
+                                FROM o_f 
+	                            LEFT JOIN evaluate e ON e.order_id = o_f.o_id
+	                            LEFT JOIN shop s ON s.id = o_f.s_id
+	                            LEFT JOIN buyer b ON b.id = e.buyer_id
+	                            LEFT JOIN food f ON f.id = o_f.f_id
+                                WHERE e.shop_id = ? ORDER BY id`
+            const [res] = await connection.execute(statement, [shop_id])
+            return res
+        } catch (error) {
+            logger.error('ShopService_getshopEvaluates ' + error)
+        }
+    }
 }
 
 module.exports = new ShopService()

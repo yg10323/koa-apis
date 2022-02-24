@@ -156,6 +156,22 @@ class ShopController {
             logger.error('ShopController_getMapData ' + error)
         }
     }
+
+    // 获取店铺评价
+    async getshopEvaluates(ctx, next) {
+        try {
+            const { shop_id } = ctx.request.body
+            const res = await ShopService.getshopEvaluates(shop_id)
+            if (res) {
+                ctx.body = {
+                    code: 200,
+                    data: res
+                }
+            }
+        } catch (error) {
+            logger.error('ShopController_getshopEvaluates ' + error)
+        }
+    }
 }
 
 

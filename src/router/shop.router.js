@@ -17,7 +17,8 @@ const {
     getOrdersAll,
     getBill,
     getSold,
-    getMapData
+    getMapData,
+    getshopEvaluates
 } = require('../controller/shop.controller')
 
 const { verifyToken } = require('../middleware/common.middleware')
@@ -48,7 +49,8 @@ shopRouter.get('/bill', verifyToken, verifyGetOrders, getBill)
 shopRouter.get('/sold', verifyToken, verifyGetOrders, getSold)
 // 获取订单地点数量分布
 shopRouter.get('/map_data', verifyToken, verifyGetOrders, getMapData)
-
+// 获取店铺评价
+shopRouter.post('/evaluates', verifyToken, getshopEvaluates)
 
 
 

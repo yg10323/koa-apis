@@ -127,7 +127,7 @@ class BuyerService {
 	                            LEFT JOIN shop s ON s.id = o_f.s_id
 	                            LEFT JOIN buyer b ON b.id = e.buyer_id
 	                            LEFT JOIN food f ON f.id = o_f.f_id
-                                WHERE e.buyer_id = 1 ORDER BY id`
+                                WHERE e.buyer_id = ? ORDER BY id`
             const [res] = await connection.execute(statement, [buyer_id])
 
             return res

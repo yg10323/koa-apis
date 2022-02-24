@@ -1006,3 +1006,10 @@ Require stack:
 [2022-02-24T09:58:18.298] [ERROR] cheese - 匹配路由错误: Error: post `/delete/evaluate`: `middleware` must be a function, not `undefined`
 [2022-02-24T09:58:26.185] [ERROR] cheese - 匹配路由错误: Error: post `/delete/evaluate`: `middleware` must be a function, not `undefined`
 [2022-02-24T09:59:19.121] [ERROR] cheese - 匹配路由错误: SyntaxError: Missing initializer in destructuring declaration
+[2022-02-24T10:53:59.559] [ERROR] cheese - 匹配路由错误: ReferenceError: getshopEvaluates is not defined
+[2022-02-24T10:54:10.337] [ERROR] cheese - 匹配路由错误: Error: post `/evaluates`: `middleware` must be a function, not `undefined`
+[2022-02-24T13:49:58.389] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2022-02-24T13:50:18.392] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2022-02-24T13:51:36.797] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2022-02-24T13:51:36.953] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
+[2022-02-24T13:51:36.954] [ERROR] cheese - 匹配路由错误: SyntaxError: Unexpected token '}'
