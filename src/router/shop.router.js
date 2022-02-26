@@ -50,7 +50,7 @@ shopRouter.get('/sold', verifyToken, verifyGetOrders, getSold)
 // 获取订单地点数量分布
 shopRouter.get('/map_data', verifyToken, verifyGetOrders, getMapData)
 // 获取店铺评价
-shopRouter.post('/evaluates', verifyToken, getshopEvaluates)
+shopRouter.post('/evaluates', getshopEvaluates)
 
 
 
