@@ -1,4 +1,7 @@
 
+# koa-apis
+外卖点餐系统的后端接口, 对应的前台点餐系统: [uniapp-order](https://github.com/yg10323/uniapp-order) 和 后台管理系统: [vue-cms](https://github.com/yg10323/vue-cms)
+
 ## config.json
 克隆到本地以后, 项目根目录下新建config.json文件, 参照如下配置   
 因扫码登陆需要配合redis使用, 如果没有安装redis, 请不要打开`index.js`中的socket文件引入
