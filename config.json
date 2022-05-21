@@ -1,0 +1,22 @@
+{
+    "staticPath": "http://124.70.20.215:2140/upload",
+    "app_config": {
+        "host": "localhost",
+        "port": 2140
+    },
+    "db_config": {
+        "host": "localhost",
+        "port": 3306,
+        "user": "root",
+        "password": "qqqw",
+        "database": "design"
+    },
+    "redis_config": {
+        "host": "127.0.0.1",
+        "port": 6379
+    },
+    "web_socket_config": {
+        "ip": "192.168.0.99",
+        "port": 1070
+    }
+}

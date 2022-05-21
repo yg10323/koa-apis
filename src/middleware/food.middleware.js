@@ -27,7 +27,7 @@ class FoodVerify {
             // 将重复id与新插入后获取的id合并
             const db_classify = await FoodService.getFoodClassify(foodInfo.shop_id)
             let classifyIdArray = []
-            if (!db_classify.length) {
+            if (!db_classify?.length) {
                 classifyIdArray = await FoodService.setFoodClassify(classify)
             } else {
                 for (let obj of db_classify) {
@@ -39,7 +39,7 @@ class FoodVerify {
                     })
                 }
                 // 如果不是都重复
-                if (classify.length > 0) {
+                if (classify?.length > 0) {
                     // 将新的分类插入分类表并得到新的分类id
                     const newClassifyIdArray = await FoodService.setFoodClassify(classify)
                     // 新旧分类id合并

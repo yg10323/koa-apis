@@ -74,7 +74,7 @@ class FoodService {
             const [res] = await connection.execute(statement, [shop_id])
             return res
         } catch (error) {
-            logger.error('FoodService_getFood ' + error)
+            logger.error('FoodService_getFoodList ' + error)
         }
     }
 
